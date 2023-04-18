@@ -1,0 +1,22 @@
+
+//
+// StyleDictionaryColor.h
+//
+
+#import <UIKit/UIKit.h>
+
+typedef NS_ENUM(NSInteger, StyleDictionaryColorName) {
+ColorBaseGrayLight,
+ColorBaseGrayMedium,
+ColorBaseGrayDark,
+ColorBaseRed,
+ColorBaseGreen,
+ColorFontBase,
+ColorFontSecondary,
+ColorFontTertiary
+};
+
+@interface StyleDictionaryColor : NSObject
++ (NSArray *)values;
++ (UIColor *)color:(StyleDictionaryColorName)color;
+@end
