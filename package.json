@@ -17,6 +17,7 @@
     "DOMAIN": "FANG",
     "TOKENS_DIR": "tokens",
     "BUILD_DIR": "build",
-    "PLATFORMS": ["css", "scss", "android", "objc", "swift"]
+    "PLATFORMS": ["css", "scss", "android", "objc", "swift"],
+    "OPTIMISTIC_PARSING": true
   }
 }
