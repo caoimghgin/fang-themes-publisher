@@ -25,4 +25,24 @@ const CLASS = Object.freeze({
     SHADOOW: "shadow",
 })
 
-module.exports = { CTI_SCHEMA, CLASS }
+const CATEGORY = Object.freeze({
+    PALETTE: "palette",
+    COLOR: "color",
+    FONT: "font",
+    SPACE: "space",
+    SIZE: "size",
+    SHADOW: "shadow"
+})
+
+const ITEM = Object.freeze({
+    BKG: "bkg",
+    FONT: "txt",
+    ICN: "icn",
+})
+
+const SUBCLASS = Object.freeze({
+    PALETTE: "palette",
+    CONTEXTUAL: "contextual",
+})
+
+module.exports = { CTI_SCHEMA, CLASS, SUBCLASS, CATEGORY, ITEM }

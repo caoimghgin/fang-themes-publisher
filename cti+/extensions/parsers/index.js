@@ -22,21 +22,50 @@ const { w3cTokenJsonParser } = require('./utilities/w3cTokenJsonParser')
 const { ctiPlusSchemaParser } = require('./utilities/ctiPlusSchemaParser')
 const { keyRouteParser } = require('./utilities/keyRouteParser')
 
+const mapper = require('../../mapper')
+
+
 StyleDictionary.registerParser({
     pattern: /\.json$/,
     parse: ({ contents, filePath }) => {
 
         let dictionary = w3cTokenJsonParser(contents)
         let keys = keyRouteParser(dictionary)
-        
+
         ctiPlusSchemaParser(dictionary, keys)
+        
+        for (const key of keys) {
+            const token = _.get(dictionary, key)
+            const data = mapper.schemaForToken(mapper.fang_palette(), token)
+        }
+
+        // for (const key of keys) {
+        //     const token = _.get(dictionary, key)
+        //     if (utils.shouldParse(token, consts.CLASS.COLOR)) {
+        //         const data = cti.schemaForToken(cti.djds_palette(), token, key)
+        //         if (data) {
+        //             token.$schema = data.$schema
+        //             token.$schema.$type = consts.TYPE.COLOR
+        //             token.$schema.class = consts.CLASS.PALETTE
+        //             token.$schema.mode = consts.MODE.NONE
+        //             token.$schema.route = key
+        //             token.$schema.version = 2.0
+        //             token.$schema.className = utils.parseClassName(token.$schema)
+        //         }
+        //     }
+        // }
+
+
+
+
+
 
         // parseTypography(dictionary, keys, filePath)
         // parseColors(dictionary, keys, filePath) 
         // parseSpacers(dictionary, keys, filePath) 
         // parseShadows(dictionary, keys, filePath) 
         // mapToPaletteColorRef(dictionary, keys)
-        
+
         return dictionary
     }
 })

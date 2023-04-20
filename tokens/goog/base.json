@@ -1,41 +1,33 @@
 {
   "color" : {
+    "font" : {
+      "base" : {
+        "value" : "{color.base.red.value}"
+      },
+      "secondary" : {
+        "value" : "{color.base.green.value}"
+      },
+      "tertiary" : {
+        "value" : "{color.base.gray.light.value}"
+      }
+    },
     "base" : {
       "gray" : {
         "light" : {
-          "value" : "#CCCCCC",
-          "type" : "color"
+          "value" : "#CCCCCC"
         },
         "medium" : {
-          "value" : "#999999",
-          "type" : "color"
+          "value" : "#999999"
         },
         "dark" : {
-          "value" : "#111111",
-          "type" : "color"
+          "value" : "#111111"
         }
       },
       "red" : {
-        "value" : "#FF0000",
-        "type" : "color"
+        "value" : "#FF0000"
       },
       "green" : {
-        "value" : "#00FF00",
-        "type" : "color"
-      }
-    },
-    "font" : {
-      "base" : {
-        "value" : "{color.base.red.value}",
-        "type" : "color"
-      },
-      "secondary" : {
-        "value" : "{color.base.green.value}",
-        "type" : "color"
-      },
-      "tertiary" : {
-        "value" : "{color.base.gray.light.value}",
-        "type" : "color"
+        "value" : "#00FF00"
       }
     }
   },
@@ -43,23 +35,19 @@
     "font" : {
       "small" : {
         "value" : "0.75",
-        "comment" : "the small size of the font",
-        "type" : "dimension"
+        "comment" : "the small size of the font"
       },
       "medium" : {
         "value" : "1",
-        "comment" : "the medium size of the font",
-        "type" : "dimension"
+        "comment" : "the medium size of the font"
       },
       "large" : {
         "value" : "2",
-        "comment" : "the large size of the font",
-        "type" : "dimension"
+        "comment" : "the large size of the font"
       },
       "base" : {
         "value" : "{size.font.medium.value}",
-        "comment" : "the base size of the font",
-        "type" : "dimension"
+        "comment" : "the base size of the font"
       }
     }
   }
