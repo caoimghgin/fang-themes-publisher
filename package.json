@@ -14,7 +14,7 @@
     "style-dictionary": "^3.7.2"
   },
   "ENV": {
-    "DOMAIN": "FANG",
+    "DOMAIN": "FNG",
     "TOKENS_DIR": "tokens",
     "BUILD_DIR": "build",
     "PLATFORMS": ["css", "scss", "android", "objc", "swift"],

@@ -1,1 +1,5 @@
 require('./utilities/cti+.console.log.tokens')
+require('./utilities/cti+.name.dCTI.kebab')
+require('./utilities/cti+.name.dCTI.pascal')
+require('./utilities/cti+.name.dCTI.snake')
+require('./utilities/cti+.name.CTI.camel')

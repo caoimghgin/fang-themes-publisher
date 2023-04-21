@@ -3,7 +3,8 @@ const ext = "xml"
 
 const transforms = [ 
     'attribute/cti',
-    'name/cti/snake',
+    // 'name/cti/snake',
+    'cti+/name/dCTI/snake',
     'color/hex8android',
     'size/remToSp',
     'size/remToDp'

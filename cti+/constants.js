@@ -21,7 +21,7 @@ const CTI_SCHEMA = () => {
 const CLASS = Object.freeze({
     COLOR: "color",
     TYPOGRAPHY: "typography",
-    SPACING: "spacing",
+    SIZE: "size",
     SHADOOW: "shadow",
 })
 
@@ -36,7 +36,7 @@ const CATEGORY = Object.freeze({
 
 const ITEM = Object.freeze({
     BKG: "bkg",
-    FONT: "txt",
+    FONT: "text",
     ICN: "icn",
 })
 
@@ -45,4 +45,9 @@ const SUBCLASS = Object.freeze({
     CONTEXTUAL: "contextual",
 })
 
-module.exports = { CTI_SCHEMA, CLASS, SUBCLASS, CATEGORY, ITEM }
+const MODE =  Object.freeze({
+    LIGHT: "light",
+    DARK: "dark",
+})
+
+module.exports = { CTI_SCHEMA, CLASS, SUBCLASS, MODE, CATEGORY, ITEM }

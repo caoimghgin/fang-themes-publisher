@@ -23,7 +23,7 @@ const { ctiPlusSchemaParser } = require('./utilities/ctiPlusSchemaParser')
 const { keyRouteParser } = require('./utilities/keyRouteParser')
 
 const mapper = require('../../mapper')
-
+const consts = require('../../constants')
 
 StyleDictionary.registerParser({
     pattern: /\.json$/,
@@ -33,11 +33,29 @@ StyleDictionary.registerParser({
         let keys = keyRouteParser(dictionary)
 
         ctiPlusSchemaParser(dictionary, keys)
-        
-        for (const key of keys) {
-            const token = _.get(dictionary, key)
-            const data = mapper.schemaForToken(mapper.fang_palette(), token)
-        }
+
+        // // Palette Colors
+        // for (const key of keys) {
+        //     const token = _.get(dictionary, key)
+        //     mapper.schemaForToken(mapper.fang_palette(), token)
+        // }
+
+        // // Contextual Colors
+        // for (const key of keys) {
+        //     const token = _.get(dictionary, key)
+        //     if (mapper.shouldMapToken(token, consts.CLASS.COLOR)) {
+        //         mapper.schemaForToken(mapper.fang_contextual(), token)
+        //     }
+        // }
+
+        // // Size
+        // for (const key of keys) {
+        //     const token = _.get(dictionary, key)
+        //     if (mapper.shouldMapToken(token, consts.CLASS.SIZE)) {
+        //         mapper.schemaForToken(mapper.fang_size(), token)
+        //     }
+        // }
+
 
         // for (const key of keys) {
         //     const token = _.get(dictionary, key)

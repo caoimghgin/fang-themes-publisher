@@ -1,14 +1,14 @@
 :root {
-  --color-font-base: #ff0000;
-  --color-font-secondary: #00ff00;
-  --color-font-tertiary: #cccccc;
-  --color-base-gray-light: #cccccc;
-  --color-base-gray-medium: #999999;
-  --color-base-gray-dark: #111111;
-  --color-base-red: #ff0000;
-  --color-base-green: #00ff00;
-  --size-font-small: 0.75rem; /* the small size of the font */
-  --size-font-medium: 1rem; /* the medium size of the font */
-  --size-font-large: 2rem; /* the large size of the font */
-  --size-font-base: 1rem; /* the base size of the font */
+  --fng_color_text_base: #ff0000;
+  --fng_color_text_secondary: #00ff00;
+  --fng_color_text_tertiary: #cccccc;
+  --fng_palette_gray_light: #cccccc;
+  --fng_palette_gray_medium: #999999;
+  --fng_palette_gray_dark: #111111;
+  --fng_palette_red: #ff0000;
+  --fng_palette_green: #00ff00;
+  --fng_size_text_small: 0.75rem; /* the small size of the font */
+  --fng_size_text_medium: 1rem; /* the medium size of the font */
+  --fng_size_text_large: 2rem; /* the large size of the font */
+  --fng_size_text_base: 1rem; /* the base size of the font */
 }

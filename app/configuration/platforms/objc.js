@@ -2,7 +2,8 @@ const name = "objc"
 
 const transforms = [ 
     'attribute/cti',
-    'name/cti/pascal',
+    // 'name/cti/pascal',
+    'cti+/name/dCTI/pascal',
     'color/UIColor',
     'content/objC/literal',
     'asset/objC/literal',

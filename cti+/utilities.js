@@ -5,6 +5,10 @@ const isColor = (value) => {
     return color.isValid()
 }
 
+const isNumber = (value) => {
+    return (isNaN(value) ? false : true)
+}
+
 const parseKey = (token) => {
     let result = null
     if (token.$schema.route) {
@@ -19,4 +23,4 @@ const keyCleaner = (item) => {
     return item.split('.').join('').replace(/[^A-Z0-9]/ig, "").toUpperCase()
 }
 
-module.exports = { isColor, parseKey, keyCleaner }
+module.exports = { isColor, isNumber, parseKey, keyCleaner }

@@ -4,7 +4,8 @@ const ext = "swift"
 
 const transforms = [ 
     'attribute/cti',
-    'name/cti/camel',
+    // 'name/cti/camel',
+    'cti+/name/CTI/camel',
     'color/UIColorSwift',
     'content/swift/literal',
     'asset/swift/literal',
