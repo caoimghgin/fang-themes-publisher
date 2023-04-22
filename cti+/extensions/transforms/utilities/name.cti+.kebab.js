@@ -1,6 +1,6 @@
 const StyleDictionary = require('style-dictionary')
 const transforms = require('style-dictionary/lib/common/transforms')
-const {hasSchema, fallbackTransform} = require('../../../utilities')
+const { hasSchema, fallbackTransform } = require('../../../utilities')
 const _ = require("lodash");
 
 StyleDictionary.registerTransform({

@@ -1,6 +1,6 @@
 const StyleDictionary = require('style-dictionary')
 const transforms = require('style-dictionary/lib/common/transforms')
-const {hasSchema, fallbackTransform} = require('../../../utilities')
+const { hasSchema, fallbackTransform } = require('../../../utilities')
 const _ = require("lodash");
 
 StyleDictionary.registerTransform({
@@ -18,8 +18,3 @@ StyleDictionary.registerTransform({
         return fallbackTransform(transforms['name/cti/snake'], token, options)
     }
 })
-
-
-    // 'name/cti/snake',
-    // 'name/cti+/snake'
-    // 'cti+/name/dCTI/snake',
