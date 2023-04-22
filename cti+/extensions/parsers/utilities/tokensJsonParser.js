@@ -12,9 +12,9 @@
 
 function tokensJsonParser(contents, W3CPrefix) {
     if (!W3CPrefix) return JSON.parse(contents)
-    const preparedContent = (contents || '{}').replace(/"\$?value"/g, '"value"')
+    const result = (contents || '{}').replace(/"\$?value"/g, '"value"')
         .replace(/"\$?description"/g, '"comment"');
-    return JSON.parse(preparedContent);
+    return JSON.parse(result);
 }
 
 module.exports = { tokensJsonParser }
