@@ -1,6 +1,6 @@
 const StyleDictionary = require('style-dictionary')
 const transforms = require('style-dictionary/lib/common/transforms')
-const { hasSchema, fallbackTransform } = require('../../../utilities')
+const { hasSchema, transformFallback } = require('../../../utilities')
 const _ = require("lodash");
 
 StyleDictionary.registerTransform({
@@ -15,6 +15,6 @@ StyleDictionary.registerTransform({
             }
             return _.camelCase(result.join(' '))
         }
-        return fallbackTransform(transforms['name/cti/camel'], token, options)
+        return transformFallback(transforms['name/cti/camel'], token, options)
     }
 })

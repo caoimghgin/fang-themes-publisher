@@ -27,8 +27,8 @@ const hasSchema = (token) => {
     return (token.hasOwnProperty('$schema'))
 }
 
-const fallbackTransform = (transform, token, options) => {
+const transformFallback = (transform, token, options) => {
     return transform.transformer(token, options)
 }
 
-module.exports = { isColor, isNumber, parseKey, keyCleaner, hasSchema, fallbackTransform }
+module.exports = { isColor, isNumber, parseKey, keyCleaner, hasSchema, transformFallback }
