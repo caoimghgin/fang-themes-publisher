@@ -29,11 +29,12 @@ This tutorial will follow the footsteps of the **FANGORIA** Design System team a
 │          ├── index.js
 │      ├── transforms/
 │          ├── utilities/
-│              ├── cti+.console.log.tokens.js
-│              ├── cti+.name.CTI.camel.js
-│              ├── cti+.name.dCTI.kebab.js
-│              ├── cti+.name.dCTI.pascal.js
-│              ├── cti+.name.dCTI.snake.js
+│              ├── console.cti+.schemas.js
+│              ├── console.cti+.tokens.js
+│              ├── name.cti+.camel.js
+│              ├── name.cti+.kebob.js
+│              ├── name.cti+.pascal.js
+│              ├── name.cti+.snake.js
 │          ├── index.js
 │      ├── schemas/
 │          ├── fang/
