@@ -1,13 +1,13 @@
-$fng-color-text-base: #ff0000;
-$fng-color-text-secondary: #00ff00;
-$fng-color-text-tertiary: #cccccc;
-$fng-palette-gray-light: #cccccc;
-$fng-palette-gray-medium: #999999;
-$fng-palette-gray-dark: #111111;
-$fng-palette-red: #ff0000;
-$fng-palette-green: #00ff00;
-$unkn-color-base-orange: #ff9900;
-$fng-size-text-small: 0.75rem; // the small size of the font
-$fng-size-text-medium: 1rem; // the medium size of the font
 $fng-size-text-large: 2rem; // the large size of the font
-$fng-size-text-base: 1rem; // the base size of the font
+$fng-size-text-medium: 1rem; // the medium size of the font
+$fng-size-text-small: 0.75rem; // the small size of the font
+$unkn-color-base-orange: #ff9900;
+$fng-palette-green: #00ff00;
+$fng-palette-red: #ff0000;
+$fng-palette-gray-dark: #111111;
+$fng-palette-gray-medium: #999999;
+$fng-palette-gray-light: #cccccc;
+$fng-size-text-base: $fng-size-text-medium; // the base size of the font
+$fng-color-text-tertiary: $fng-palette-gray-light;
+$fng-color-text-secondary: $fng-palette-green;
+$fng-color-text-base: $fng-palette-red;

@@ -17,7 +17,7 @@ module.exports = (build, brand, platform) => {
         buildPath: `${build}/${brand}/${platform}/`,
         options: {
             showFileHeader: false,
-            outputReferences: false,
+            outputReferences: true,
         },
         files: [
             colors(),

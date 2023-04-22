@@ -9,8 +9,8 @@ const brands = getDirectories(ENV.TOKENS_DIR)
 const platforms = ENV.PLATFORMS
 
 brands.map(brand => {
-    platforms.map(platform => {
-      StyleDictionary.extend(getConfiguration(brand, platform))
-        .buildPlatform(platform);
-    })
+  platforms.map(platform => {
+    StyleDictionary.extend(getConfiguration(brand, platform))
+      .buildPlatform(platform);
   })
+})

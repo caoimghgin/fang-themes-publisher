@@ -1,11 +1,12 @@
 const { ENV } = require('../../package.json')
+
 const css = require('./platforms/css')
 const scss = require('./platforms/scss')
 const android = require('./platforms/android')
 const objc = require('./platforms/objc')
 const swift = require('./platforms/swift')
 
-const getConfiguration = (brand, platform, source) => {
+function getConfiguration(brand, platform, source) {
     const sourceDir = (source ? `${source}/**/*.json` : `${ENV.TOKENS_DIR}/${brand}/**/*.json`)
     return {
         source: [sourceDir],
