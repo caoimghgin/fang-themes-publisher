@@ -2,7 +2,7 @@
  * @name tokenJsonParser
  * @type parser
  * @param  {JSON} contents The contents of the tokens.json file
- * @param  {Bool} stripW3CPrefix replace `$value` with `value` and `$description` with `comment`
+ * @param  {Bool} W3CPrefix replace `$value` with `value` and `$description` with `comment`
  * @return {Object} JSON parsed into Javascript object
  * @author Lukas Oppermann
  * @link https://github.com/lukasoppermann/style-dictionary-utils/blob/main/src/parser/w3c-token-json-parser.ts
@@ -11,7 +11,7 @@
  */
 
 function tokensJsonParser(contents, stripW3CPrefix) {
-    if (!stripW3CPrefix) return JSON.parse(contents)
+    if (!W3CPrefix) return JSON.parse(contents)
     const preparedContent = (contents || '{}').replace(/"\$?value"/g, '"value"')
         .replace(/"\$?description"/g, '"comment"');
     return JSON.parse(preparedContent);
