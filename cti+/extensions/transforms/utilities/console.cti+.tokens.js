@@ -5,7 +5,7 @@ StyleDictionary.registerTransform({
     name: 'console/cti+/tokens',   
     type: 'attribute',
     transformer: function (token) {
-        console.log("console/cti+/tokens ->", util.inspect(token, false, null, true))
+        console.log("console/cti+/token ->", util.inspect(token, false, null, true))
     }
 })
 

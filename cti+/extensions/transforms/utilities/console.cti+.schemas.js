@@ -7,9 +7,9 @@ StyleDictionary.registerTransform({
     type: 'attribute',
     transformer: function (token) {
         if (hasSchema(token)) {
-            console.log("console/cti+/schemas ->", util.inspect(token.$schema, false, null, true))
+            console.log("console/cti+/schema ->", util.inspect(token.$schema, false, null, true))
         } else {
-            console.log("console/cti+/schemas (fallback) ->", util.inspect(token, false, null, true))
+            console.log("console/cti+/schema (fallback) ->", util.inspect(token, false, null, true))
         }
     }
 })
