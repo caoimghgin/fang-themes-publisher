@@ -10,7 +10,7 @@
  * with `comment` to make it work with style dictionary. Else, returns parsed contents
  */
 
-function tokensJsonParser(contents, stripW3CPrefix) {
+function tokensJsonParser(contents, W3CPrefix) {
     if (!W3CPrefix) return JSON.parse(contents)
     const preparedContent = (contents || '{}').replace(/"\$?value"/g, '"value"')
         .replace(/"\$?description"/g, '"comment"');

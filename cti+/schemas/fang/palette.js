@@ -1,7 +1,7 @@
 const { ENV } = require('../../../package.json')
 const { CATEGORY, SUBCLASS } = require('../../constants')
 
-const props = { subclass: SUBCLASS.PALETTE, domain: ENV.DOMAIN.toLowerCase(), category: CATEGORY.PALETTE }
+const props = { subclass: SUBCLASS.PALETTE, domain: ENV.DOMAIN.SYSTEM.toLowerCase(), category: CATEGORY.PALETTE }
 
 const FANG_PALETTE = [
     { map: "base.red", value: { ...props, type: null, item: null, variant: "red", subitem: null, state: null, context: null } }, 

@@ -66,12 +66,11 @@ const undefinedSchemaParser = (dictionary, keys) => {
     for (const key of keys) {
         const token = _.get(dictionary, key)
         if (mapper.shouldMapToken(token, null)) {
-            token.$schema.taxonomy.domain = ENV.UNKNOWN
+            token.$schema.taxonomy.domain = ENV.DOMAIN.UNDEFINED
             token.$schema.taxonomy.state = key
             if (token.$schema.class == consts.CLASS.COLOR) {
                 token.$schema.subclass = consts.SUBCLASS.DEFINITIVE
             }
-            console.log(token)
         }
     }
 }

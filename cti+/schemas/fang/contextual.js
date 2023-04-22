@@ -1,7 +1,7 @@
 const { ENV } = require('../../../package.json')
 const { SUBCLASS, CATEGORY, ITEM } = require('../../constants')
 
-const props = { subclass: SUBCLASS.CONTEXTUAL, domain: ENV.DOMAIN.toLowerCase(), category: CATEGORY.COLOR }
+const props = { subclass: SUBCLASS.CONTEXTUAL, domain: ENV.DOMAIN.SYSTEM.toLowerCase(), category: CATEGORY.COLOR }
 
 const FANG_CONTEXTUAL = [
     { map: "font.base", value: { ...props, type: null, item: ITEM.FONT, variant: "base", subitem: null, state: null, context: null } }, 
