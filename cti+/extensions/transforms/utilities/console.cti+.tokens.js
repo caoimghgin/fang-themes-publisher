@@ -2,10 +2,10 @@ const StyleDictionary = require('style-dictionary')
 const util = require('util')
 
 StyleDictionary.registerTransform({
-    name: 'cti+/console/tokens',
+    name: 'console/cti+/tokens',   
     type: 'attribute',
     transformer: function (token) {
-        // console.log("cti+/console/tokens ->", util.inspect(token, false, null, true /* enable colors */))
+        console.log("console/cti+/tokens ->", util.inspect(token, false, null, true))
     }
 })
 

@@ -4,17 +4,17 @@ const {hasSchema, fallbackTransform} = require('../../../utilities')
 const _ = require("lodash");
 
 StyleDictionary.registerTransform({
-    name: 'cti+/name/CTI/camel',
+    name: 'name/cti+/kebab',
     type: 'name',
     transformer: function (token, options) {
         if (hasSchema(token)) {
             let result = []
-            let dynamics = ["category", "type", "item", "variant", "subitem", "state", "context"]
+            let dynamics = ["domain", "category", "type", "item", "variant", "subitem", "state", "context"]
             for (const dynamic of dynamics) {
                 if (token.$schema.taxonomy[dynamic]) result.push(token.$schema.taxonomy[dynamic])
             }
-            return _.camelCase(result.join(' '))
+            return _.kebabCase(result.join(' '));
         }
-        return fallbackTransform(transforms['name/cti/camel'], token, options)
+        return fallbackTransform(transforms['name/cti/kebab'], token, options)
     }
 })
