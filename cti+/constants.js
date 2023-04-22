@@ -43,6 +43,7 @@ const ITEM = Object.freeze({
 const SUBCLASS = Object.freeze({
     PALETTE: "palette",
     CONTEXTUAL: "contextual",
+    DEFINITIVE: "definitive",
 })
 
 const MODE =  Object.freeze({

@@ -11,12 +11,15 @@ const mapper = require('../../../mapper')
 const { ENV } = require('../../../../package.json')
 
 function ctiPlusSchemaParser(dictionary, keys) {
+
     schemaRouteParser(dictionary, keys)
     colorClassParser(dictionary, keys)
     sizeClassParser(dictionary, keys)
     schemaMappingParser(dictionary, keys, consts.CLASS.COLOR, mapper.fang_palette())
     schemaMappingParser(dictionary, keys, consts.CLASS.COLOR, mapper.fang_contextual())
     schemaMappingParser(dictionary, keys, consts.CLASS.SIZE, mapper.fang_size())
+
+    undefinedSchemaParser(dictionary, keys)
 }
 
 const schemaRouteParser = (dictionary, keys) => {
@@ -52,6 +55,20 @@ const schemaMappingParser = (dictionary, keys, tClass, map) => {
         const token = _.get(dictionary, key)
         if (mapper.shouldMapToken(token, tClass)) {
             mapper.schemaForToken(map, token)
+        }
+    }
+}
+
+const undefinedSchemaParser = (dictionary, keys) => {
+    for (const key of keys) {
+        const token = _.get(dictionary, key)
+        if (mapper.shouldMapToken(token, null)) {
+            token.$schema.taxonomy.domain = ENV.UNKNOWN
+            token.$schema.taxonomy.state = key
+            if (token.$schema.class == consts.CLASS.COLOR) {
+                token.$schema.subclass = consts.SUBCLASS.DEFINITIVE
+            }
+            console.log(token)
         }
     }
 }

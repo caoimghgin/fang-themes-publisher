@@ -13,7 +13,8 @@ FNGPaletteGrayLight,
 FNGPaletteGrayMedium,
 FNGPaletteGrayDark,
 FNGPaletteRed,
-FNGPaletteGreen
+FNGPaletteGreen,
+UNKNColorBaseOrange
 };
 
 @interface StyleDictionaryColor : NSObject

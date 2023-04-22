@@ -6,6 +6,7 @@
 import UIKit
 
 public class StyleDictionaryClass {
+    public static let colorBaseOrange = UIColor(red: 1.000, green: 0.600, blue: 0.000, alpha: 1)
     public static let colorTextBase = UIColor(red: 1.000, green: 0.000, blue: 0.000, alpha: 1)
     public static let colorTextSecondary = UIColor(red: 0.000, green: 1.000, blue: 0.000, alpha: 1)
     public static let colorTextTertiary = UIColor(red: 0.800, green: 0.800, blue: 0.800, alpha: 1)

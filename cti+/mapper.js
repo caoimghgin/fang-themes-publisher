@@ -8,7 +8,12 @@ const FANG_CONTEXTUAL = require("./schemas/fang/contextual")
 const FANG_SIZE = require("./schemas/fang/size")
 
 const shouldMapToken = (token, schemaClass) => {
-    return (token.$schema.taxonomy.domain == null && token.$schema.class == schemaClass)
+    // if (schemaClass != null) return (token.$schema.map == null && token.$schema.class == schemaClass)
+    // return (token.$schema.map == null)
+
+    return ((schemaClass != null) ?
+        (token.$schema.class == schemaClass && token.$schema.map == null) :
+        (token.$schema.map == null))
 }
 
 const schemaForToken = (schema, token) => {

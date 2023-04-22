@@ -15,13 +15,9 @@
   },
   "ENV": {
     "DOMAIN": "FNG",
+    "UNKNOWN" : "UNKN",
     "TOKENS_DIR": "tokens",
     "BUILD_DIR": "build",
-    "PLATFORMS": ["css", "scss", "android", "objc", "swift"],
-    "OPTIMISTIC_PARSING": true,
-    "OPTIMISTIC_MAPPING": {
-      "ON": true,
-      "PALETTE_DIRECTORIES": ["base", "palette", "palettes"]
-    }
+    "PLATFORMS": ["css", "scss", "android", "objc", "swift"]
   }
 }

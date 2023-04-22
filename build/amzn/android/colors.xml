@@ -10,5 +10,6 @@
   <color name="fng_palette_gray_dark">#ff111111</color>
   <color name="fng_palette_red">#ffff0000</color>
   <color name="fng_palette_green">#ff00ff00</color>
+  <color name="unkn_color_base_orange">#ffff9900</color>
   
 </resources>

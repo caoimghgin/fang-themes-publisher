@@ -5,7 +5,7 @@ StyleDictionary.registerTransform({
     name: 'cti+/console/tokens',
     type: 'attribute',
     transformer: function (token) {
-        console.log("cti+/console/tokens ->", util.inspect(token, false, null, true /* enable colors */))
+        // console.log("cti+/console/tokens ->", util.inspect(token, false, null, true /* enable colors */))
     }
 })
 

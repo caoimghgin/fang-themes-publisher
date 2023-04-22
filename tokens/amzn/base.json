@@ -28,6 +28,9 @@
       },
       "green" : {
         "value" : "#00FF00"
+      },
+      "orange" : {
+        "value" : "#FF9900"
       }
     }
   },
