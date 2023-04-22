@@ -1,6 +1,9 @@
 /**
  * @name ctiPlusSchemaParser
  * @type parser
+ * @param {Object} dictionary All tokens parsed to a Javascript Object
+ * @param {Array} keys List of all nodes in the dictionary
+ * @author Kevin Muldoon
  * @description inserts CTI+ schema into every node for processing/filtering
  */
 

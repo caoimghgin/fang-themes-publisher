@@ -18,9 +18,9 @@ file path or programmatically generate tokens based on the data in certain files
 
 const StyleDictionary = require('style-dictionary');
 const _ = require('lodash');
-const { w3cTokenJsonParser } = require('./utilities/w3cTokenJsonParser')
-const { ctiPlusSchemaParser } = require('./utilities/ctiPlusSchemaParser')
+const { tokensJsonParser } = require('./utilities/tokensJsonParser')
 const { keyRouteParser } = require('./utilities/keyRouteParser')
+const { ctiPlusSchemaParser } = require('./utilities/ctiPlusSchemaParser')
 
 const mapper = require('../../mapper')
 const consts = require('../../constants')
@@ -29,60 +29,10 @@ StyleDictionary.registerParser({
     pattern: /\.json$/,
     parse: ({ contents, filePath }) => {
 
-        let dictionary = w3cTokenJsonParser(contents)
+        let dictionary = tokensJsonParser(contents, false)
         let keys = keyRouteParser(dictionary)
 
         ctiPlusSchemaParser(dictionary, keys)
-
-        // // Palette Colors
-        // for (const key of keys) {
-        //     const token = _.get(dictionary, key)
-        //     mapper.schemaForToken(mapper.fang_palette(), token)
-        // }
-
-        // // Contextual Colors
-        // for (const key of keys) {
-        //     const token = _.get(dictionary, key)
-        //     if (mapper.shouldMapToken(token, consts.CLASS.COLOR)) {
-        //         mapper.schemaForToken(mapper.fang_contextual(), token)
-        //     }
-        // }
-
-        // // Size
-        // for (const key of keys) {
-        //     const token = _.get(dictionary, key)
-        //     if (mapper.shouldMapToken(token, consts.CLASS.SIZE)) {
-        //         mapper.schemaForToken(mapper.fang_size(), token)
-        //     }
-        // }
-
-
-        // for (const key of keys) {
-        //     const token = _.get(dictionary, key)
-        //     if (utils.shouldParse(token, consts.CLASS.COLOR)) {
-        //         const data = cti.schemaForToken(cti.djds_palette(), token, key)
-        //         if (data) {
-        //             token.$schema = data.$schema
-        //             token.$schema.$type = consts.TYPE.COLOR
-        //             token.$schema.class = consts.CLASS.PALETTE
-        //             token.$schema.mode = consts.MODE.NONE
-        //             token.$schema.route = key
-        //             token.$schema.version = 2.0
-        //             token.$schema.className = utils.parseClassName(token.$schema)
-        //         }
-        //     }
-        // }
-
-
-
-
-
-
-        // parseTypography(dictionary, keys, filePath)
-        // parseColors(dictionary, keys, filePath) 
-        // parseSpacers(dictionary, keys, filePath) 
-        // parseShadows(dictionary, keys, filePath) 
-        // mapToPaletteColorRef(dictionary, keys)
 
         return dictionary
     }

@@ -23,4 +23,12 @@ const keyCleaner = (item) => {
     return item.split('.').join('').replace(/[^A-Z0-9]/ig, "").toUpperCase()
 }
 
-module.exports = { isColor, isNumber, parseKey, keyCleaner }
+const hasSchema = (token) => {
+    return (token.hasOwnProperty('$schema'))
+}
+
+const fallbackTransform = (transform, token, options) => {
+    return transform.transformer(token, options)
+}
+
+module.exports = { isColor, isNumber, parseKey, keyCleaner, hasSchema, fallbackTransform }

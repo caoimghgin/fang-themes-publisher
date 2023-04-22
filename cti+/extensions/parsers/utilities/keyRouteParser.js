@@ -1,3 +1,12 @@
+/**
+ * @name keyRouteParser
+ * @type utility
+ * @param {Object} dictionary All tokens
+ * @return {Array} All keys within the dictionary
+ * @author Kevin Muldoon
+ * @description returns a list of keys for every node of the dictionary to
+ * populate the value of token.$schema.route and map tokens to defined schemas.
+ */
 
 function keyRouteParser(dictionary) {
     const result = []
@@ -12,11 +21,10 @@ function keyRouteParser(dictionary) {
         });
     }
 
-    // Filter the set to object keys which end with 'type'.
+    // Filter the set to object keys which end with 'value'.
     const routeFilteredByValue = Array.from(set).filter(function (route) {
         return route.endsWith("value");
     });
-
 
     // Remove 'value' from each entry and push to result. 
     // The result is an array of keys we can use to find 
