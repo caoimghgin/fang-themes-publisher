@@ -113,6 +113,10 @@ You can build the design tokens from the `/app` folder using the CLI command:
 ```
 npm run build
 ```
+or
+```
+yarn build
+```
 
 The generated tokens are saved in the `/build` folder, and organised by brand/platform.
 
