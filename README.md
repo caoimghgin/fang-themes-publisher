@@ -18,7 +18,7 @@ npm install
 ## Project structure
 The project is made of these files and folders:
 
-* `/app` contains the build.js, configurations and utilities
+* `/app` contains the build.js, configurations for platforms, and utilities
 * `/cti+` extensions for CTI+ parsers/transforms, and schema files
 * `/tokens` contains the design tokens input files (in JSON format)
 * `/build` contains the generated output files (in different formats)
