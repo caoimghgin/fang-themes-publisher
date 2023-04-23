@@ -1,6 +1,6 @@
 # FANG Themes Publisher
 
-This demo imagines a dystopian world where the **FANG** corporation acquires **Facebook**, **Amazon**, **Apple**, **Netflix**, and **Google**. To maximize efficiencies, **FANG Corp** plans to unify all brands under a singular design system, called **FANGORIA**. The design system will use [Style Dictionary](https://github.com/amzn/style-dictionary), Figma plugins and the [CTI+ Taxonomy](https://medium.com/user-experience-design-1/how-to-name-tokens-in-a-design-system-5b218589dadc) to enable support for cross-brand/white-label, multi-platform, and dark mode.
+Imagine a dystopian world where the **FANG** corporation acquires **Facebook**, **Amazon**, **Apple**, **Netflix**, and **Google**. To maximize efficiencies, **FANG Corp** plans to unify all brands under a singular design system, called **FANGORIA**. The design system will use [Style Dictionary](https://github.com/amzn/style-dictionary), Figma plugins and the [CTI+ Taxonomy](https://medium.com/user-experience-design-1/how-to-name-tokens-in-a-design-system-5b218589dadc) to enable support for cross-brand/white-label, multi-platform, and dark mode.
 
 The problem is **FANG Corp** hasn't built the **FANGORIA** design system and time is running out!
 
