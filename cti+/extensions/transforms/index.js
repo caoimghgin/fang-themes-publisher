@@ -1,4 +1,5 @@
 require('./utilities/console.cti+.schemas')
+require('./utilities/console.cti+.routes')
 require('./utilities/console.cti+.tokens')
 require('./utilities/name.cti+.camel')
 require('./utilities/name.cti+.kebab')

@@ -10,7 +10,7 @@ const transforms = [
     'content/icon',
     'size/rem',
     'color/css',
-    'console/cti+/schemas'
+    'console/cti+/routes'
 ]
 
 module.exports = (build, brand, platform) => {
