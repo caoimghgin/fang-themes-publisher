@@ -6,7 +6,7 @@ The problem is **FANG Corp** hasn't built the **FANGORIA** design system and tim
 
 This tutorial shows techniques and examples to ensure the success of **FANGORIA** design system to support the integration of five large companies under the singular **FANG** umbrella.
 
-**Notice**: *Feel free to use this code as reference, or clone it and tailor it to your needs. This demo combines many Medium articles I've written over the years on design systems. However, the inpiration for this demo is from [How to manage your Design Tokens with Style Dictionary](https://medium.com/@didoo/how-to-manage-your-design-tokens-with-style-dictionary-98c795b938aa), written by Cristiano Rastelli in 2020.*
+**Notice**: *I recommend copying **app/** and **cti+/** directories into your own Style Dictionary project and updating the **package.json** so you can freely optimize for your needs. This demo combines many Medium articles I've written over the years on design systems. However, the inpiration for this demo is from [How to manage your Design Tokens with Style Dictionary](https://medium.com/@didoo/how-to-manage-your-design-tokens-with-style-dictionary-98c795b938aa), written by Cristiano Rastelli in 2020.*
 
 ## Initial setup
 Install the project dependencies via the CLI command:
