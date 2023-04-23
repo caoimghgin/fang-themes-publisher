@@ -4,7 +4,7 @@ This demo imagines a dystopian world where the **FANG** corporation acquires **F
 
 The only problem is they haven't built the **FANGORIA** design system yet and time is running out!
 
-This tutorial will follow the the **FANG** team responsible for the **FANGORIA** Design System as they meet the challenges to support the integration of five large companies under the singular **FANG** umbrella.
+This tutorial will follow the team responsible for the success of **FANGORIA** as they meet the challenges to support the integration of five large companies under the singular **FANG** umbrella.
 
 
 ```
