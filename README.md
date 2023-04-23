@@ -4,7 +4,7 @@ This demo imagines a dystopian world where the **FANG** corporation acquires **F
 
 The problem is **FANG Corp** hasn't built the **FANGORIA** design system and time is running out!
 
-This tutorial will follow the team responsible for the success of **FANGORIA** as they meet the challenges to support the integration of five large companies under the singular **FANG** umbrella.
+This tutorial shows practical examples and techniques to ensure the success of the new **FANGORIA** design system to support the integration of five large companies under the singular **FANG** umbrella.
 
 **Notice**: *Feel free to use this code as reference, or clone it and tailor it to your needs. This demo combines many Medium articles I've written over the years on design systems. However, the inpiration for this demo is from [How to manage your Design Tokens with Style Dictionary](https://medium.com/@didoo/how-to-manage-your-design-tokens-with-style-dictionary-98c795b938aa), written by Cristiano Rastelli in 2020.*
 
