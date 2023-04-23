@@ -2,7 +2,7 @@
 
 This demo imagines a dystopian world where the **FANG** corporation acquires **Facebook**, **Amazon**, **Apple**, **Netflix**, and **Google**. To maximize efficiencies, **FANG Corp** wants to unify all brands under a singular design system, called **FANGORIA**. The design system will use [Style Dictionary](https://github.com/amzn/style-dictionary), Figma plugins and the [CTI+ Taxonomy](https://medium.com/user-experience-design-1/how-to-name-tokens-in-a-design-system-5b218589dadc) to enable support for cross-brand/white-label, multi-platform, and dark mode.
 
-The only problem is they haven't built the **FANGORIA** design system yet and time is running out!
+The only problem is **FANG Corp** hasn't built the **FANGORIA** design system yet and time is running out!
 
 This tutorial will follow the team responsible for the success of **FANGORIA** as they meet the challenges to support the integration of five large companies under the singular **FANG** umbrella.
 
