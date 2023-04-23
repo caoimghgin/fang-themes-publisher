@@ -6,6 +6,22 @@ The only problem is they haven't built the **FANGORIA** design system yet and ti
 
 This tutorial will follow the team responsible for the success of **FANGORIA** as they meet the challenges to support the integration of five large companies under the singular **FANG** umbrella.
 
+**Notice**: *Feel free to use this code as reference, or clone it and tailor it to your needs. This demo combines the information from many Medium articles I've written.*
+
+## Initial setup
+Install the project dependencies via the CLI command:
+
+```
+npm install
+```
+
+## Project structure
+The project is made of these files and folders:
+
+* `/app` contains the configuration files and build.js
+* `/cti+` style dictionary extensions and schema files for CTI+
+* `/tokens` contains the design tokens input files (in JSON format)
+* `/build` contains the generated output files (in different formats)
 
 ```
 ├── README.md
@@ -59,3 +75,17 @@ This tutorial will follow the team responsible for the success of **FANGORIA** a
 │   ├── nflx/
 │       ├── tokens.json
 ```
+
+## Running the project
+You can build the design tokens from the `/app` folder using the CLI command:
+
+```
+npm run build
+```
+
+The generated tokens are saved in the `/build` folder, and organised by brand/platform.
+
+## License
+
+This project is under [MIT license](https://github.com/didoo/style-dictionary-demo/blob/master/LICENSE).
+
