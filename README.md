@@ -118,7 +118,7 @@ or
 yarn build
 ```
 
-The generated tokens are saved in the `/build` folder, and organised by brand/platform.
+The generated tokens are saved in the `/build` folder, and organised by brand/platform/files.
 
 ## License
 
