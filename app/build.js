@@ -1,3 +1,9 @@
+/**
+ * Main app
+ * 
+ * @file 'app/build.js'
+ */
+
 const StyleDictionary = require('style-dictionary');
 const { ENV } = require('../package.json')
 const { getDirectories } = require('./utilities')

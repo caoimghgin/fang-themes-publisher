@@ -2,7 +2,7 @@
   "name": "fang-themes-publisher",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./app/build.js",
   "scripts": {
     "build": "npm run clean && node ./app/build.js",
     "clean": "rm -rf build",
