@@ -6,7 +6,7 @@
 #import "StyleDictionarySize.h"
 
 
-float const FNGSizeTextSmall = 12.00f;
-float const FNGSizeTextMedium = 16.00f;
-float const FNGSizeTextLarge = 32.00f;
-float const FNGSizeTextBase = 16.00f;
+float const AARDSizeTextSmall = 12.00f;
+float const AARDSizeTextMedium = 16.00f;
+float const AARDSizeTextLarge = 32.00f;
+float const AARDSizeTextBase = 16.00f;

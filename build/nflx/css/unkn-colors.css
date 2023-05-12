@@ -1,0 +1,10 @@
+:root {
+  --unkn-color-base-green: #00ff00;
+  --unkn-color-base-red: #ff0000;
+  --unkn-color-base-gray-dark: #111111;
+  --unkn-color-base-gray-medium: #999999;
+  --unkn-color-base-gray-light: #cccccc;
+  --unkn-color-font-tertiary: var(--unkn-color-base-gray-light);
+  --unkn-color-font-secondary: var(--unkn-color-base-green);
+  --unkn-color-font-base: var(--unkn-color-base-red);
+}

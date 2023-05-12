@@ -1,3 +1,6 @@
+const { ENV } = require('../../../package.json')
+const { CLASS, SUBCLASS, CATEGORY, ITEM } = require('../../../cti+/constants')
+
 const name = "css"
 const ext = "css"
 const format = "css/variables"
@@ -23,11 +26,44 @@ module.exports = (build, brand, platform) => {
             outputReferences: true,
         },
         files: [
-            all(),
+            // all(),
+            paletteColors(),
+            contextualColors(),
+            unknownColors()
+
         ]
     }
     return result
 }
+
+const paletteColors = () => {
+    return {
+        destination: `${ENV.DOMAIN.SYSTEM.toLowerCase()}-palette.${ext}`,
+        format: format,
+        filter: { $schema: { subclass: SUBCLASS.PALETTE } }
+    }
+}
+
+const contextualColors = () => {
+    return {
+        destination: `${ENV.DOMAIN.SYSTEM.toLowerCase()}-contextual.${ext}`,
+        format: format,
+        filter: { $schema: { subclass: SUBCLASS.CONTEXTUAL } }
+    }
+}
+
+const unknownColors = () => {
+    return {
+        destination: `${ENV.DOMAIN.UNDEFINED.toLowerCase()}-colors.${ext}`,
+        format: format,
+        filter: (token) => {
+            return ( (token.$schema.class === CLASS.COLOR) && (token.$schema.taxonomy.domain === ENV.DOMAIN.UNDEFINED) )
+        }
+    }
+}
+
+
+
 
 let all = () => {
     return {
