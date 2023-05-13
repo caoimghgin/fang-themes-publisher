@@ -1,14 +1,14 @@
 :root {
-  --fng-size-text-large: 2rem; /* the large size of the font */
-  --fng-size-text-medium: 1rem; /* the medium size of the font */
-  --fng-size-text-small: 0.75rem; /* the small size of the font */
-  --fng-palette-green: #00ff00;
-  --fng-palette-red: #ff0000;
-  --fng-palette-gray-dark: #111111;
-  --fng-palette-gray-medium: #999999;
-  --fng-palette-gray-light: #cccccc;
-  --fng-size-text-base: var(--fng-size-text-medium); /* the base size of the font */
-  --fng-color-text-tertiary: var(--fng-palette-gray-light);
-  --fng-color-text-secondary: var(--fng-palette-green);
-  --fng-color-text-base: var(--fng-palette-red);
+  --fang-size-text-large: 2rem; /* the large size of the font */
+  --fang-size-text-medium: 1rem; /* the medium size of the font */
+  --fang-size-text-small: 0.75rem; /* the small size of the font */
+  --fang-palette-green: #00ff00;
+  --fang-palette-red: #ff0000;
+  --fang-palette-gray-dark: #111111;
+  --fang-palette-gray-medium: #999999;
+  --fang-palette-gray-light: #cccccc;
+  --unkn-size-font-base: var(--fang-size-text-medium); /* the base size of the font */
+  --unkn-color-font-tertiary: var(--fang-palette-gray-light);
+  --unkn-color-font-secondary: var(--fang-palette-green);
+  --unkn-color-font-base: var(--fang-palette-red);
 }

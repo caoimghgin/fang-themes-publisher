@@ -20,6 +20,7 @@ const CTI_SCHEMA = () => {
 
 const CLASS = Object.freeze({
     COLOR: "color",
+    FONT: "font",
     TYPOGRAPHY: "typography",
     SIZE: "size",
     SHADOOW: "shadow",
