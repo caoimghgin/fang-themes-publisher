@@ -6,14 +6,14 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, StyleDictionaryColorName) {
-FNGColorTextBase,
-FNGColorTextSecondary,
-FNGColorTextTertiary,
-FNGPaletteGrayLight,
-FNGPaletteGrayMedium,
-FNGPaletteGrayDark,
-FNGPaletteRed,
-FNGPaletteGreen
+UNKNColorFontBase,
+UNKNColorFontSecondary,
+UNKNColorFontTertiary,
+FANGPaletteGrayLight,
+FANGPaletteGrayMedium,
+FANGPaletteGrayDark,
+FANGPaletteRed,
+FANGPaletteGreen
 };
 
 @interface StyleDictionaryColor : NSObject

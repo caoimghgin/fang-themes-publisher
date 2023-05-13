@@ -5,7 +5,7 @@
 #import <Foundation/Foundation.h>
 
 
-extern float const FNGSizeTextSmall;
-extern float const FNGSizeTextMedium;
-extern float const FNGSizeTextLarge;
-extern float const FNGSizeTextBase;
+extern float const FANGSizeTextSmall;
+extern float const FANGSizeTextMedium;
+extern float const FANGSizeTextLarge;
+extern float const UNKNSizeFontBase;

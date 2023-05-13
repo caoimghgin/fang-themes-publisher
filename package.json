@@ -18,7 +18,7 @@
     "BUILD_DIR": "build",
     "PLATFORMS": ["css", "scss", "android", "objc", "swift"],
     "DOMAIN": {
-      "SYSTEM": "FNG",
+      "SYSTEM": "FANG",
       "UNDEFINED": "UNKN"
     }
   }

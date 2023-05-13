@@ -9,6 +9,10 @@ const isNumber = (value) => {
     return (isNaN(value) ? false : true)
 }
 
+const isFont = (value) => {
+    return (value.hasOwnProperty('fontFamily') ? true : false)
+}
+
 const parseKey = (token) => {
     let result = null
     if (token.$schema.route) {
@@ -31,4 +35,4 @@ const transformFallback = (transform, token, options) => {
     return transform.transformer(token, options)
 }
 
-module.exports = { isColor, isNumber, parseKey, keyCleaner, hasSchema, transformFallback }
+module.exports = { isColor, isNumber, isFont, parseKey, keyCleaner, hasSchema, transformFallback }

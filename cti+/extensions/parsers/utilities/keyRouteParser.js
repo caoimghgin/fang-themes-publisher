@@ -16,21 +16,25 @@ function keyRouteParser(dictionary) {
     // set remove duplicates the recursive keyify 
     // function creates.
     for (const root in dictionary) {
-        keyify(dictionary[root]).forEach((el) => {
-            set.add(root + "." + el)
+        keyify(dictionary[root]).forEach((item) => {
+            set.add(root + "." + item)
         });
     }
 
     // Filter the set to object keys which end with 'value'.
     const routeFilteredByValue = Array.from(set).filter(function (route) {
-        return route.endsWith("value");
+        // if route endsWith or second to last item has value
+        // console.log("find route", route)
+        return (route.endsWith("value") || route.includes(".value."))
     });
 
     // Remove 'value' from each entry and push to result. 
     // The result is an array of keys we can use to find 
     // values and modify objects.
-    routeFilteredByValue.forEach(function (item, index) {
-        result.push(item.split('.').slice(0, -1).join('.'))
+    routeFilteredByValue.forEach(function (route, index) {
+        const routeArray = route.split('.')
+        routeArray.length = routeArray.indexOf("value") // set length to remove elements
+        result.push(routeArray.join('.'))
     });
 
     return result
