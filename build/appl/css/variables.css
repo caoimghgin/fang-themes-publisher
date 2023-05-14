@@ -7,8 +7,8 @@
   --fang-palette-gray-dark: #111111;
   --fang-palette-gray-medium: #999999;
   --fang-palette-gray-light: #cccccc;
-  --unkn-size-font-base: var(--fang-size-text-medium); /* the base size of the font */
-  --unkn-color-font-tertiary: var(--fang-palette-gray-light);
-  --unkn-color-font-secondary: var(--fang-palette-green);
-  --unkn-color-font-base: var(--fang-palette-red);
+  --fang-size-text-base: var(--fang-size-text-medium); /* the base size of the font */
+  --fang-color-text-tertiary: var(--fang-palette-gray-light);
+  --fang-color-text-secondary: var(--fang-palette-green);
+  --fang-color-text-base: var(--fang-palette-red);
 }
