@@ -4,7 +4,7 @@ const ext = "xml"
 const transforms = [ 
     'attribute/cti',
     // 'name/cti/snake',
-    'name/cti+/snake',
+    'name/snake/[cti+]',
     'color/hex8android',
     'size/remToSp',
     'size/remToDp'

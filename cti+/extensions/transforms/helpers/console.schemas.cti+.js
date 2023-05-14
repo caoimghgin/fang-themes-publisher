@@ -3,7 +3,7 @@ const { hasSchema } = require('../../../utilities')
 const util = require('util')
 
 StyleDictionary.registerTransform({
-    name: 'console/cti+/schemas',
+    name: 'console/schemas/[cti+]',
     type: 'attribute',
     transformer: function (token) {
         if (hasSchema(token)) {

@@ -5,7 +5,7 @@ const format = "scss/variables"
 const transforms = [
     'attribute/cti',
     // 'name/cti/kebab',
-    'name/cti+/kebab',
+    'name/kebab/[cti+]',
     'time/seconds',
     'content/icon',
     'size/rem',

@@ -3,7 +3,7 @@ const name = "objc"
 const transforms = [ 
     'attribute/cti',
     // 'name/cti/pascal',
-    'name/cti+/pascal',
+    'name/pascal/[cti+]',
     'color/UIColor',
     'content/objC/literal',
     'asset/objC/literal',

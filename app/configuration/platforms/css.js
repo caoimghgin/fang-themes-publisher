@@ -5,12 +5,12 @@ const format = "css/variables"
 const transforms = [
     'attribute/cti',
     // 'name/cti/kebab',
-    'name/cti+/kebab',
+    'name/kebab/[cti+]',
     'time/seconds',
     'content/icon',
     'size/rem',
     'color/css',
-    'console/cti+/routes'
+    'console/routes/[cti+]'
 ]
 
 module.exports = (build, brand, platform) => {

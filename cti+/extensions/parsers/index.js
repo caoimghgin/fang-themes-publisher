@@ -18,9 +18,9 @@ file path or programmatically generate tokens based on the data in certain files
 
 const StyleDictionary = require('style-dictionary');
 const _ = require('lodash');
-const { tokensJsonParser } = require('./utilities/tokensJsonParser')
-const { keyRouteParser } = require('./utilities/keyRouteParser')
-const { ctiPlusSchemaParser } = require('./utilities/ctiPlusSchemaParser')
+const { tokensJsonParser } = require('./helpers/tokensJsonParser')
+const { keyRouteParser } = require('./helpers/keyRouteParser')
+const { ctiPlusSchemaParser } = require('./helpers/ctiPlusSchemaParser')
 
 const mapper = require('../../mapper')
 const consts = require('../../constants')
