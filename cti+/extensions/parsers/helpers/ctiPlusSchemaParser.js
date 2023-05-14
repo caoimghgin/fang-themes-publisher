@@ -35,39 +35,16 @@ const schemaRouteParser = (dictionary, keys) => {
 const colorClassParser = (dictionary, keys) => {
     for (const key of keys) {
         const token = _.get(dictionary, key)
-        if (typeof token.value === 'object') return // is the value an object?, NOT A COLOR!
-        if (typeof token.value === 'string' || myVar instanceof String) {
-            if (token.value.startsWith('{') && token.value.endsWith('}')) {
-                let pointerValue = _.get(dictionary, token.value.replace(/[{()}]/g, ''))
-                if (utils.isColor(pointerValue)) {
-                    token.$schema.class = consts.CLASS.COLOR
-                } 
-            } else {
-                if (utils.isColor(token.value)) {
-                    token.$schema.class = consts.CLASS.COLOR
-                } 
-            }
-        }
+        const value = (utils.isReferenceValue(token) ? utils.getReferenceValue(dictionary, token) : token.value)
+        if (utils.isColor(value)) token.$schema.class = consts.CLASS.COLOR
     }
 }
 
 const sizeClassParser = (dictionary, keys) => {
     for (const key of keys) {
         const token = _.get(dictionary, key)
-        if (typeof token.value === 'object') return // is the value an object?, NOT A SIZE!
-
-        if (typeof token.value === 'string' || myVar instanceof String) {
-            if (token.value.startsWith('{') && token.value.endsWith('}')) {
-                let pointerValue = _.get(dictionary, token.value.replace(/[{()}]/g, ''))
-                if (utils.isNumber(pointerValue)) {
-                    token.$schema.class = consts.CLASS.SIZE
-                } 
-            }
-        }
-        
-        if (utils.isNumber(token.value)) {
-            token.$schema.class = consts.CLASS.SIZE
-        }
+        const value = (utils.isReferenceValue(token) ? utils.getReferenceValue(dictionary, token) : token.value)
+        if (utils.isNumber(value)) token.$schema.class = consts.CLASS.SIZE
     }
 }
 
