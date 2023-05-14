@@ -4,7 +4,7 @@ const { hasSchema, transformFallback } = require('../../../utilities')
 const _ = require("lodash");
 
 StyleDictionary.registerTransform({
-    name: 'name/cti+/pascal',  
+    name: 'name/pascal/[cti+]',  
     type: 'name',
     transformer: function (token, options) {
         if (hasSchema(token)) {
