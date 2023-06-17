@@ -15,7 +15,7 @@ public class StyleDictionaryClass {
     public static let paletteGrayMedium = UIColor(red: 0.600, green: 0.600, blue: 0.600, alpha: 1)
     public static let paletteGrayLight = UIColor(red: 0.800, green: 0.800, blue: 0.800, alpha: 1)
     public static let sizeTextBase = sizeTextMedium /* the base size of the font */
-    public static let colorTextTertiary = paletteGrayLight
-    public static let colorTextSecondary = paletteGreen
-    public static let colorTextBase = paletteRed
+    public static let contextualTextTertiary = paletteGrayLight
+    public static let contextualTextSecondary = paletteGreen
+    public static let contextualTextBase = paletteRed
 }

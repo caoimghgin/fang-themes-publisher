@@ -6,9 +6,9 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, StyleDictionaryColorName) {
-FANGColorTextBase,
-FANGColorTextSecondary,
-FANGColorTextTertiary,
+FANGContextualTextBase,
+FANGContextualTextSecondary,
+FANGContextualTextTertiary,
 FANGPaletteGrayLight,
 FANGPaletteGrayMedium,
 FANGPaletteGrayDark,

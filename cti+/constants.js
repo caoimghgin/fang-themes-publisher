@@ -32,8 +32,7 @@ const FOO = Object.freeze({
 const CLASS = Object.freeze({
     COLOR: "color",
     FONT: "font",
-    TYPOGRAPHY: "typography",
-    SIZE: "size",
+    DIMENSION: "dimension",
     SHADOOW: "shadow",
 })
 
@@ -41,6 +40,8 @@ const SUBCLASS = Object.freeze({
     PALETTE: "palette",
     CONTEXTUAL: "contextual",
     DEFINITIVE: "definitive",
+    SIZE: "size",
+    SPACE: "space"
 })
 
 const CATEGORY = Object.freeze({
@@ -56,7 +57,7 @@ const CATEGORY = Object.freeze({
 // (Backgrounds, Text, Icons, Borders)
 const TYPE = Object.freeze({
     BKG: "bkg",
-    TXT: "text",
+    TEXT: "text",
     ICN: "icn",
 })
 
@@ -74,4 +75,4 @@ const MODE =  Object.freeze({
     DARK: "dark",
 })
 
-module.exports = { CTI_SCHEMA, CLASS, SUBCLASS, MODE, CATEGORY, ITEM }
+module.exports = { CTI_SCHEMA, CLASS, SUBCLASS, MODE, CATEGORY, TYPE, ITEM }
