@@ -18,12 +18,29 @@ const CTI_SCHEMA = () => {
     }
 }
 
+// These are modeled on the Styles that Figma
+// Publishes. I think they should be CLASS definitions
+
+const FOO = Object.freeze({
+    // EFFECT: -> SHADOOW: "shadow",
+    // PAINT: -> COLOR: "color",
+    // GRID:
+    // TEXT: -> TYPOGRAPHY: "typography",
+    // SIZE: -> SIZE: "size",
+})
+
 const CLASS = Object.freeze({
     COLOR: "color",
     FONT: "font",
     TYPOGRAPHY: "typography",
     SIZE: "size",
     SHADOOW: "shadow",
+})
+
+const SUBCLASS = Object.freeze({
+    PALETTE: "palette",
+    CONTEXTUAL: "contextual",
+    DEFINITIVE: "definitive",
 })
 
 const CATEGORY = Object.freeze({
@@ -35,16 +52,21 @@ const CATEGORY = Object.freeze({
     SHADOW: "shadow"
 })
 
+// TYPE describes how the token is used. 
+// (Backgrounds, Text, Icons, Borders)
+const TYPE = Object.freeze({
+    BKG: "bkg",
+    TXT: "text",
+    ICN: "icn",
+})
+
+// ITEM describes a component it’s used on. 
+// (Button, Modal, Banner, Paper)
 const ITEM = Object.freeze({
     BKG: "bkg",
     FONT: "text",
     ICN: "icn",
-})
-
-const SUBCLASS = Object.freeze({
-    PALETTE: "palette",
-    CONTEXTUAL: "contextual",
-    DEFINITIVE: "definitive",
+    BTN: "btn"
 })
 
 const MODE =  Object.freeze({
