@@ -15,13 +15,8 @@ const { ENV } = require('../../../../package.json')
 
 function ctiPlusSchemaParser(dictionary, keys) {
     schemaRouteParser(dictionary, keys)
-    colorClassParser(dictionary, keys)
-    sizeClassParser(dictionary, keys)
-    fontClassParser(dictionary, keys)
-    schemaMappingParser(dictionary, keys, consts.CLASS.COLOR, mapper.fang_palette())
-    schemaMappingParser(dictionary, keys, consts.CLASS.COLOR, mapper.fang_contextual())
-    schemaMappingParser(dictionary, keys, consts.CLASS.SIZE, mapper.fang_size())
-    undefinedSchemaParser(dictionary, keys)
+    classParser(dictionary, keys)
+    mappingParser(dictionary, keys)
 }
 
 const schemaRouteParser = (dictionary, keys) => {
@@ -30,6 +25,19 @@ const schemaRouteParser = (dictionary, keys) => {
         Object.assign(token, { $schema: consts.CTI_SCHEMA() });
         token.$schema.route = key
     }
+}
+
+const classParser = (dictionary, keys) => {
+    colorClassParser(dictionary, keys)
+    sizeClassParser(dictionary, keys)
+    fontClassParser(dictionary, keys)
+}
+
+const mappingParser = (dictionary, keys) => {
+    schemaMappingParser(dictionary, keys, consts.CLASS.COLOR, mapper.fang_palette())
+    schemaMappingParser(dictionary, keys, consts.CLASS.COLOR, mapper.fang_contextual())
+    schemaMappingParser(dictionary, keys, consts.CLASS.DIMENSION, mapper.fang_size())
+    undefinedSchemaParser(dictionary, keys)
 }
 
 const colorClassParser = (dictionary, keys) => {
@@ -44,7 +52,7 @@ const sizeClassParser = (dictionary, keys) => {
     for (const key of keys) {
         const token = _.get(dictionary, key)
         const value = (utils.isReferenceValue(token) ? utils.getReferenceValue(dictionary, token) : token.value)
-        if (utils.isNumber(value)) token.$schema.class = consts.CLASS.SIZE
+        if (utils.isNumber(value)) token.$schema.class = consts.CLASS.DIMENSION
     }
 }
 
@@ -57,10 +65,10 @@ const fontClassParser = (dictionary, keys) => {
     }
 }
 
-const schemaMappingParser = (dictionary, keys, tClass, map) => {
+const schemaMappingParser = (dictionary, keys, tokenClass, map) => {
     for (const key of keys) {
         const token = _.get(dictionary, key)
-        if (mapper.shouldMapToken(token, tClass)) {
+        if (mapper.shouldMapToken(token, tokenClass)) {
             mapper.schemaForToken(map, token)
         }
     }

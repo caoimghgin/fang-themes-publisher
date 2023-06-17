@@ -13,6 +13,7 @@ const transforms = [
     'content/icon',
     'size/rem',
     'color/css',
+    'console/schemas/[cti+]'
     // 'console/routes/[cti+]'
 ]
 

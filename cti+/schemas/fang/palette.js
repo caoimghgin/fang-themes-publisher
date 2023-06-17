@@ -8,11 +8,11 @@ const props = {
 }
 
 const FANG_PALETTE = [
-    { map: "base.red", value: { ...props, type: null, item: null, subitem: null, variant: "red", state: null, context: null } }, 
-    { map: "base.green", value: { ...props, type: null, item: null, subitem: null, variant: "green",  state: null, context: null } },
-    { map: "base.gray.light", value: { ...props, type: null, item: null, subitem: null, variant: "gray", state: "light", context: null } },
-    { map: "base.gray.medium", value: { ...props, type: null, item: null, subitem: null, variant: "gray", state: "medium", context: null } },
-    { map: "base.gray.dark", value: { ...props, type: null, item: null, subitem: null, variant: "gray", state: "dark", context: null } },
+    { map: "base.red",  ...props, type: null, item: null, subitem: null, variant: "red", state: null, context: null} , 
+    { map: "base.green",  ...props, type: null, item: null, subitem: null, variant: "green",  state: null, context: null} ,
+    { map: "base.gray.light", ...props, type: null, item: null, subitem: null, variant: "gray", state: "light", context: null},
+    { map: "base.gray.medium", ...props, type: null, item: null, subitem: null, variant: "gray", state: "medium", context: null },
+    { map: "base.gray.dark",  ...props, type: null, item: null, subitem: null, variant: "gray", state: "dark", context: null },
 ]
 
 module.exports = [...FANG_PALETTE] 
