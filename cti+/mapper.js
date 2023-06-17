@@ -8,11 +8,9 @@ const FANG_CONTEXTUAL = require("./schemas/fang/contextual")
 const FANG_SIZE = require("./schemas/fang/size")
 
 const shouldMapToken = (token, schemaClass) => {
-    // if (schemaClass != null) return (token.$schema.map == null && token.$schema.class == schemaClass)
-    // return (token.$schema.map == null)
-
+    return (token.$schema.map == null)
     return ((schemaClass != null) ?
-        (token.$schema.class == schemaClass && token.$schema.map == null) :
+        ((token.$schema.class == schemaClass) && (token.$schema.map == null)) :
         (token.$schema.map == null))
 }
 
@@ -30,7 +28,7 @@ const schemaForToken = (schema, token) => {
     let item = result[0]
 
     if (item) {
-        // token.$schema.class = token.$schema.class
+        token.$schema.class = token.$schema.class
         token.$schema.subclass = item.subclass
         // token.$schema.mode = token.$schema.mode
         // token.$schema.route = token.$schema.route
@@ -60,19 +58,19 @@ const getSchema = (taxonomy) => {
     result = []
     taxonomy.forEach((item) => {
         let schema = consts.CTI_SCHEMA()
-        schema.class = null
-        schema.subclass = item.value.subclass
+        schema.class = item.class
+        schema.subclass = item.subclass
         schema.mode = null
         schema.route = null
         schema.map = item.map
-        schema.taxonomy.domain = item.value.domain
-        schema.taxonomy.category = item.value.category
-        schema.taxonomy.type = item.value.type
-        schema.taxonomy.item = item.value.item
-        schema.taxonomy.variant = item.value.variant
-        schema.taxonomy.subitem = item.value.subitem
-        schema.taxonomy.state = item.value.state
-        schema.taxonomy.context = item.value.context
+        schema.taxonomy.domain = item.domain
+        schema.taxonomy.category = item.category
+        schema.taxonomy.type = item.type
+        schema.taxonomy.item = item.item
+        schema.taxonomy.variant = item.variant
+        schema.taxonomy.subitem = item.subitem
+        schema.taxonomy.state = item.state
+        schema.taxonomy.context = item.context
         result.push(schema)
     });
     return result
