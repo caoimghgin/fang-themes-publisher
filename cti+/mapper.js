@@ -67,6 +67,7 @@ const getSchema = (taxonomy) => {
         schema.map = item.map
         schema.taxonomy.domain = item.value.domain
         schema.taxonomy.category = item.value.category
+        schema.taxonomy.type = item.value.type
         schema.taxonomy.item = item.value.item
         schema.taxonomy.variant = item.value.variant
         schema.taxonomy.subitem = item.value.subitem

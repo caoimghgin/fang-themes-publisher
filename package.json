@@ -16,7 +16,8 @@
   "ENV": {
     "TOKENS_DIR": "tokens",
     "BUILD_DIR": "build",
-    "PLATFORMS": ["css", "scss", "android", "objc", "swift"],
+    "PLATFORMS": ["css"],
+    "//PLATFORMS": ["css", "scss", "android", "objc", "swift"],
     "DOMAIN": {
       "SYSTEM": "FANG",
       "UNDEFINED": "UNKN"

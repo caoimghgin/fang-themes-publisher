@@ -1,3 +1,5 @@
+const { ENV } = require("../package.json")
+
 const CTI_SCHEMA = () => {
     return {
         class: null,
@@ -10,20 +12,38 @@ const CTI_SCHEMA = () => {
             category: null,
             type: null,
             item: null,
-            variant: null,
             subitem: null,
+            variant: null,
             state: null,
             context: null,
         }
     }
 }
 
+// These are modeled on the Styles that Figma
+// Publishes. I think they should be CLASS definitions
+
+const FOO = Object.freeze({
+    // EFFECT: -> SHADOOW: "shadow",
+    // PAINT: -> COLOR: "color",
+    // GRID:
+    // TEXT: -> TYPOGRAPHY: "typography",
+    // SIZE: -> SIZE: "size",
+})
+
 const CLASS = Object.freeze({
     COLOR: "color",
     FONT: "font",
-    TYPOGRAPHY: "typography",
-    SIZE: "size",
+    DIMENSION: "dimension",
     SHADOOW: "shadow",
+})
+
+const SUBCLASS = Object.freeze({
+    PALETTE: "palette",
+    CONTEXTUAL: "contextual",
+    DEFINITIVE: "definitive",
+    SIZE: "size",
+    SPACE: "space"
 })
 
 const CATEGORY = Object.freeze({
@@ -35,16 +55,21 @@ const CATEGORY = Object.freeze({
     SHADOW: "shadow"
 })
 
+// TYPE describes how the token is used. 
+// (Backgrounds, Text, Icons, Borders)
+const TYPE = Object.freeze({
+    BKG: "bkg",
+    TEXT: "text",
+    ICN: "icn",
+})
+
+// ITEM describes a component it’s used on. 
+// (Button, Modal, Banner, Paper)
 const ITEM = Object.freeze({
     BKG: "bkg",
     FONT: "text",
     ICN: "icn",
-})
-
-const SUBCLASS = Object.freeze({
-    PALETTE: "palette",
-    CONTEXTUAL: "contextual",
-    DEFINITIVE: "definitive",
+    BTN: "btn"
 })
 
 const MODE =  Object.freeze({
@@ -52,4 +77,4 @@ const MODE =  Object.freeze({
     DARK: "dark",
 })
 
-module.exports = { CTI_SCHEMA, CLASS, SUBCLASS, MODE, CATEGORY, ITEM }
+module.exports = { CTI_SCHEMA, ENV, CLASS, SUBCLASS, MODE, CATEGORY, TYPE, ITEM }
