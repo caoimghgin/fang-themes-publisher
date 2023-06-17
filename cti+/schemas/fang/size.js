@@ -5,7 +5,7 @@ const props = {
     class: CLASS.DIMENSION, 
     subclass: SUBCLASS.SIZE, 
     domain: ENV.DOMAIN.SYSTEM.toLowerCase(), 
-    category: SUBCLASS.SIZE, 
+    category: CATEGORY.SIZE
 }
 
 const FANG_SIZE = [

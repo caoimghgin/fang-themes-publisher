@@ -5,7 +5,7 @@ const props = {
     class: CLASS.COLOR,
     subclass: SUBCLASS.PALETTE, 
     domain: ENV.DOMAIN.SYSTEM.toLowerCase(), 
-    category: SUBCLASS.PALETTE
+    category: CATEGORY.PALETTE
 }
 
 const FANG_PALETTE = [

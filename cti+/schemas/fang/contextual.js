@@ -5,7 +5,7 @@ const props = {
     class: CLASS.COLOR,
     subclass: SUBCLASS.CONTEXTUAL, 
     domain: ENV.DOMAIN.SYSTEM.toLowerCase(),
-    category: SUBCLASS.CONTEXTUAL, 
+    category: CATEGORY.COLOR
 }
 
 const FANG_CONTEXTUAL = [
