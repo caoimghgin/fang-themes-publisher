@@ -1,3 +1,5 @@
+const { ENV } = require("../package.json")
+
 const CTI_SCHEMA = () => {
     return {
         class: null,
@@ -10,8 +12,8 @@ const CTI_SCHEMA = () => {
             category: null,
             type: null,
             item: null,
-            variant: null,
             subitem: null,
+            variant: null,
             state: null,
             context: null,
         }
@@ -75,4 +77,4 @@ const MODE =  Object.freeze({
     DARK: "dark",
 })
 
-module.exports = { CTI_SCHEMA, CLASS, SUBCLASS, MODE, CATEGORY, TYPE, ITEM }
+module.exports = { CTI_SCHEMA, ENV, CLASS, SUBCLASS, MODE, CATEGORY, TYPE, ITEM }
