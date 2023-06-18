@@ -10,11 +10,11 @@
  * with `comment` to make it work with style dictionary. Else, returns parsed contents
  */
 
-function tokensJsonParser(contents, W3CPrefix) {
+function jsonParser(contents, W3CPrefix) {
     if (!W3CPrefix) return JSON.parse(contents)
     const result = (contents || '{}').replace(/"\$?value"/g, '"value"')
         .replace(/"\$?description"/g, '"comment"');
     return JSON.parse(result);
 }
 
-module.exports = { tokensJsonParser }
+module.exports = { jsonParser }

@@ -8,9 +8,9 @@ const props = {
 }
 
 const FANG_CONTEXTUAL = [
-    { map: "font.base",  ...props, type: TYPE.TEXT, item: null, subitem: null, variant: "base",state: null, context: null } , 
-    { map: "font.secondary", ...props, type: TYPE.TEXT, item: null, subitem: null, variant: "secondary",  state: null, context: null },
-    { map: "font.tertiary", ...props, type: TYPE.TEXT, item: null, subitem: null, variant: "tertiary", state: null, context: null  },
+    { map: "color.font.base",  ...props, type: TYPE.TEXT, item: null, subitem: null, variant: "base",state: null, context: null } , 
+    { map: "color.font.secondary", ...props, type: TYPE.TEXT, item: null, subitem: null, variant: "secondary",  state: null, context: null },
+    { map: "color.font.tertiary", ...props, type: TYPE.TEXT, item: null, subitem: null, variant: "tertiary", state: null, context: null  },
 ]
 
 module.exports = [...FANG_CONTEXTUAL] 

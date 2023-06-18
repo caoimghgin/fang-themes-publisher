@@ -1,5 +1,5 @@
 /**
- * @name keyRouteParser
+ * @name keyParser
  * @type utility
  * @param {Object} dictionary All tokens
  * @return {Array} All keys within the dictionary
@@ -8,7 +8,7 @@
  * populate the value of token.$schema.route and map tokens to defined schemas.
  */
 
-function keyRouteParser(dictionary) {
+function keyParser(dictionary) {
     const result = []
     const set = new Set()
 
@@ -51,4 +51,4 @@ const keyify = (obj, prefix = '') =>
     }, []
     )
 
-module.exports = { keyRouteParser }
+module.exports = { keyParser }
