@@ -26,32 +26,6 @@ const getReferenceValue = (dictionary, token) => {
     return _.get(dictionary, token.value.replace(/[{()}]/g, ''))
 }
 
-
-const colorClassParser = (dictionary, keys) => {
-    for (const key of keys) {
-        const token = _.get(dictionary, key)
-        if (typeof token.value === 'object') return // is the value an object?, NOT A COLOR!
-        if (typeof token.value === 'string' || myVar instanceof String) {
-            if (token.value.startsWith('{') && token.value.endsWith('}')) {
-                let pointerValue = _.get(dictionary, token.value.replace(/[{()}]/g, ''))
-                if (utils.isColor(pointerValue)) {
-                    token.$schema.class = consts.CLASS.COLOR
-                } 
-            } else {
-                if (utils.isColor(token.value)) {
-                    token.$schema.class = consts.CLASS.COLOR
-                } 
-            }
-        }
-    }
-}
-
-
-
-
-
-
-
 const parseKey = (token) => {
     let result = null
     if (token.$schema.route) {
