@@ -23,12 +23,65 @@ const CTI_SCHEMA = () => {
 // These are modeled on the Styles that Figma
 // Publishes. I think they should be CLASS definitions
 
-const FOO = Object.freeze({
-    // EFFECT: -> SHADOOW: "shadow",
-    // PAINT: -> COLOR: "color",
-    // GRID:
-    // TEXT: -> TYPOGRAPHY: "typography",
-    // SIZE: -> SIZE: "size",
+const CLASSES = Object.freeze({
+    COLOR:{
+        CLASS: "COLOR",
+        SUBCLASS: {
+            PALETTE: "PALETTE",         // Base semantic colors, not mode specific
+            DEFINITIVE: "DEFINITIVE",   // Additional colors, not mode specific
+            SOCIAL: "SOCIAL",           // Apple, Google, etc...
+            CONTEXTUAL: {
+                CANVAS: "CANVAS",       // Background colors of the app
+                INK: "INK",             // Typography and icons
+                DYE: "DYE",             // Lines, rules
+                PAINT: "PAINT",         // Non-interactive backgrounds on canvas
+                CHROMA: "CHROMA",       // Interactive backgrounds on components
+            }
+        },
+        MODE: {
+            LIGHT: "LIGHT",
+            DARK: "DARK"
+        }
+    },
+    DIMENSION: {
+        CLASS: "DIMENSION",
+        SUBCLASS: { 
+            SIZE: "SIZE",
+            SPACE: "SPACE"
+        }
+    },
+    FONT: {
+        CLASS: "FONT",
+        SUBCLASS: {
+            EDITORIAL: "EDITORIAL",
+            UTILITY: "UTILITY",
+        }
+    },
+    EFFECT: {
+        CLASS: "EFFECT",
+        SUBCLASS: {
+            SHADOW: "SHADOW",
+            GRID: "GRID",
+            BLUR: "BLUR"
+        }
+    }
+})
+
+const DIMENSION = Object.freeze({
+    CLASS: "DIMENSION",
+    SUBCLASS: { 
+        SIZE: "SIZE",
+        SPACE: "SPACE"
+    }
+})
+
+const EFFECT = Object.freeze({
+    CLASS: "EFFECT",
+    SUBCLASS: {
+        SHADOW: "SHADOW",
+        GRID: "GRID",
+        BLUR: "BLUR"
+    }
 })
 
 const CLASS = Object.freeze({
@@ -45,6 +98,7 @@ const SUBCLASS = Object.freeze({
     SIZE: "size",
     SPACE: "space"
 })
+
 
 const CATEGORY = Object.freeze({
     PALETTE: "palette",
@@ -72,9 +126,9 @@ const ITEM = Object.freeze({
     BTN: "btn"
 })
 
-const MODE =  Object.freeze({
+const MODE = Object.freeze({
     LIGHT: "light",
     DARK: "dark",
 })
 
-module.exports = { CTI_SCHEMA, ENV, CLASS, SUBCLASS, MODE, CATEGORY, TYPE, ITEM }
+module.exports = { CTI_SCHEMA, ENV, CLASS, SUBCLASS, MODE, CATEGORY, TYPE, ITEM, CLASSES }
