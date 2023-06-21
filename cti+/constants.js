@@ -20,15 +20,12 @@ const CTI_SCHEMA = () => {
     }
 }
 
-// These are modeled on the Styles that Figma
-// Publishes. I think they should be CLASS definitions
-
 const CLASSES = Object.freeze({
     COLOR:{
         CLASS: "COLOR",
         SUBCLASS: {
             PALETTE: "PALETTE",         // Base semantic colors, not mode specific
-            DEFINITIVE: "DEFINITIVE",   // Additional colors, not mode specific
+            DEFINITIVE: "DEFINITIVE",   // Brand specific color (non-white-label), not mode specific
             SOCIAL: "SOCIAL",           // Apple, Google, etc...
             CONTEXTUAL: {
                 CANVAS: "CANVAS",       // Background colors of the app
@@ -67,48 +64,6 @@ const CLASSES = Object.freeze({
     }
 })
 
-const DIMENSION = Object.freeze({
-    CLASS: "DIMENSION",
-    SUBCLASS: { 
-        SIZE: "SIZE",
-        SPACE: "SPACE"
-    }
-})
-
-const EFFECT = Object.freeze({
-    CLASS: "EFFECT",
-    SUBCLASS: {
-        SHADOW: "SHADOW",
-        GRID: "GRID",
-        BLUR: "BLUR"
-    }
-})
-
-const CLASS = Object.freeze({
-    COLOR: "color",
-    FONT: "font",
-    DIMENSION: "dimension",
-    SHADOOW: "shadow",
-})
-
-const SUBCLASS = Object.freeze({
-    PALETTE: "palette",
-    CONTEXTUAL: "contextual",
-    DEFINITIVE: "definitive",
-    SIZE: "size",
-    SPACE: "space"
-})
-
-
-const CATEGORY = Object.freeze({
-    PALETTE: "palette",
-    COLOR: "color",
-    FONT: "font",
-    SPACE: "space",
-    SIZE: "size",
-    SHADOW: "shadow"
-})
-
 // TYPE describes how the token is used. 
 // (Backgrounds, Text, Icons, Borders)
 const TYPE = Object.freeze({
@@ -131,4 +86,13 @@ const MODE = Object.freeze({
     DARK: "dark",
 })
 
-module.exports = { CTI_SCHEMA, ENV, CLASS, SUBCLASS, MODE, CATEGORY, TYPE, ITEM, CLASSES }
+module.exports = { 
+    CTI_SCHEMA, 
+    ENV, 
+    MODE, 
+    TYPE, 
+    ITEM, 
+    DIMENSION: CLASSES.DIMENSION,
+    COLOR: CLASSES.COLOR,
+    FONT: CLASSES.FONT
+}

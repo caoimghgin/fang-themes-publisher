@@ -7,7 +7,7 @@
  * @description inserts CTI+ schema into every node for processing/filtering
  */
 
-const { CTI_SCHEMA, ENV, CLASS, SUBCLASS } = require('../../../constants')
+const { CTI_SCHEMA, ENV, COLOR, DIMENSION } = require('../../../constants')
 const utils = require('../../../utilities')
 const mapper = require('../../../mapper')
 const _ = require('lodash');
@@ -33,16 +33,16 @@ const classParser = (dictionary, keys) => {
         classForValue(token, value)
     }
     function classForValue(token, value) {
-        if (utils.isColor(value)) token.$schema.class = CLASS.COLOR
-        if (utils.isNumber(value)) token.$schema.class = CLASS.DIMENSION
-        if (utils.isFont(value)) token.$schema.class = CLASS.FONT
+        if (utils.isColor(value)) token.$schema.class = COLOR.CLASS
+        if (utils.isNumber(value)) token.$schema.class = DIMENSION.CLASS
+        if (utils.isFont(value)) token.$schema.class = FONT.CLASS
     }
 }
 
 const mappingParser = (dictionary, keys) => {
-    schemaMappingParser(dictionary, keys, CLASS.COLOR, mapper.fang_palette())
-    schemaMappingParser(dictionary, keys, CLASS.COLOR, mapper.fang_contextual())
-    schemaMappingParser(dictionary, keys, CLASS.DIMENSION, mapper.fang_size())
+    schemaMappingParser(dictionary, keys, COLOR.CLASS, mapper.fang_palette())
+    schemaMappingParser(dictionary, keys, COLOR.CLASS, mapper.fang_contextual())
+    schemaMappingParser(dictionary, keys, DIMENSION.CLASS, mapper.fang_size())
     schemaMappingParser(dictionary, keys, null, null)
 }
 
@@ -63,8 +63,8 @@ const schemaMappingParser = (dictionary, keys, tokenClass, map) => {
             if (mapper.shouldMapToken(token, null)) {
                 token.$schema.taxonomy.domain = ENV.DOMAIN.UNDEFINED
                 token.$schema.taxonomy.state = key
-                if (token.$schema.class == CLASS.COLOR) {
-                    token.$schema.subclass = SUBCLASS.DEFINITIVE
+                if (token.$schema.class == COLOR.CLASS) {
+                    token.$schema.subclass = COLOR.SUBCLASS.DEFINITIVE
                 }
             }
         }
@@ -75,7 +75,7 @@ const classParserColor = (dictionary, keys) => {
     for (const key of keys) {
         const token = _.get(dictionary, key)
         const value = (utils.isReferenceValue(token) ? utils.getReferenceValue(dictionary, token) : token.value)
-        if (utils.isColor(value)) token.$schema.class = CLASS.COLOR
+        if (utils.isColor(value)) token.$schema.class = COLOR.CLASS
     }
 }
 
@@ -83,7 +83,7 @@ const classParserSize = (dictionary, keys) => {
     for (const key of keys) {
         const token = _.get(dictionary, key)
         const value = (utils.isReferenceValue(token) ? utils.getReferenceValue(dictionary, token) : token.value)
-        if (utils.isNumber(value)) token.$schema.class = CLASS.DIMENSION
+        if (utils.isNumber(value)) token.$schema.class = DIMENSION.CLASS
     }
 }
 
@@ -91,7 +91,7 @@ const classParserFont = (dictionary, keys) => {
     for (const key of keys) {
         const token = _.get(dictionary, key)
         if (utils.isFont(token.value)) {
-            token.$schema.class = CLASS.FONT
+            token.$schema.class = FONT.CLASS
         }
     }
 }
