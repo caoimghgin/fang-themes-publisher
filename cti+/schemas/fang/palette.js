@@ -1,10 +1,10 @@
-const { ENV, CLASS, SUBCLASS, CATEGORY } = require('../../constants')
+const { ENV, COLOR } = require('../../constants')
 
 const props = { 
-    class: CLASS.COLOR,
-    subclass: SUBCLASS.PALETTE, 
-    domain: ENV.DOMAIN.SYSTEM.toLowerCase(), 
-    category: CATEGORY.PALETTE
+    class: COLOR.CLASS,
+    subclass: COLOR.SUBCLASS.PALETTE,
+    domain: ENV.DOMAIN.SYSTEM.toLowerCase(),
+    category: COLOR.SUBCLASS.PALETTE
 }
 
 const FANG_PALETTE = [

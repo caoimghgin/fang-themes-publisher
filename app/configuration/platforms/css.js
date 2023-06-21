@@ -1,5 +1,4 @@
-const { ENV } = require('../../../package.json')
-const { CLASS, SUBCLASS, CATEGORY, ITEM } = require('../../../cti+/constants')
+const { ENV, COLOR, FONT } = require('../../../cti+/constants')
 
 const name = "css"
 const ext = "css"
@@ -28,10 +27,11 @@ module.exports = (build, brand, platform) => {
         },
         files: [
             // all(),
-            paletteColors(),
-            contextualColors(),
-            unknownColors(),
-            unknownFonts(),
+            paletteColorsFile(),
+            contextualColorsFile(),
+            unknownColorsFile(),
+            
+            unknownFontsFile(),
         ]
     }
     return result
@@ -44,39 +44,54 @@ let all = () => {
     }
 }
 
-const unknownFonts = () => {
+const unknownFontsFile = () => {
     return {
         destination: `${ENV.DOMAIN.UNDEFINED.toLowerCase()}-fonts.${ext}`,
         format: 'fonts/css/[cti+]',
         filter: (token) => {
-            return ( (token.$schema.class === CLASS.FONT) && (token.$schema.taxonomy.domain === ENV.DOMAIN.UNDEFINED) )
+            return ( 
+                (token.$schema.class === FONT.CLASS) && 
+                (token.$schema.taxonomy.domain === ENV.DOMAIN.UNDEFINED) 
+                )
         }
     }
-
 }
 
-const paletteColors = () => {
+const paletteColorsFile = () => {
     return {
         destination: `${ENV.DOMAIN.SYSTEM.toLowerCase()}-palette.${ext}`,
         format: format,
-        filter: { $schema: { subclass: SUBCLASS.PALETTE } }
+        filter: (token) => {
+            return (token.$schema.subclass === COLOR.SUBCLASS.PALETTE)
+        }
     }
 }
 
-const contextualColors = () => {
+const contextualColorsFile = () => {
     return {
         destination: `${ENV.DOMAIN.SYSTEM.toLowerCase()}-contextual.${ext}`,
         format: format,
-        filter: { $schema: { subclass: SUBCLASS.CONTEXTUAL } }
+        filter: (token) => {
+            return (
+                (token.$schema.subclass === COLOR.SUBCLASS.CONTEXTUAL.CANVAS) || 
+                (token.$schema.subclass === COLOR.SUBCLASS.CONTEXTUAL.INK) || 
+                (token.$schema.subclass === COLOR.SUBCLASS.CONTEXTUAL.DYE) || 
+                (token.$schema.subclass === COLOR.SUBCLASS.CONTEXTUAL.PAINT) || 
+                (token.$schema.subclass === COLOR.SUBCLASS.CONTEXTUAL.CHROMA)
+            )
+        }
     }
 }
 
-const unknownColors = () => {
+const unknownColorsFile = () => {
     return {
         destination: `${ENV.DOMAIN.UNDEFINED.toLowerCase()}-colors.${ext}`,
         format: format,
         filter: (token) => {
-            return ( (token.$schema.class === CLASS.COLOR) && (token.$schema.taxonomy.domain === ENV.DOMAIN.UNDEFINED) )
+            return ( 
+                (token.$schema.class === COLOR.CLASS) && 
+                (token.$schema.taxonomy.domain === ENV.DOMAIN.UNDEFINED) 
+                )
         }
     }
 }

@@ -1,10 +1,10 @@
-const { ENV, CLASS, SUBCLASS, CATEGORY, TYPE } = require('../../constants')
+const { ENV, TYPE, DIMENSION } = require('../../constants')
 
 const props = { 
-    class: CLASS.DIMENSION, 
-    subclass: SUBCLASS.SIZE, 
+    class: DIMENSION.CLASS, 
+    subclass: DIMENSION.SUBCLASS.SIZE, 
     domain: ENV.DOMAIN.SYSTEM.toLowerCase(), 
-    category: CATEGORY.SIZE
+    category: DIMENSION.SUBCLASS.SIZE
 }
 
 const FANG_SIZE = [

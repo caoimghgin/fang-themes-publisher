@@ -20,39 +20,48 @@ const CTI_SCHEMA = () => {
     }
 }
 
-// These are modeled on the Styles that Figma
-// Publishes. I think they should be CLASS definitions
-
-const FOO = Object.freeze({
-    // EFFECT: -> SHADOOW: "shadow",
-    // PAINT: -> COLOR: "color",
-    // GRID:
-    // TEXT: -> TYPOGRAPHY: "typography",
-    // SIZE: -> SIZE: "size",
-})
-
-const CLASS = Object.freeze({
-    COLOR: "color",
-    FONT: "font",
-    DIMENSION: "dimension",
-    SHADOOW: "shadow",
-})
-
-const SUBCLASS = Object.freeze({
-    PALETTE: "palette",
-    CONTEXTUAL: "contextual",
-    DEFINITIVE: "definitive",
-    SIZE: "size",
-    SPACE: "space"
-})
-
-const CATEGORY = Object.freeze({
-    PALETTE: "palette",
-    COLOR: "color",
-    FONT: "font",
-    SPACE: "space",
-    SIZE: "size",
-    SHADOW: "shadow"
+const CLASSES = Object.freeze({
+    COLOR:{
+        CLASS: "COLOR",
+        SUBCLASS: {
+            PALETTE: "PALETTE",         // Base semantic colors, not mode specific
+            DEFINITIVE: "DEFINITIVE",   // Brand specific color (non-white-label), not mode specific
+            SOCIAL: "SOCIAL",           // Apple, Google, etc...
+            CONTEXTUAL: {
+                CANVAS: "CANVAS",       // Background colors of the app
+                INK: "INK",             // Typography and icons
+                DYE: "DYE",             // Lines, rules
+                PAINT: "PAINT",         // Non-interactive backgrounds on canvas
+                CHROMA: "CHROMA",       // Interactive backgrounds on components
+            }
+        },
+        MODE: {
+            LIGHT: "LIGHT",
+            DARK: "DARK"
+        }
+    },
+    DIMENSION: {
+        CLASS: "DIMENSION",
+        SUBCLASS: { 
+            SIZE: "SIZE",
+            SPACE: "SPACE"
+        }
+    },
+    FONT: {
+        CLASS: "FONT",
+        SUBCLASS: {
+            EDITORIAL: "EDITORIAL",
+            UTILITY: "UTILITY",
+        }
+    },
+    EFFECT: {
+        CLASS: "EFFECT",
+        SUBCLASS: {
+            SHADOW: "SHADOW",
+            GRID: "GRID",
+            BLUR: "BLUR"
+        }
+    }
 })
 
 // TYPE describes how the token is used. 
@@ -72,9 +81,18 @@ const ITEM = Object.freeze({
     BTN: "btn"
 })
 
-const MODE =  Object.freeze({
+const MODE = Object.freeze({
     LIGHT: "light",
     DARK: "dark",
 })
 
-module.exports = { CTI_SCHEMA, ENV, CLASS, SUBCLASS, MODE, CATEGORY, TYPE, ITEM }
+module.exports = { 
+    CTI_SCHEMA, 
+    ENV, 
+    MODE, 
+    TYPE, 
+    ITEM, 
+    DIMENSION: CLASSES.DIMENSION,
+    COLOR: CLASSES.COLOR,
+    FONT: CLASSES.FONT
+}
