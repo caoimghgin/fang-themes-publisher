@@ -22,7 +22,9 @@ function schemaParser(dictionary, keys) {
 const modeParser = (dictionary, keys) => {
     for (const key of keys) {
         const token = _.get(dictionary, key)
-        // mapper.modeForToken(token)
+
+        
+        mapper.modeForToken(token)
     }
 }
 

@@ -2,6 +2,7 @@
 
 const consts = require("./constants")
 const utils = require("./utilities")
+const { ENV, COLOR, MODE } = require('./constants')
 
 const FANG_PALETTE = require("./schemas/fang/palette")
 const FANG_CONTEXTUAL = require("./schemas/fang/contextual")
@@ -57,11 +58,9 @@ const getSchema = (taxonomy) => {
     });
 
     function schemaMapContructor (item) {
-        if (item.map) return item.map
-        // let result = [item.type, item.item, item.variant, item.subitem, item.state, item.context]
+        if (item.map) return item.map.toUpperCase()
         let result = [item.category, item.type, item.item, item.variant, item.subitem, item.state, item.context]
-
-        return result.filter(n => n).toString()
+        return result.filter(n => n).join(".").toUpperCase()
     }
 
     return result
@@ -69,10 +68,8 @@ const getSchema = (taxonomy) => {
 }
 
 const modeForToken = (token) => {
-    // isContextual(token)
-
-    let modeKey = "dark"
-    if (token.$schema.subclass == consts.SUBCLASS.CONTEXTUAL) {
+    let modeKey = MODE.DARK
+    if (isContextualColor(token)) {
         let path = token.$schema.route.split(".")
         path.pop()
         const endsWithDark = path.find(item => {
@@ -85,11 +82,9 @@ const modeForToken = (token) => {
         token.$schema.mode = (isDarkMode ? consts.MODE.DARK : consts.MODE.LIGHT)
     }
 
-    function isContextual (token) {
-    //  let r = Object.values(consts.COLOR.CONTEXTUAL)
-    //  if (r.includes(token.subclass)) {
-    //     console.log("FOUND A CONTEXTUAL ->", token)
-    //  }
+    function isContextualColor(token) {
+        let contextualColors = Object.values(COLOR.SUBCLASS.CONTEXTUAL) 
+        return contextualColors.includes(token.$schema.subclass)
     }
 }
 

@@ -82,8 +82,8 @@ const ITEM = Object.freeze({
 })
 
 const MODE = Object.freeze({
-    LIGHT: "light",
-    DARK: "dark",
+    LIGHT: "LIGHT",
+    DARK: "DARK",
 })
 
 module.exports = { 
