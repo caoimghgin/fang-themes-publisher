@@ -16,6 +16,14 @@ function schemaParser(dictionary, keys) {
     routeParser(dictionary, keys)
     classParser(dictionary, keys)
     mappingParser(dictionary, keys)
+    modeParser(dictionary, keys)
+}
+
+const modeParser = (dictionary, keys) => {
+    for (const key of keys) {
+        const token = _.get(dictionary, key)
+        // mapper.modeForToken(token)
+    }
 }
 
 const routeParser = (dictionary, keys) => {

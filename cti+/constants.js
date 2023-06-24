@@ -28,7 +28,7 @@ const CLASSES = Object.freeze({
             DEFINITIVE: "DEFINITIVE",   // Brand specific color (non-white-label), not mode specific
             SOCIAL: "SOCIAL",           // Apple, Google, etc...
             CONTEXTUAL: {
-                CANVAS: "CANVAS",       // Background colors of the app
+                CANVAS: "CANVAS",       // Background of app
                 INK: "INK",             // Typography and icons
                 DYE: "DYE",             // Lines, rules
                 PAINT: "PAINT",         // Non-interactive backgrounds on canvas
