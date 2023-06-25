@@ -27,10 +27,10 @@ module.exports = (build, brand, platform) => {
         },
         files: [
             // all(),
-            paletteColorsFile(),
-            contextualColorsFile(),
-            unknownColorsFile(),
-            
+            paletteColorsFile(ENV.DOMAIN.SYSTEM),
+            contextualColorsFile(ENV.DOMAIN.SYSTEM, COLOR.MODE.LIGHT),
+            contextualColorsFile(ENV.DOMAIN.SYSTEM, COLOR.MODE.DARK),
+            definitiveColorsFile(ENV.DOMAIN.UNDEFINED),
             unknownFontsFile(),
         ]
     }
@@ -49,49 +49,59 @@ const unknownFontsFile = () => {
         destination: `${ENV.DOMAIN.UNDEFINED.toLowerCase()}-fonts.${ext}`,
         format: 'fonts/css/[cti+]',
         filter: (token) => {
-            return ( 
-                (token.$schema.class === FONT.CLASS) && 
-                (token.$schema.taxonomy.domain === ENV.DOMAIN.UNDEFINED) 
-                )
-        }
-    }
-}
-
-const paletteColorsFile = () => {
-    return {
-        destination: `${ENV.DOMAIN.SYSTEM.toLowerCase()}-palette.${ext}`,
-        format: format,
-        filter: (token) => {
-            return (token.$schema.subclass === COLOR.SUBCLASS.PALETTE)
-        }
-    }
-}
-
-const contextualColorsFile = () => {
-    return {
-        destination: `${ENV.DOMAIN.SYSTEM.toLowerCase()}-contextual.${ext}`,
-        format: format,
-        filter: (token) => {
             return (
-                (token.$schema.subclass === COLOR.SUBCLASS.CONTEXTUAL.CANVAS) || 
-                (token.$schema.subclass === COLOR.SUBCLASS.CONTEXTUAL.INK) || 
-                (token.$schema.subclass === COLOR.SUBCLASS.CONTEXTUAL.DYE) || 
-                (token.$schema.subclass === COLOR.SUBCLASS.CONTEXTUAL.PAINT) || 
-                (token.$schema.subclass === COLOR.SUBCLASS.CONTEXTUAL.CHROMA)
+                (token.$schema.class === FONT.CLASS) &&
+                (token.$schema.taxonomy.domain === ENV.DOMAIN.UNDEFINED)
             )
         }
     }
 }
 
-const unknownColorsFile = () => {
+const paletteColorsFile = (domain) => {
+    const destination = `colors/palette/${domain.toLowerCase()}-palette.${ext}`
     return {
-        destination: `${ENV.DOMAIN.UNDEFINED.toLowerCase()}-colors.${ext}`,
+        destination: destination,
         format: format,
         filter: (token) => {
-            return ( 
-                (token.$schema.class === COLOR.CLASS) && 
-                (token.$schema.taxonomy.domain === ENV.DOMAIN.UNDEFINED) 
+            return (
+                (token.$schema.taxonomy.domain.toLowerCase() === domain.toLowerCase()) &&
+                (token.$schema.subclass === COLOR.SUBCLASS.PALETTE)
+            )
+        }
+    }
+}
+
+const contextualColorsFile = (domain, mode) => {
+    const destination = `colors/contextual/${mode.toLowerCase()}/${domain.toLowerCase()}-contextual.${ext}`
+    return {
+        destination: destination,
+        format: format,
+        filter: (token) => {
+            return (
+                (
+                    (token.$schema.subclass === COLOR.SUBCLASS.CONTEXTUAL.CANVAS) ||
+                    (token.$schema.subclass === COLOR.SUBCLASS.CONTEXTUAL.INK) ||
+                    (token.$schema.subclass === COLOR.SUBCLASS.CONTEXTUAL.DYE) ||
+                    (token.$schema.subclass === COLOR.SUBCLASS.CONTEXTUAL.PAINT) ||
+                    (token.$schema.subclass === COLOR.SUBCLASS.CONTEXTUAL.CHROMA)
+                ) && (
+                    (token.$schema.mode === mode)
                 )
+            )
+        }
+    }
+}
+
+const definitiveColorsFile = (domain) => {
+    const destination = `colors/definitive/${domain.toLowerCase()}-definitive.${ext}`
+    return {
+        destination: destination,
+        format: format,
+        filter: (token) => {
+            return (
+                (token.$schema.class === COLOR.CLASS) &&
+                (token.$schema.taxonomy.domain === ENV.DOMAIN.UNDEFINED)
+            )
         }
     }
 }
