@@ -1,8 +1,5 @@
-
-
-const consts = require("./constants")
+const { SCHEMA, COLOR } = require('./constants')
 const utils = require("./utilities")
-const { ENV, COLOR, MODE } = require('./constants')
 
 const FANG_PALETTE = require("./schemas/fang/palette")
 const FANG_CONTEXTUAL = require("./schemas/fang/contextual")
@@ -12,7 +9,7 @@ const shouldMapToken = (token, schemaClass) => {
     return (token.$schema.map == null)
 }
 
-const schemaForToken = (schemaSet, token) => {
+const setSchemaForToken = (schemaSet, token) => {
 
     const route = utils.keyCleaner(token.$schema.route)
     const result = schemaSet.filter(schema => route.endsWith(utils.keyCleaner(schema.map))) // <-
@@ -34,7 +31,7 @@ const schemaForToken = (schemaSet, token) => {
 const getSchema = (taxonomy) => {
     result = []
     taxonomy.forEach((item) => {
-        let schema = consts.CTI_SCHEMA()
+        let schema = SCHEMA()
         schema.class = item.class
         schema.subclass = item.subclass
         schema.mode = null
@@ -51,41 +48,42 @@ const getSchema = (taxonomy) => {
         result.push(schema)
     });
 
-    function schemaMapContructor (item) {
+    function schemaMapContructor(item) {
         if (item.map) return item.map.toUpperCase()
         let result = [item.type, item.item, item.variant, item.subitem, item.state, item.context]
         return result.filter(n => n).join(".").toUpperCase()
     }
 
     return result
-    
+
 }
 
-const modeForToken = (token) => {
-    let modeKey = MODE.DARK
-    if (isContextualColor(token)) {
-        let path = token.$schema.route.split(".")
-        path.pop()
-        const endsWithDark = path.find(item => {
-            return item.toUpperCase().endsWith(modeKey.toUpperCase());
-        })
-        const startsWitDark = path.find(item => {
-            return item.toUpperCase().startsWith(modeKey.toUpperCase());
-        })
-        const isDarkMode = ((endsWithDark !== undefined) || (startsWitDark !== undefined))
-        token.$schema.mode = (isDarkMode ? consts.MODE.DARK : consts.MODE.LIGHT)
-    }
+const setModeForToken = (token) => {
+
+    if (!isContextualColor(token)) return null
+
+    let path = token.$schema.route.split("."); path.pop()
+
+    const endsWithDark = path.find(item => {
+        return item.toUpperCase().endsWith(COLOR.MODE.DARK.toUpperCase());
+    })
+
+    const startsWitDark = path.find(item => {
+        return item.toUpperCase().startsWith(COLOR.MODE.DARK.toUpperCase());
+    })
+
+    token.$schema.mode = (((endsWithDark !== undefined) || (startsWitDark !== undefined)) ? COLOR.MODE.DARK : COLOR.MODE.LIGHT)
 
     function isContextualColor(token) {
-        let contextualColors = Object.values(COLOR.SUBCLASS.CONTEXTUAL) 
+        let contextualColors = Object.values(COLOR.SUBCLASS.CONTEXTUAL)
         return contextualColors.includes(token.$schema.subclass)
     }
 }
 
 module.exports = {
+    setSchemaForToken,
+    setModeForToken,
     shouldMapToken,
-    schemaForToken,
-    modeForToken,
     fang_palette: () => (getSchema(FANG_PALETTE)),
     fang_contextual: () => (getSchema(FANG_CONTEXTUAL)),
     fang_size: () => (getSchema(FANG_SIZE)),

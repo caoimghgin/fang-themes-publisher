@@ -1,6 +1,6 @@
 const { ENV } = require("../package.json")
 
-const CTI_SCHEMA = () => {
+const SCHEMA = () => {
     return {
         class: null,
         subclass: null,
@@ -75,24 +75,17 @@ const TYPE = Object.freeze({
 // ITEM describes a component it’s used on. 
 // (Button, Modal, Banner, Paper)
 const ITEM = Object.freeze({
-    BKG: "bkg",
     FONT: "text",
     ICN: "icn",
     BTN: "btn"
 })
 
-const MODE = Object.freeze({
-    LIGHT: "LIGHT",
-    DARK: "DARK",
-})
-
 module.exports = { 
-    CTI_SCHEMA, 
+    SCHEMA, 
     ENV, 
-    MODE, 
     TYPE, 
     ITEM, 
-    DIMENSION: CLASSES.DIMENSION,
     COLOR: CLASSES.COLOR,
-    FONT: CLASSES.FONT
+    FONT: CLASSES.FONT,
+    DIMENSION: CLASSES.DIMENSION
 }

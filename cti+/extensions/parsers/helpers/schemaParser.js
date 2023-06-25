@@ -7,7 +7,7 @@
  * @description inserts CTI+ schema into every node for processing/filtering
  */
 
-const { CTI_SCHEMA, ENV, COLOR, DIMENSION } = require('../../../constants')
+const { SCHEMA, ENV, COLOR, DIMENSION } = require('../../../constants')
 const utils = require('../../../utilities')
 const mapper = require('../../../mapper')
 const _ = require('lodash');
@@ -22,16 +22,14 @@ function schemaParser(dictionary, keys) {
 const modeParser = (dictionary, keys) => {
     for (const key of keys) {
         const token = _.get(dictionary, key)
-
-        
-        mapper.modeForToken(token)
+        mapper.setModeForToken(token)
     }
 }
 
 const routeParser = (dictionary, keys) => {
     for (const key of keys) {
         const token = _.get(dictionary, key)
-        Object.assign(token, { $schema: CTI_SCHEMA() });
+        Object.assign(token, { $schema: SCHEMA() });
         token.$schema.route = key
     }
 }
@@ -63,7 +61,7 @@ const schemaMappingParser = (dictionary, keys, tokenClass, map) => {
     for (const key of keys) {
         const token = _.get(dictionary, key)
         if (mapper.shouldMapToken(token, tokenClass)) {
-            mapper.schemaForToken(map, token)
+            mapper.setSchemaForToken(map, token)
         }
     }
 
@@ -72,7 +70,7 @@ const schemaMappingParser = (dictionary, keys, tokenClass, map) => {
             const token = _.get(dictionary, key)
             if (mapper.shouldMapToken(token, null)) {
                 token.$schema.taxonomy.domain = ENV.DOMAIN.UNDEFINED
-                token.$schema.taxonomy.state = key
+                token.$schema.taxonomy.context = key
                 if (token.$schema.class == COLOR.CLASS) {
                     token.$schema.subclass = COLOR.SUBCLASS.DEFINITIVE
                 }
