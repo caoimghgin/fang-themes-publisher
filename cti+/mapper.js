@@ -10,15 +10,12 @@ const FANG_SIZE = require("./schemas/fang/size")
 
 const shouldMapToken = (token, schemaClass) => {
     return (token.$schema.map == null)
-    return ((schemaClass != null) ?
-        ((token.$schema.class == schemaClass) && (token.$schema.map == null)) :
-        (token.$schema.map == null))
 }
 
-const schemaForToken = (schemaArray, token) => {
+const schemaForToken = (schemaSet, token) => {
 
     const route = utils.keyCleaner(token.$schema.route)
-    const result = schemaArray.filter(schema => route.endsWith(utils.keyCleaner(schema.map))) // <-
+    const result = schemaSet.filter(schema => route.endsWith(utils.keyCleaner(schema.map))) // <-
 
     if (result.length === 0) return undefined
     if (result.length > 1) throw new Error(`"${result}" has more than one value for tokenAttributesForKey. 
@@ -27,13 +24,10 @@ const schemaForToken = (schemaArray, token) => {
     let item = result[0]
 
     if (item) {
-        token.$schema.class = token.$schema.class
+        token.$schema.class = item.class
         token.$schema.subclass = item.subclass
-        // token.$schema.mode = token.$schema.mode
-        // token.$schema.route = token.$schema.route
         token.$schema.map = item.map
         token.$schema.taxonomy = item.taxonomy
-        // mapMode(token)
     }
 }
 
@@ -59,7 +53,7 @@ const getSchema = (taxonomy) => {
 
     function schemaMapContructor (item) {
         if (item.map) return item.map.toUpperCase()
-        let result = [item.category, item.type, item.item, item.variant, item.subitem, item.state, item.context]
+        let result = [item.type, item.item, item.variant, item.subitem, item.state, item.context]
         return result.filter(n => n).join(".").toUpperCase()
     }
 
