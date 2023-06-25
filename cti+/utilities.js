@@ -36,10 +36,6 @@ const parseKey = (token) => {
     return result
 }
 
-const keyCleaner = (item) => {
-    return item.split('.').join('').replace(/[^A-Z0-9]/ig, "").toUpperCase()
-}
-
 const hasSchema = (token) => {
     return (token.hasOwnProperty('$schema'))
 }
@@ -48,4 +44,4 @@ const transformFallback = (transform, token, options) => {
     return transform.transformer(token, options)
 }
 
-module.exports = { isColor, isNumber, isFont, parseKey, keyCleaner, hasSchema, transformFallback, isReferenceValue, getReferenceValue }
+module.exports = { isColor, isNumber, isFont, parseKey, hasSchema, transformFallback, isReferenceValue, getReferenceValue }

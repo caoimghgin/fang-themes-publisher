@@ -60,7 +60,7 @@ const schemaMappingParser = (dictionary, keys, tokenClass, map) => {
 
     for (const key of keys) {
         const token = _.get(dictionary, key)
-        if (mapper.shouldMapToken(token, tokenClass)) {
+        if (token.$schema.map == null) {
             mapper.setSchemaForToken(map, token)
         }
     }
@@ -68,7 +68,7 @@ const schemaMappingParser = (dictionary, keys, tokenClass, map) => {
     function undefinedSchemaParser(dictionary, keys) {
         for (const key of keys) {
             const token = _.get(dictionary, key)
-            if (mapper.shouldMapToken(token, null)) {
+            if (token.$schema.map == null) {
                 token.$schema.taxonomy.domain = ENV.DOMAIN.UNDEFINED
                 token.$schema.taxonomy.context = key
                 if (token.$schema.class == COLOR.CLASS) {

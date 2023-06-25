@@ -1,18 +1,13 @@
 const { SCHEMA, COLOR } = require('./constants')
-const utils = require("./utilities")
 
 const FANG_PALETTE = require("./schemas/fang/palette")
 const FANG_CONTEXTUAL = require("./schemas/fang/contextual")
 const FANG_SIZE = require("./schemas/fang/size")
 
-const shouldMapToken = (token, schemaClass) => {
-    return (token.$schema.map == null)
-}
-
 const setSchemaForToken = (schemaSet, token) => {
 
-    const route = utils.keyCleaner(token.$schema.route)
-    const result = schemaSet.filter(schema => route.endsWith(utils.keyCleaner(schema.map))) // <-
+    const route = keyCleaner(token.$schema.route)
+    const result = schemaSet.filter(schema => route.endsWith(keyCleaner(schema.map))) // <-
 
     if (result.length === 0) return undefined
     if (result.length > 1) throw new Error(`"${result}" has more than one value for tokenAttributesForKey. 
@@ -25,6 +20,10 @@ const setSchemaForToken = (schemaSet, token) => {
         token.$schema.subclass = item.subclass
         token.$schema.map = item.map
         token.$schema.taxonomy = item.taxonomy
+    }
+
+    function keyCleaner(item) {
+        return item.split('.').join('').replace(/[^A-Z0-9]/ig, "").toUpperCase()
     }
 }
 
@@ -60,20 +59,37 @@ const getSchema = (taxonomy) => {
 
 const setModeForToken = (token) => {
 
+    // Only contextual colors have dark/light modes. If token is not 
+    // a contextual color return null
     if (!isContextualColor(token)) return null
+    
+    // Get path to the token without the end leaf node
+    const path = getPath(token)
 
-    let path = token.$schema.route.split("."); path.pop()
+    // Set the $schema.mode to dark or light mode
+    token.$schema.mode = (isDarkMode(path) ? COLOR.MODE.DARK : COLOR.MODE.LIGHT)
+    
+    // Get path to the token without the end leaf node. If a color is
+    // named 'ink.dark', it is not considered dark mode. We only look at 
+    // the container directories above.
+    function getPath(token) {
+        let result = token.$schema.route.split("."); result.pop()
+        return result
+    }
 
-    const endsWithDark = path.find(item => {
-        return item.toUpperCase().endsWith(COLOR.MODE.DARK.toUpperCase());
-    })
+    // If a container of a token begins or ends with the word 'dark', 
+    // then it is dark mode.
+    function isDarkMode(path) {
+        const startsWithDark = path.find(item => {
+            return item.toUpperCase().startsWith(COLOR.MODE.DARK.toUpperCase());
+        })
+        const endsWithDark = path.find(item => {
+            return item.toUpperCase().endsWith(COLOR.MODE.DARK.toUpperCase());
+        })
+        return ((startsWithDark !== undefined) || (endsWithDark !== undefined))
+    }
 
-    const startsWitDark = path.find(item => {
-        return item.toUpperCase().startsWith(COLOR.MODE.DARK.toUpperCase());
-    })
-
-    token.$schema.mode = (((endsWithDark !== undefined) || (startsWitDark !== undefined)) ? COLOR.MODE.DARK : COLOR.MODE.LIGHT)
-
+    // Contextual colors are a subclass of color that responds to mode support
     function isContextualColor(token) {
         let contextualColors = Object.values(COLOR.SUBCLASS.CONTEXTUAL)
         return contextualColors.includes(token.$schema.subclass)
@@ -83,7 +99,6 @@ const setModeForToken = (token) => {
 module.exports = {
     setSchemaForToken,
     setModeForToken,
-    shouldMapToken,
     fang_palette: () => (getSchema(FANG_PALETTE)),
     fang_contextual: () => (getSchema(FANG_CONTEXTUAL)),
     fang_size: () => (getSchema(FANG_SIZE)),
