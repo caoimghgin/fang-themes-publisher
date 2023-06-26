@@ -1,8 +1,8 @@
-const { ENV, COLOR, FONT } = require('../../../cti+/constants')
+const { DOMAIN, COLOR, FONT } = require('../../../cti+/constants')
 
 const name = "css"
 const ext = "css"
-const format = "css/variables"
+const format = "css/variables/[cti+]"
 
 const transforms = [
     'attribute/cti',
@@ -12,7 +12,7 @@ const transforms = [
     'content/icon',
     'size/rem',
     'color/css',
-    'console/schemas/[cti+]'
+    // 'console/schemas/[cti+]'
     // 'console/routes/[cti+]'
 ]
 
@@ -27,11 +27,11 @@ module.exports = (build, brand, platform) => {
         },
         files: [
             // all(),
-            paletteColorsFile(ENV.DOMAIN.SYSTEM),
-            contextualColorsFile(ENV.DOMAIN.SYSTEM, COLOR.MODE.LIGHT),
-            contextualColorsFile(ENV.DOMAIN.SYSTEM, COLOR.MODE.DARK),
-            definitiveColorsFile(ENV.DOMAIN.UNDEFINED),
-            unknownFontsFile(),
+            paletteColorsFile(DOMAIN.SYSTEM),
+            contextualColorsFile(DOMAIN.SYSTEM, COLOR.MODE.LIGHT),
+            contextualColorsFile(DOMAIN.SYSTEM, COLOR.MODE.DARK),
+            definitiveColorsFile(DOMAIN.UNDEFINED),
+            unknownFontsFile(DOMAIN.UNDEFINED),
         ]
     }
     return result
@@ -44,14 +44,14 @@ let all = () => {
     }
 }
 
-const unknownFontsFile = () => {
+const unknownFontsFile = (domain) => {
     return {
-        destination: `${ENV.DOMAIN.UNDEFINED.toLowerCase()}-fonts.${ext}`,
+        destination: `${domain.toLowerCase()}-fonts.${ext}`,
         format: 'fonts/css/[cti+]',
         filter: (token) => {
             return (
                 (token.$schema.class === FONT.CLASS) &&
-                (token.$schema.taxonomy.domain === ENV.DOMAIN.UNDEFINED)
+                (token.$schema.taxonomy.domain.toLowerCase() === domain.toLowerCase())
             )
         }
     }
@@ -76,6 +76,7 @@ const contextualColorsFile = (domain, mode) => {
     return {
         destination: destination,
         format: format,
+        options: {mode: mode},
         filter: (token) => {
             return (
                 (
@@ -100,7 +101,7 @@ const definitiveColorsFile = (domain) => {
         filter: (token) => {
             return (
                 (token.$schema.class === COLOR.CLASS) &&
-                (token.$schema.taxonomy.domain === ENV.DOMAIN.UNDEFINED)
+                (token.$schema.taxonomy.domain.toLowerCase() === domain.toLowerCase())
             )
         }
     }

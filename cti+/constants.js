@@ -85,6 +85,7 @@ module.exports = {
     ENV, 
     TYPE, 
     ITEM, 
+    DOMAIN: ENV.DOMAIN,
     COLOR: CLASSES.COLOR,
     FONT: CLASSES.FONT,
     DIMENSION: CLASSES.DIMENSION
