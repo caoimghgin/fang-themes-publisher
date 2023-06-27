@@ -1,9 +1,16 @@
+const { COLOR } = require ("./constants")
 const tinycolor = require("tinycolor2")
 const _ = require('lodash');
 
 const isColor = (value) => {
     const color = tinycolor(value);
     return color.isValid()
+}
+
+// Contextual colors are a subclass of color that responds to mode support
+const isContextualColor = (token) => {
+    let contextualColors = Object.values(COLOR.SUBCLASS.CONTEXTUAL)
+    return contextualColors.includes(token.$schema.subclass)
 }
 
 const isNumber = (value) => {
@@ -15,8 +22,8 @@ const isFont = (value) => {
 }
 
 const isReferenceValue = (token) => {
-    if ((typeof token.value === 'string' || token.value instanceof String) && 
-    (token.value.startsWith('{') && token.value.endsWith('}'))) {
+    if ((typeof token.value === 'string' || token.value instanceof String) &&
+        (token.value.startsWith('{') && token.value.endsWith('}'))) {
         return true
     }
     return false
@@ -36,6 +43,10 @@ const parseKey = (token) => {
     return result
 }
 
+function keyCleaner(item) {
+    return item.split('.').join('').replace(/[^A-Z0-9]/ig, "").toUpperCase()
+}
+
 const hasSchema = (token) => {
     return (token.hasOwnProperty('$schema'))
 }
@@ -44,4 +55,4 @@ const transformFallback = (transform, token, options) => {
     return transform.transformer(token, options)
 }
 
-module.exports = { isColor, isNumber, isFont, parseKey, hasSchema, transformFallback, isReferenceValue, getReferenceValue }
+module.exports = { isColor, isContextualColor, isNumber, isFont, parseKey, keyCleaner, hasSchema, transformFallback, isReferenceValue, getReferenceValue }

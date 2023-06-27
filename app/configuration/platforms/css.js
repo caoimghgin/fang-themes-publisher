@@ -7,7 +7,8 @@ const format = "css/variables/[cti+]"
 const transforms = [
     'attribute/cti',
     'name/cti/kebab',
-    'name/kebab/[cti+]',
+    // 'name/cti/kebab/[cti+]',
+    'name/color/ti/kebab/[cti+]',
     'time/seconds',
     'content/icon',
     'size/rem',

@@ -1,4 +1,5 @@
 const { SCHEMA, COLOR } = require('./constants')
+const { isContextualColor, keyCleaner } = require('./utilities')
 
 const FANG_PALETTE = require("./schemas/fang/palette")
 const FANG_CONTEXTUAL = require("./schemas/fang/contextual")
@@ -20,10 +21,6 @@ const setSchemaForToken = (schemaSet, token) => {
         token.$schema.subclass = item.subclass
         token.$schema.map = item.map
         token.$schema.taxonomy = item.taxonomy
-    }
-
-    function keyCleaner(item) {
-        return item.split('.').join('').replace(/[^A-Z0-9]/ig, "").toUpperCase()
     }
 }
 
@@ -87,12 +84,6 @@ const setModeForToken = (token) => {
             return item.toUpperCase().endsWith(COLOR.MODE.DARK.toUpperCase());
         })
         return ((startsWithDark !== undefined) || (endsWithDark !== undefined))
-    }
-
-    // Contextual colors are a subclass of color that responds to mode support
-    function isContextualColor(token) {
-        let contextualColors = Object.values(COLOR.SUBCLASS.CONTEXTUAL)
-        return contextualColors.includes(token.$schema.subclass)
     }
 }
 
