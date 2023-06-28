@@ -1,5 +1,5 @@
 const { SCHEMA, COLOR } = require('./constants')
-const { isContextualColor, keyCleaner } = require('./utilities')
+const { isContextualColor, keyCleaner, schemaMapContructor } = require('./utilities')
 
 const FANG_PALETTE = require("./schemas/fang/palette")
 const FANG_CONTEXTUAL = require("./schemas/fang/contextual")
@@ -44,14 +44,7 @@ const getSchema = (taxonomy) => {
         result.push(schema)
     });
 
-    function schemaMapContructor(item) {
-        if (item.map) return item.map.toUpperCase()
-        let result = [item.type, item.item, item.variant, item.subitem, item.state, item.context]
-        return result.filter(n => n).join(".").toUpperCase()
-    }
-
     return result
-
 }
 
 const setModeForToken = (token) => {

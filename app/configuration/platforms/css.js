@@ -1,4 +1,5 @@
 const { DOMAIN, COLOR, FONT } = require('../../../cti+/constants')
+const { isContextualColor } = require('../../../cti+/utilities')
 
 const name = "css"
 const ext = "css"
@@ -7,7 +8,6 @@ const format = "css/variables/[cti+]"
 const transforms = [
     'attribute/cti',
     'name/cti/kebab',
-    // 'name/cti/kebab/[cti+]',
     'name/color/ti/kebab/[cti+]',
     'time/seconds',
     'content/icon',
@@ -27,22 +27,15 @@ module.exports = (build, brand, platform) => {
             outputReferences: true,
         },
         files: [
-            // all(),
             paletteColorsFile(DOMAIN.SYSTEM),
             contextualColorsFile(DOMAIN.SYSTEM, COLOR.MODE.LIGHT),
             contextualColorsFile(DOMAIN.SYSTEM, COLOR.MODE.DARK),
             definitiveColorsFile(DOMAIN.UNDEFINED),
             unknownFontsFile(DOMAIN.UNDEFINED),
+            // all(),
         ]
     }
     return result
-}
-
-let all = () => {
-    return {
-        destination: `variables.${ext}`,
-        format: format,
-    }
 }
 
 const unknownFontsFile = (domain) => {
@@ -80,15 +73,8 @@ const contextualColorsFile = (domain, mode) => {
         options: {mode: mode},
         filter: (token) => {
             return (
-                (
-                    (token.$schema.subclass === COLOR.SUBCLASS.CONTEXTUAL.CANVAS) ||
-                    (token.$schema.subclass === COLOR.SUBCLASS.CONTEXTUAL.INK) ||
-                    (token.$schema.subclass === COLOR.SUBCLASS.CONTEXTUAL.DYE) ||
-                    (token.$schema.subclass === COLOR.SUBCLASS.CONTEXTUAL.PAINT) ||
-                    (token.$schema.subclass === COLOR.SUBCLASS.CONTEXTUAL.CHROMA)
-                ) && (
-                    (token.$schema.mode === mode)
-                )
+                (isContextualColor(token)) && 
+                (token.$schema.mode === mode)
             )
         }
     }
@@ -105,5 +91,12 @@ const definitiveColorsFile = (domain) => {
                 (token.$schema.taxonomy.domain.toLowerCase() === domain.toLowerCase())
             )
         }
+    }
+}
+
+const all = () => {
+    return {
+        destination: `variables.${ext}`,
+        format: format,
     }
 }

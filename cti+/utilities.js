@@ -55,4 +55,22 @@ const transformFallback = (transform, token, options) => {
     return transform.transformer(token, options)
 }
 
-module.exports = { isColor, isContextualColor, isNumber, isFont, parseKey, keyCleaner, hasSchema, transformFallback, isReferenceValue, getReferenceValue }
+function schemaMapContructor(item) {
+    if (item.map) return item.map.toUpperCase()
+    let result = [item.type, item.item, item.variant, item.subitem, item.state, item.context]
+    return result.filter(n => n).join(".").toUpperCase()
+}
+
+module.exports = { 
+    isColor, 
+    isContextualColor, 
+    isNumber, 
+    isFont, 
+    parseKey, 
+    keyCleaner, 
+    hasSchema, 
+    transformFallback, 
+    isReferenceValue, 
+    getReferenceValue, 
+    schemaMapContructor 
+}
