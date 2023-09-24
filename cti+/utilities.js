@@ -9,6 +9,7 @@ const isColor = (value) => {
 
 // Contextual colors are a subclass of color that responds to mode support
 const isContextualColor = (token) => {
+    return false
     let contextualColors = Object.values(COLOR.SUBCLASS.CONTEXTUAL)
     return contextualColors.includes(token.$schema.subclass)
 }
@@ -55,10 +56,16 @@ const transformFallback = (transform, token, options) => {
     return transform.transformer(token, options)
 }
 
-function schemaMapContructor(item) {
-    if (item.map) return item.map.toUpperCase()
-    let result = [item.type, item.item, item.variant, item.subitem, item.state, item.context]
-    return result.filter(n => n).join(".").toUpperCase()
+function schemaMapContructor(taxonomy) {
+    if (taxonomy.map) {
+        const result = taxonomy.map.toUpperCase()
+        return result
+    } else {
+        const dynamics = [taxonomy.type, taxonomy.item, taxonomy.variant, taxonomy.subitem, taxonomy.state, taxonomy.context]
+        const result = dynamics.filter(n => n).join(".").toUpperCase()
+        return result
+    }
+
 }
 
 module.exports = { 
