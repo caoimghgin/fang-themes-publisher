@@ -1,4 +1,4 @@
-const { COLOR } = require ("./constants")
+const { COLOR } = require("./constants")
 const tinycolor = require("tinycolor2")
 const _ = require('lodash');
 
@@ -44,8 +44,19 @@ const parseKey = (token) => {
     return result
 }
 
-function keyCleaner(item) {
-    return item.split('.').join('').replace(/[^A-Z0-9]/ig, "").toUpperCase()
+// Where token routes from Figma have duplicates, such as 'neutral'
+// in 'color.palette.neutral.neutral015', remove the 'neutral' folder 
+// so it reads 'color.palette.neutral015'. Finally return uppercase with
+// all delimiters removed. This allows the token to be mapped to schema.
+function routeCleaner(item) {
+    let result = []
+    let elements = item.toUpperCase().split(".")
+    for (element of elements) {
+        if (result.length && element.startsWith(result.slice(-1))) result.splice(-1)
+        result.push(element)
+    }
+
+    return result.join('').replace(/[^A-Z0-9]/ig, "").toUpperCase()
 }
 
 const hasSchema = (token) => {
@@ -68,16 +79,16 @@ function schemaMapContructor(taxonomy) {
 
 }
 
-module.exports = { 
-    isColor, 
-    isContextualColor, 
-    isNumber, 
-    isFont, 
-    parseKey, 
-    keyCleaner, 
-    hasSchema, 
-    transformFallback, 
-    isReferenceValue, 
-    getReferenceValue, 
-    schemaMapContructor 
+module.exports = {
+    isColor,
+    isContextualColor,
+    isNumber,
+    isFont,
+    parseKey,
+    routeCleaner,
+    hasSchema,
+    transformFallback,
+    isReferenceValue,
+    getReferenceValue,
+    schemaMapContructor
 }

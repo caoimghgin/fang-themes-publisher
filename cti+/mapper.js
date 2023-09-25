@@ -1,26 +1,46 @@
 const { SCHEMA, COLOR } = require('./constants')
-const { isContextualColor, keyCleaner, schemaMapContructor } = require('./utilities')
+const { isContextualColor, routeCleaner, schemaMapContructor } = require('./utilities')
 
 const FANG_PALETTE = require("./schemas/fang/palette")
 const FANG_CONTEXTUAL = require("./schemas/fang/contextual")
 const FANG_SIZE = require("./schemas/fang/size")
 
-const setSchemaForToken = (schemaSet, token) => {
+let x = {
+    key: 'PALETTEPRIMARY025',
+    name: 'fang-palette-primary-025',
+    domain: 'FANG',
+    class: 'COLOR',
+    subclass: 'PALETTE',
+    mode: null,
+    taxonomy: {
+      domain: 'fang',
+      category: 'palette',
+      type: null,
+      item: null,
+      variant: 'primary',
+      subitem: null,
+      state: '025',
+      context: null
+    }
+  }
 
-    const route = keyCleaner(token.$schema.route)
-    const result = schemaSet.filter(schema => route.endsWith(keyCleaner(schema.map))) // <-
+const setSchemaForToken = (schemas, token) => {
 
-    if (result.length === 0) return undefined
-    if (result.length > 1) throw new Error(`"${result}" has more than one value for tokenAttributesForKey. 
+    const route = routeCleaner(token.$schema.route)
+    const schema = schemas.filter(schema => route.endsWith(schema.key))
+
+    if (schema.length === 0) {
+        console.log("COULD NOT FIND ", route)
+        return undefined
+    } 
+    if (schema.length > 1) throw new Error(`"${schema}" has more than one value for tokenAttributesForKey. 
     All taxonomy definitions need to be unique.`);
 
-    let item = result[0]
-
-    if (item) {
-        token.$schema.class = item.class
-        token.$schema.subclass = item.subclass
-        token.$schema.map = item.map
-        token.$schema.taxonomy = item.taxonomy
+    let result = schema[0]
+    if (result) {
+        result.route = token.$schema.route // Add route back in
+        token.$schema = result
+        console.log(token.$schema)
     }
 }
 
@@ -83,7 +103,7 @@ const setModeForToken = (token) => {
 module.exports = {
     setSchemaForToken,
     setModeForToken,
-    fang_palette: () => (getSchema(FANG_PALETTE)),
+    fang_palette: () => FANG_PALETTE,
     fang_contextual: () => (getSchema(FANG_CONTEXTUAL)),
     fang_size: () => (getSchema(FANG_SIZE)),
 }

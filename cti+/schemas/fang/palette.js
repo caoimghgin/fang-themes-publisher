@@ -1,7 +1,7 @@
 const { ENV, COLOR } = require('../../constants')
 const { createSchema } = require('../helpers')
 
-const meta = { domain: ENV.DOMAIN.SYSTEM, class: COLOR.CLASS, subclass: COLOR.SUBCLASS.PALETTE, mode: null, taxonomy: {} }
+const meta = { domain: ENV.DOMAIN.SYSTEM, class: COLOR.CLASS, subclass: COLOR.SUBCLASS.PALETTE, mode: null, route: null, taxonomy: {} }
 
 const XXX = [
     createSchema(meta, { type: null, item: null, variant: "primary", subitem: null, state: "015", context: null, key: "My Custom ID" }),
@@ -17,8 +17,8 @@ const YYY = [
     createSchema(schemaC, { type: null, item: null, variant: "positive", subitem: null, state: "ff", context: null })
 ]
 
-console.log("XXX ->", XXX)
-console.log("YYY ->", YYY)
+// console.log("XXX ->", XXX)
+// console.log("YYY ->", YYY)
 
 const PRIMARY = [
     createSchema(meta, { type: null, item: null, variant: "primary", subitem: null, state: "015", context: null }),
@@ -36,6 +36,7 @@ const PRIMARY = [
     createSchema(meta, { type: null, item: null, variant: "primary", subitem: null, state: "800", context: null }),
     createSchema(meta, { type: null, item: null, variant: "primary", subitem: null, state: "900", context: null }),
 ]
+
 
 module.exports = [
     ...PRIMARY,
