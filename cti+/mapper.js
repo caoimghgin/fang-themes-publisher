@@ -107,6 +107,6 @@ module.exports = {
     setSchemaForToken,
     setModeForToken,
     fang_palette: () => FANG_PALETTE,
-    fang_contextual: () => (getSchema(FANG_CONTEXTUAL)),
+    fang_contextual: () => FANG_CONTEXTUAL,
     fang_size: () => (getSchema(FANG_SIZE)),
 }

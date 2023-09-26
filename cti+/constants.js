@@ -29,10 +29,9 @@ const CLASSES = Object.freeze({
         CLASS: "COLOR",
         SUBCLASS: {
             PALETTE: "PALETTE",         // Base semantic colors, not mode specific
-            CONTEXTUAL: "COLOR",         // Base semantic colors, not mode specific
             DEFINITIVE: "DEFINITIVE",   // Brand specific color (non-white-label), not mode specific
             SOCIAL: "SOCIAL",           // Apple, Google, etc...
-            CONTEXTUALX: {
+            CONTEXTUAL: {
                 CANVAS: "CANVAS",       // Background of app
                 INK: "INK",             // Typography and icons
                 DYE: "DYE",             // Lines, rules

@@ -1,8 +1,18 @@
 const { ENV, COLOR } = require('../../constants')
-const domain = ENV.DOMAIN.SYSTEM.toLowerCase()
+const { schema } = require('../helpers')
+
+
+const CANVASX = () => {
+    const meta = { domain: ENV.DOMAIN.SYSTEM, class: COLOR.CLASS, subclass: COLOR.SUBCLASS.CONTEXTUAL.CANVAS }
+    return [
+        schema(meta, { type: null, item: null, variant: null, subitem: null, state: null, context: null }),
+        schema(meta, { type: null, item: null, variant: null, subitem: null, state: null, context: "p" }),
+        schema(meta, { type: null, item: null, variant: null, subitem: null, state: null, context: "pp" }),
+    ]
+}
 
 const CANVAS = () => {
-    const meta = { domain: domain, class: COLOR.CLASS, subclass: COLOR.CLASS, category:COLOR.CLASS }
+    const meta = { domain: ENV.DOMAIN.SYSTEM, class: COLOR.CLASS, subclass: COLOR.SUBCLASS.CONTEXTUAL.CANVAS }
     return [
         { map: null, ...meta, type: meta.subclass, item: null, subitem: null, variant: null, state: null, context: null }, 
         { map: null, ...meta, type: meta.subclass, item: null, subitem: null, variant: null, state: "p", context: null },
@@ -11,7 +21,7 @@ const CANVAS = () => {
 }
 
 const INK = () => {
-    const meta = { domain: domain, class: COLOR.CLASS, subclass: COLOR.CLASS, category:COLOR.CLASS }
+    const meta = { domain: ENV.DOMAIN.SYSTEM, class: COLOR.CLASS, subclass: COLOR.SUBCLASS.CONTEXTUAL.INK }
     return [
         { map: null, ...meta, type: meta.subclass, item: null, subitem: null, variant: null, state: "f", context: null }, 
         { map: null, ...meta, type: meta.subclass, item: null, subitem: null, variant: null, state: null, context: null }, 
@@ -30,4 +40,4 @@ const INK = () => {
     ]
 }
 
-module.exports = [...CANVAS(), ...INK()] 
+module.exports = [...CANVASX(), ...INK()] 
