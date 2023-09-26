@@ -1,38 +1,57 @@
-function createSchema(meta, taxonomy) {
-    let schema = {...meta}
 
-    const domain =  schema.domain.toLowerCase()
-    const category = !schema.subclass ? schema.class.toLowerCase() : schema.subclass.toLowerCase()
+const { SCHEMA } = require('../constants')
+const { routeCleaner } = require('../utilities')
 
-    if (!taxonomy.key) {
-        schema = {key: createKey({category: category, ...taxonomy}), name: null, route: null, ...schema}
-    } else {
-        schema = {key: taxonomy.key, name: null, route: null, ...schema}
-        delete taxonomy.key
-    }
+function schema(meta, taxonomy) {
 
-    schema.taxonomy = {domain: domain, category: category, ...taxonomy}
-    schema.name = createName(schema.taxonomy)
+    let result = SCHEMA()
 
-    return schema
+    result.taxonomy.domain = meta.domain.toLowerCase()
+    result.taxonomy.category = createCategory(meta)
+    result.taxonomy.type = taxonomy.type
+    result.taxonomy.item = taxonomy.item
+    result.taxonomy.variant = taxonomy.variant
+    result.taxonomy.subitem = taxonomy.subitem
+    result.taxonomy.state = taxonomy.state
+    result.taxonomy.context = taxonomy.context
+
+    result.key = taxonomy.key ? taxonomy.key : createKey(result.taxonomy)
+    result.name = createName(result.taxonomy)
+    result.route = meta.route
+    result.domain = meta.domain.toLowerCase()
+    result.subdomain = meta.subdomain
+    result.class = meta.class
+    result.subclass = meta.subclass
+    result.mode = meta.mode
+
+    delete result.taxonomy.key
+    console.log(result)
+    return result
 }
 
 const createName = (taxonomy) => {
-    // Let's make this simpler...
-    const dynamics = [taxonomy.domain, taxonomy.category, taxonomy.type, taxonomy.item, taxonomy.variant, taxonomy.subitem, taxonomy.state, taxonomy.context]
+    const dynamics = [
+        taxonomy.domain,
+        taxonomy.category,
+        taxonomy.type,
+        taxonomy.item,
+        taxonomy.variant,
+        taxonomy.subitem,
+        taxonomy.state,
+        taxonomy.context
+    ]
     const result = dynamics.filter(dynamic => dynamic).join('-').toLowerCase()
     return result
 }
 
-const createKey = (taxonomy) => {
-    if (taxonomy.map) {
-        const result = taxonomy.map.toUpperCase()
-        return result
-    } else {
-        const dynamics = [taxonomy.category, taxonomy.type, taxonomy.item, taxonomy.variant, taxonomy.subitem, taxonomy.state, taxonomy.context]
-        const result = dynamics.filter(n => n).join('').toUpperCase()
-        return result
-    }
+const createCategory = (meta) => {
+    return !meta.subclass ? meta.class.toLowerCase() : meta.subclass.toLowerCase()
 }
 
-module.exports = { createSchema }
+const createKey = (taxonomy) => {
+    if (taxonomy.key) return routeCleaner(taxonomy.key)
+    const dynamics = [taxonomy.category, taxonomy.type, taxonomy.item, taxonomy.variant, taxonomy.subitem, taxonomy.state, taxonomy.context]
+    return routeCleaner(dynamics.filter(n => n).join(''))
+}
+
+module.exports = { schema }

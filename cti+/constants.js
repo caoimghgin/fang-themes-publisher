@@ -2,11 +2,15 @@ const { ENV } = require("../package.json")
 
 const SCHEMA = () => {
     return {
+        key: null,
+        name: null,
+        route: null,
+        mapped: false,
+        domain: null,
+        subdomain: null,
         class: null,
         subclass: null,
         mode: null,
-        map: null,
-        route: null,
         taxonomy: {
             domain: null,
             category: null,

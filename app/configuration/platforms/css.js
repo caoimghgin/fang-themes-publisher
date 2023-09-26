@@ -58,7 +58,7 @@ const paletteColorsFile = (domain) => {
         format: format,
         filter: (token) => {
             return (
-                (token.$schema.taxonomy.domain.toLowerCase() === domain.toLowerCase()) &&
+                (token.$schema.domain === domain.toLowerCase()) &&
                 (token.$schema.subclass === COLOR.SUBCLASS.PALETTE)
             )
         }
@@ -87,8 +87,8 @@ const definitiveColorsFile = (domain) => {
         format: format,
         filter: (token) => {
             return (
-                (token.$schema.class === COLOR.CLASS) &&
-                (token.$schema.taxonomy.domain.toLowerCase() === domain.toLowerCase())
+                (token.$schema.domain === domain.toLowerCase()) && 
+                (token.$schema.class === COLOR.CLASS)
             )
         }
     }

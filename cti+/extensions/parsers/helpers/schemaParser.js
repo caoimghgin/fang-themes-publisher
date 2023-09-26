@@ -49,9 +49,9 @@ const classParser = (dictionary, keys) => {
 
 const mappingParser = (dictionary, keys) => {
     schemaMappingParser(dictionary, keys, COLOR.CLASS, mapper.fang_palette())
-    schemaMappingParser(dictionary, keys, COLOR.CLASS, mapper.fang_contextual())
-    schemaMappingParser(dictionary, keys, DIMENSION.CLASS, mapper.fang_size())
-    schemaMappingParser(dictionary, keys, null, null)
+    // schemaMappingParser(dictionary, keys, COLOR.CLASS, mapper.fang_contextual())
+    // schemaMappingParser(dictionary, keys, DIMENSION.CLASS, mapper.fang_size())
+    // schemaMappingParser(dictionary, keys, null, null)
 }
 
 const schemaMappingParser = (dictionary, keys, tokenClass, map) => {
@@ -60,7 +60,7 @@ const schemaMappingParser = (dictionary, keys, tokenClass, map) => {
 
     for (const key of keys) {
         const token = _.get(dictionary, key)
-        if (token.$schema.map == null) {
+        if (!token.$schema.mapped) {
             mapper.setSchemaForToken(map, token)
         }
     }
