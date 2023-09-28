@@ -26,15 +26,13 @@ let x = {
 
 const setSchemaForToken = (schemas, token) => {
 
-    // console.log(schemas.map(schema => schema.key))
-
     const route = routeCleaner(token.$schema.route)
     const schema = schemas.filter(schema => !token.$schema.mapped && route.endsWith(schema.key))
 
-    if (schema.length === 0) {
-        // console.log("COULD NOT FIND ", route)
-        return undefined
-    } 
+    console.log("TOKEN ROUTE =>", route)
+
+    if (schema.length === 0) return undefined
+
     if (schema.length > 1) throw new Error(`"${schema}" has more than one value for tokenAttributesForKey. 
     All taxonomy definitions need to be unique.`);
 
@@ -43,7 +41,7 @@ const setSchemaForToken = (schemas, token) => {
         result.route = token.$schema.route // Add route back in
         result.mapped = true // Set mapped to true, so it is not remapped later.
         token.$schema = result
-        console.log("FOUND ->", token.$schema)
+        // console.log("FOUND ->", token.$schema)
     }
 }
 

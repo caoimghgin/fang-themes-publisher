@@ -15,7 +15,7 @@ function schema(meta, taxonomy) {
     result.taxonomy.state = taxonomy.state
     result.taxonomy.context = taxonomy.context
 
-    result.key = taxonomy.key ? taxonomy.key : createKey(result.taxonomy)
+    result.key = taxonomy.key ? createKey(taxonomy) : createKey(result.taxonomy)
     result.name = createName(result.taxonomy)
     result.route = meta.route
     result.domain = meta.domain.toLowerCase()
