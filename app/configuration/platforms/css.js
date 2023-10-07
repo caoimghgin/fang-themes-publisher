@@ -56,6 +56,7 @@ const paletteColorsFile = (domain) => {
     return {
         destination: destination,
         format: format,
+        options: {outputReferences: false, mode: null},
         filter: (token) => {
             return (
                 (token.$schema.domain === domain.toLowerCase()) &&
@@ -70,7 +71,7 @@ const contextualColorsFile = (domain, mode) => {
     return {
         destination: destination,
         format: format,
-        options: {mode: mode},
+        options: {outputReferences: false, mode: mode},
         filter: (token) => {
             return (
                 (isContextualColor(token)) && 

@@ -29,8 +29,6 @@ const setSchemaForToken = (schemas, token) => {
     const route = routeCleaner(token.$schema.route)
     const schema = schemas.filter(schema => !token.$schema.mapped && route.endsWith(schema.key))
 
-    console.log("TOKEN ROUTE =>", route)
-
     if (schema.length === 0) return undefined
 
     if (schema.length > 1) throw new Error(`"${schema}" has more than one value for tokenAttributesForKey. 
@@ -104,7 +102,11 @@ const setModeForToken = (token) => {
 module.exports = {
     setSchemaForToken,
     setModeForToken,
-    fang_palette: () => FANG_PALETTE,
+    FANG_PALETTE,
     fang_contextual: () => FANG_CONTEXTUAL,
     fang_size: () => (getSchema(FANG_SIZE)),
 }
+
+// const palette = require('../cti+/schemas/fang/palette')
+// palette.map(item => {console.log(item.key)})
+// return

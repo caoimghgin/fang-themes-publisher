@@ -25,7 +25,6 @@ function schema(meta, taxonomy) {
     result.mode = meta.mode
 
     delete result.taxonomy.key
-    console.log(result)
     return result
 }
 

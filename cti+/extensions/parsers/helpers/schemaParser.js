@@ -48,17 +48,7 @@ const classParser = (dictionary, keys) => {
 }
 
 const mappingParser = (dictionary, keys) => {
-    schemaMappingParser(dictionary, keys, COLOR.CLASS, mapper.fang_palette())
-    // schemaMappingParser(dictionary, keys, COLOR.CLASS, mapper.fang_contextual())
-
-    // const  asdf = mapper.fang_palette()
-    // asdf.map(elem => {
-    //     console.log(elem.key)
-    // })
-
-    // console.log(mapper.fang_palette().map(element => element.key))
-    // schemaMappingParser(dictionary, keys, DIMENSION.CLASS, mapper.fang_size())
-    // schemaMappingParser(dictionary, keys, null, null)
+    schemaMappingParser(dictionary, keys, COLOR.CLASS, mapper.FANG_PALETTE)
 }
 
 const schemaMappingParser = (dictionary, keys, tokenClass, map) => {

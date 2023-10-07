@@ -12,7 +12,6 @@ StyleDictionary.registerTransform({
         if (hasSchema(token)) {
             let result = []
             let dynamics = Object.keys(SCHEMA().taxonomy)
-            // console.log(Object.keys(SCHEMA().taxonomy).filter(e => e !== 'category'));
 
             for (const dynamic of dynamics) {
                 if (token.$schema.taxonomy[dynamic]) result.push(token.$schema.taxonomy[dynamic])
