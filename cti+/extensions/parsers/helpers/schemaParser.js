@@ -56,8 +56,6 @@ const classParser = (dictionary, keys) => {
 // If I find an item using a KEY made by this, I should be able to 'filter'
 // and find multiple values if needed.
 
-
-
 const mything =  {
     key: 'PAPERPP',
     name: 'fang-paper-pp',
@@ -86,57 +84,12 @@ const mappingParser = (dictionary, keys) => {
     for (const key of keys) {
         const token = _.get(dictionary, key)
         if (!token.$schema.mapped) {
-            mapper.assignSchema(map, token)
+            mapper.assignSchema(token, map)
         }
 
         console.log(`----------------> key:${key} mode:${token.$schema.mode} route:${token.$schema.route}`)    
 
     }
-
-
-    // const map = mapper.FANG_SCHEMAS
-    // if (map === null) {undefinedSchemaParser(dictionary, keys); return}
-
-    // keys.map(key => {
-    //     // console.log("MY KEY:", key)
-    //     const token = _.get(dictionary, key)
-    //     if (!token.$schema.mapped) mapper.setSchemaForToken(map, token)
-
-    //     if (key.includes(".paper.")) {
-    //         // tell me what is going on
-    //         console.log(`----------------> key:${key} mode:${token.$schema.mode}`)
-
-    //         if (token.$schema.mode === "LIGHT") {
-    //             console.log(token)
-    //         }
-    //     }
-
-        // MY KEY: color.contextual.light-mode.paper.~
-        // MY KEY: color.contextual.light-mode.paper.p
-        // MY KEY: color.contextual.light-mode.paper.pp
-        // MY KEY: color.contextual.dark-mode.paper.~
-        // MY KEY: color.contextual.dark-mode.paper.p
-        // MY KEY: color.contextual.dark-mode.paper.pp
-    // })
-
-    // for (const key of keys) {
-    //     const token = _.get(dictionary, key)
-    //     if (!token.$schema.mapped) mapper.setSchemaForToken(map, token)
-    // }
-
-    // function undefinedSchemaParser(dictionary, keys) {
-    //     for (const key of keys) {
-    //         const token = _.get(dictionary, key)
-    //         if (token.$schema.map == null) {
-    //             token.$schema.taxonomy.domain = ENV.DOMAIN.UNDEFINED
-    //             token.$schema.taxonomy.context = key
-    //             if (token.$schema.class == COLOR.CLASS) {
-    //                 token.$schema.subclass = COLOR.SUBCLASS.DEFINITIVE
-    //             }
-    //         }
-    //     }
-    // }
-
 }
 
 const schemaMappingParser = (dictionary, keys, tokenClass, map) => {

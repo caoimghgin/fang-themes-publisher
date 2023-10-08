@@ -95,6 +95,27 @@ const doParseMode = (token) => {
 }
 
 const parseMode = (token) => {
+
+    if (!isContextualColor(token)) return null
+    const route = token.$schema.route.split("."); route.pop()
+
+    return (isDarkMode(route) ? COLOR.MODE.DARK : COLOR.MODE.LIGHT)
+
+    // If a container of a token begins or ends with the word 'dark', 
+    // then it is dark mode.
+    function isDarkMode(route) {
+        const startsWithDark = route.find(item => {
+            return item.toUpperCase().startsWith(COLOR.MODE.DARK.toUpperCase());
+        })
+        const endsWithDark = route.find(item => {
+            return item.toUpperCase().endsWith(COLOR.MODE.DARK.toUpperCase());
+        })
+        return ((startsWithDark !== undefined) || (endsWithDark !== undefined))
+    }
+}
+
+
+const XparseMode = (token) => {
     if (!isContextualColor(token)) { token.$schema.mode = MODE.NULL; return }
     
     const path = token.$schema.route.split(".");

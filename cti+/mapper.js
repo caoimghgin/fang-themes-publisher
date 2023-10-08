@@ -1,5 +1,5 @@
 const { SCHEMA, COLOR, MODE } = require('./constants')
-const { isContextualColor, routeCleaner, schemaMapContructor, parseMode, doParseMode } = require('./utilities')
+const { isContextualColor, routeCleaner, schemaMapContructor, parseMode } = require('./utilities')
 
 const FANG_PALETTE = require("./schemas/fang/palette")
 const FANG_CONTEXTUAL = require("./schemas/fang/contextual")
@@ -43,7 +43,7 @@ const setSchemaForToken = (schemas, token) => {
 
         result.route = token.$schema.route // Add route back in
         result.mapped = true // Set mapped to true, so it is not remapped later.
-        result.mode = getModeForToken(token)
+        result.mode = parseMode(token)
         // token.$schema = result
         // console.log(`ADD ROUTE: ${token.$schema.route}`)
 
@@ -78,38 +78,6 @@ const myParseMode = (token) => {
       }
 }
 
-const getModeForToken = (token) => {
-    // return "LIGHT"
-    // console.log("MY TOKEN: ", token)
-
-    if (!isContextualColor(token)) return null
-    const route = token.$schema.route.split("."); route.pop()
-
-    return (isDarkMode(route) ? COLOR.MODE.DARK : COLOR.MODE.LIGHT)
-
-    // Set the $schema.mode to dark or light mode
-    // console.log(`I have determined that the mode is "${token.$schema.mode}" given the route path ${route}`)
-
-    // Get path to the token without the end leaf node. If a color is
-    // named 'ink.dark', it is not considered dark mode. We only look at 
-    // the container directories above.
-    function getPath(token) {
-        let result = token.$schema.route.split("."); result.pop()
-        return result
-    }
-
-    // If a container of a token begins or ends with the word 'dark', 
-    // then it is dark mode.
-    function isDarkMode(route) {
-        const startsWithDark = route.find(item => {
-            return item.toUpperCase().startsWith(COLOR.MODE.DARK.toUpperCase());
-        })
-        const endsWithDark = route.find(item => {
-            return item.toUpperCase().endsWith(COLOR.MODE.DARK.toUpperCase());
-        })
-        return ((startsWithDark !== undefined) || (endsWithDark !== undefined))
-    }
-}
 
 const setModeForToken = (token) => {
 
@@ -147,7 +115,7 @@ const setModeForToken = (token) => {
     }
 }
 
-const assembleFangSchemas = () => {
+const systemSchemas = () => {
     const result = [
         ...FANG_PALETTE, 
         ...FANG_CONTEXTUAL 
@@ -155,9 +123,9 @@ const assembleFangSchemas = () => {
     return result
 }
 
-const assignSchema = (schemas, token) => {
+const assignSchema = (token, schemas) => {
 
-    let result = null
+    if (!schemas) schemas = systemSchemas()
 
     const route = routeCleaner(token.$schema.route)
     const schema = schemas.filter(schema => !token.$schema.mapped && route.endsWith(schema.key))
@@ -167,11 +135,11 @@ const assignSchema = (schemas, token) => {
     if (schema.length > 1) throw new Error(`"${schema}" has more than one value for tokenAttributesForKey. 
     All taxonomy definitions need to be unique.`);
 
-    result = schema[0]
+    let result = schema[0]
     if (result) {
         result.route = token.$schema.route // Add route back in
         result.mapped = true // Set mapped to true, so it is not remapped later.
-        result.mode = getModeForToken({$schema: result})
+        result.mode = parseMode({$schema: result})
         Object.assign(token.$schema, result)
     }
 

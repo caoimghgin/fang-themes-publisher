@@ -1,53 +1,53 @@
-const { parseMode } = require('../cti+/utilities');
 const { MODE } = require('../cti+/constants')
+const { parseMode } = require('../cti+/utilities');
 
 // To be recognized as dark or light mode in the system the token $schema
 // must satisfy these tests...
 // 
-//   a) Must be a contextual token (not palette, or anything else)
-//   b) One item in route (minus name of token) must begin, end or be 'dark'
+//   a) Must be a defined contextual token (not palette, or anything else)
+//   b) One item in route (minus name of token) must begin, end or equal 'dark'
 //   c) If contextual without 'dark', it is assumed 'light' mode.
 //
 
 test('Palette token $schema.node is MODE.NULL', () => {
   const token = token_palette
-  parseMode(token)
+  token.$schema.mode = parseMode(token)
   expect(token.$schema.mode).toBe(MODE.NULL);
 });
 
 test('Contextual token with "dark" in route returns MODE.DARK', () => {
   const token = token_paper_dark
-  parseMode(token)
+  token.$schema.mode = parseMode(token)
   expect(token.$schema.mode).toBe(MODE.DARK);
 });
 
 test('Contextual token with "dark-mode" in route returns MODE.DARK', () => {
   const token = token_paper_darkMode
-  parseMode(token)
+  token.$schema.mode = parseMode(token)
   expect(token.$schema.mode).toBe(MODE.DARK);
 });
 
 test('Contextual token with "mode-dark" in route returns MODE.DARK', () => {
   const token = token_paper_darkMode_rev
-  parseMode(token)
+  token.$schema.mode = parseMode(token)
   expect(token.$schema.mode).toBe(MODE.DARK);
 });
 
 test('Contextual token with "this-dark-mode" in route returns MODE.LIGHT', () => {
   const token = token_paper_should_be_light
-  parseMode(token)
+  token.$schema.mode = parseMode(token)
   expect(token.$schema.mode).toBe(MODE.LIGHT);
 });
 
 test('Contextual token with "light" in route returns MODE.LIGHT', () => {
   const token = token_paper_lightMode
-  parseMode(token)
+  token.$schema.mode = parseMode(token)
   expect(token.$schema.mode).toBe(MODE.LIGHT);
 });
 
 test('Contextual token without "dark" in route returns MODE.LIGHT', () => {
   const token = token_paper_noMode
-  parseMode(token)
+  token.$schema.mode = parseMode(token)
   expect(token.$schema.mode).toBe(MODE.LIGHT);
 });
 
