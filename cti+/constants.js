@@ -7,7 +7,8 @@ const SCHEMA = () => {
         route: null,
         mapped: false,
         domain: null,
-        subdomain: null,
+        brand: null,
+        subbrand: null,
         class: null,
         subclass: null,
         mode: null,
@@ -24,6 +25,12 @@ const SCHEMA = () => {
     }
 }
 
+const MODE = Object.freeze({
+        LIGHT: "LIGHT",
+        DARK: "DARK",
+        NULL: null
+})
+
 const CLASSES = Object.freeze({
     COLOR:{
         CLASS: "COLOR",
@@ -32,17 +39,14 @@ const CLASSES = Object.freeze({
             DEFINITIVE: "DEFINITIVE",   // Brand specific color (non-white-label), not mode specific
             SOCIAL: "SOCIAL",           // Apple, Google, etc...
             CONTEXTUAL: {
-                CANVAS: "CANVAS",       // Background of app
+                PAPER: "PAPER",         // Background of app
                 INK: "INK",             // Typography and icons
                 DYE: "DYE",             // Lines, rules
                 PAINT: "PAINT",         // Non-interactive backgrounds on canvas
                 CHROMA: "CHROMA",       // Interactive backgrounds on components
             }
         },
-        MODE: {
-            LIGHT: "LIGHT",
-            DARK: "DARK"
-        }
+        MODE: MODE
     },
     DIMENSION: {
         CLASS: "DIMENSION",
@@ -91,6 +95,7 @@ module.exports = {
     ITEM, 
     DOMAIN: ENV.DOMAIN,
     COLOR: CLASSES.COLOR,
+    MODE: CLASSES.COLOR.MODE,
     FONT: CLASSES.FONT,
     DIMENSION: CLASSES.DIMENSION
 }

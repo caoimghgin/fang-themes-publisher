@@ -19,7 +19,6 @@ function schema(meta, taxonomy) {
     result.name = createName(result.taxonomy)
     result.route = meta.route
     result.domain = meta.domain.toLowerCase()
-    result.subdomain = meta.subdomain
     result.class = meta.class
     result.subclass = meta.subclass
     result.mode = meta.mode

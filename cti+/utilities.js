@@ -1,4 +1,4 @@
-const { COLOR } = require("./constants")
+const { COLOR, MODE } = require("./constants")
 const tinycolor = require("tinycolor2")
 const _ = require('lodash');
 
@@ -9,9 +9,9 @@ const isColor = (value) => {
 
 // Contextual colors are a subclass of color that responds to mode support
 const isContextualColor = (token) => {
-    return false
-    let contextualColors = Object.values(COLOR.SUBCLASS.CONTEXTUAL)
-    return contextualColors.includes(token.$schema.subclass)
+    const contextualColors = Object.values(COLOR.SUBCLASS.CONTEXTUAL)
+    const result = contextualColors.includes(token.$schema.subclass)
+    return result
 }
 
 const isNumber = (value) => {
@@ -79,6 +79,53 @@ function schemaMapContructor(taxonomy) {
 
 }
 
+const doParseMode = (token) => {
+    if (!isContextualColor(token)) return MODE.NULL
+    
+    const path = token.$schema.route.split(".");
+    // But honestly, I should path.pop() off the key, right? Not just the end of the route
+    path.pop();
+
+    const isDark = path.find(item => {
+        const pathItem = item.toUpperCase()
+        return (pathItem.startsWith(MODE.DARK) || pathItem.endsWith(MODE.DARK));
+    })
+
+    return (isDark ? MODE.DARK : MODE.LIGHT)
+}
+
+const parseMode = (token) => {
+    if (!isContextualColor(token)) { token.$schema.mode = MODE.NULL; return }
+    
+    const path = token.$schema.route.split(".");
+
+    // But honestly, I should path.pop() off the key, right? Not just the end of the route
+    path.pop();
+
+    const isDark = path.find(item => {
+        const pathItem = item.toUpperCase()
+        return (pathItem.startsWith(MODE.DARK) || pathItem.endsWith(MODE.DARK));
+    })
+
+    token.$schema.mode = (isDark ? MODE.DARK : MODE.LIGHT)
+
+    console.log(`name:${token.$schema.name}, mode:${token.$schema.mode} route:${token.$schema.route}`)
+}
+
+const modeForToken = (route) => {
+
+    const path = route.split("."); path.pop();
+
+    const isDark = path.find(item => {
+        const pathItem = item.toUpperCase()
+        return (pathItem.startsWith(MODE.DARK) || pathItem.endsWith(MODE.DARK));
+    })
+
+    return (isDark ? MODE.DARK : MODE.LIGHT)
+
+
+}
+
 module.exports = {
     isColor,
     isContextualColor,
@@ -90,5 +137,8 @@ module.exports = {
     transformFallback,
     isReferenceValue,
     getReferenceValue,
-    schemaMapContructor
+    schemaMapContructor,
+    modeForToken,
+    parseMode,
+    doParseMode
 }

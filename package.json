@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run clean && node ./app/build.js",
     "clean": "rm -rf build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Kevin Muldoon",
   "license": "ISC",
@@ -16,11 +16,22 @@
   "ENV": {
     "TOKENS_DIR": "tokens",
     "BUILD_DIR": "build",
-    "PLATFORMS": ["css"],
-    "//PLATFORMS": ["css", "scss", "android", "objc", "swift"],
+    "PLATFORMS": [
+      "css"
+    ],
+    "//PLATFORMS": [
+      "css",
+      "scss",
+      "android",
+      "objc",
+      "swift"
+    ],
     "DOMAIN": {
       "SYSTEM": "FANG",
       "UNDEFINED": "UNKN"
     }
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }

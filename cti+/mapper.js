@@ -1,5 +1,5 @@
-const { SCHEMA, COLOR } = require('./constants')
-const { isContextualColor, routeCleaner, schemaMapContructor } = require('./utilities')
+const { SCHEMA, COLOR, MODE } = require('./constants')
+const { isContextualColor, routeCleaner, schemaMapContructor, parseMode, doParseMode } = require('./utilities')
 
 const FANG_PALETTE = require("./schemas/fang/palette")
 const FANG_CONTEXTUAL = require("./schemas/fang/contextual")
@@ -26,58 +26,70 @@ let x = {
 
 const setSchemaForToken = (schemas, token) => {
 
+    let result = null
+
     const route = routeCleaner(token.$schema.route)
     const schema = schemas.filter(schema => !token.$schema.mapped && route.endsWith(schema.key))
+
+    // This filter will only find the first item.
 
     if (schema.length === 0) return undefined
 
     if (schema.length > 1) throw new Error(`"${schema}" has more than one value for tokenAttributesForKey. 
     All taxonomy definitions need to be unique.`);
 
-    let result = schema[0]
+    result = schema[0]
     if (result) {
+
         result.route = token.$schema.route // Add route back in
         result.mapped = true // Set mapped to true, so it is not remapped later.
-        token.$schema = result
-        // console.log("FOUND ->", token.$schema)
-    }
-}
+        result.mode = getModeForToken(token)
+        // token.$schema = result
+        // console.log(`ADD ROUTE: ${token.$schema.route}`)
 
-const getSchema = (taxonomy) => {
-    result = []
-    taxonomy.forEach((item) => {
-        let schema = SCHEMA()
-        schema.class = item.class
-        schema.subclass = item.subclass
-        schema.mode = null
-        schema.route = null
-        schema.map = schemaMapContructor(item)
-        schema.taxonomy.domain = item.domain
-        schema.taxonomy.category = item.category
-        schema.taxonomy.type = item.type
-        schema.taxonomy.item = item.item
-        schema.taxonomy.variant = item.variant
-        schema.taxonomy.subitem = item.subitem
-        schema.taxonomy.state = item.state
-        schema.taxonomy.context = item.context
-        result.push(schema)
-    });
+    }
 
     return result
+
 }
 
-const setModeForToken = (token) => {
+const myParseMode = (token) => {
+    if (!isContextualColor(token)) return MODE.NULL
 
-    // Only contextual colors have dark/light modes. If token is not 
-    // a contextual color return null
+    // return ((getRandomInt(2) % 2 === 0) ? "DARK" : "LIGHT")
+    // return MODE.DARK
+
+    const path = token.$schema.route.split(".");
+    // But honestly, I should path.pop() off the key, right? Not just the end of the route
+    path.pop();
+    console.log("THE PATH", path)
+    //
+    // Something is wrong here. I wonder what th epath is???
+    //
+    const isDark = path.find(item => {
+        const pathItem = item.toUpperCase()
+        return (pathItem.startsWith(MODE.DARK) || pathItem.endsWith(MODE.DARK));
+    })
+
+    return (isDark ? "DARK" : "LIGHT")
+
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+      }
+}
+
+const getModeForToken = (token) => {
+    // return "LIGHT"
+    // console.log("MY TOKEN: ", token)
+
     if (!isContextualColor(token)) return null
-    
-    // Get path to the token without the end leaf node
-    const path = getPath(token)
+    const route = token.$schema.route.split("."); route.pop()
+
+    return (isDarkMode(route) ? COLOR.MODE.DARK : COLOR.MODE.LIGHT)
 
     // Set the $schema.mode to dark or light mode
-    token.$schema.mode = (isDarkMode(path) ? COLOR.MODE.DARK : COLOR.MODE.LIGHT)
-    
+    // console.log(`I have determined that the mode is "${token.$schema.mode}" given the route path ${route}`)
+
     // Get path to the token without the end leaf node. If a color is
     // named 'ink.dark', it is not considered dark mode. We only look at 
     // the container directories above.
@@ -88,25 +100,90 @@ const setModeForToken = (token) => {
 
     // If a container of a token begins or ends with the word 'dark', 
     // then it is dark mode.
-    function isDarkMode(path) {
-        const startsWithDark = path.find(item => {
+    function isDarkMode(route) {
+        const startsWithDark = route.find(item => {
             return item.toUpperCase().startsWith(COLOR.MODE.DARK.toUpperCase());
         })
-        const endsWithDark = path.find(item => {
+        const endsWithDark = route.find(item => {
             return item.toUpperCase().endsWith(COLOR.MODE.DARK.toUpperCase());
         })
         return ((startsWithDark !== undefined) || (endsWithDark !== undefined))
     }
 }
 
-module.exports = {
-    setSchemaForToken,
-    setModeForToken,
-    FANG_PALETTE,
-    fang_contextual: () => FANG_CONTEXTUAL,
-    fang_size: () => (getSchema(FANG_SIZE)),
+const setModeForToken = (token) => {
+
+    // Only contextual colors have dark/light modes. If token is not 
+    // a contextual color return null
+
+    if (!isContextualColor(token)) return null
+    // console.log(`${token.$schema.name} is a CONTEXTUAL token...`)
+
+    // Get path to the token without the end leaf node
+    const route = token.$schema.route.split("."); route.pop()
+
+    // Set the $schema.mode to dark or light mode
+    token.$schema.mode = (isDarkMode(route) ? COLOR.MODE.DARK : COLOR.MODE.LIGHT)
+    // console.log(`I have determined that the mode is "${token.$schema.mode}" given the route path ${route}`)
+
+    // Get path to the token without the end leaf node. If a color is
+    // named 'ink.dark', it is not considered dark mode. We only look at 
+    // the container directories above.
+    function getPath(token) {
+        let result = token.$schema.route.split("."); result.pop()
+        return result
+    }
+
+    // If a container of a token begins or ends with the word 'dark', 
+    // then it is dark mode.
+    function isDarkMode(route) {
+        const startsWithDark = route.find(item => {
+            return item.toUpperCase().startsWith(COLOR.MODE.DARK.toUpperCase());
+        })
+        const endsWithDark = route.find(item => {
+            return item.toUpperCase().endsWith(COLOR.MODE.DARK.toUpperCase());
+        })
+        return ((startsWithDark !== undefined) || (endsWithDark !== undefined))
+    }
 }
 
-// const palette = require('../cti+/schemas/fang/palette')
-// palette.map(item => {console.log(item.key)})
-// return
+const assembleFangSchemas = () => {
+    const result = [
+        ...FANG_PALETTE, 
+        ...FANG_CONTEXTUAL 
+    ]
+    return result
+}
+
+const assignSchema = (schemas, token) => {
+
+    let result = null
+
+    const route = routeCleaner(token.$schema.route)
+    const schema = schemas.filter(schema => !token.$schema.mapped && route.endsWith(schema.key))
+
+    if (schema.length === 0) return undefined
+
+    if (schema.length > 1) throw new Error(`"${schema}" has more than one value for tokenAttributesForKey. 
+    All taxonomy definitions need to be unique.`);
+
+    result = schema[0]
+    if (result) {
+        result.route = token.$schema.route // Add route back in
+        result.mapped = true // Set mapped to true, so it is not remapped later.
+        result.mode = getModeForToken({$schema: result})
+        Object.assign(token.$schema, result)
+    }
+
+}
+
+module.exports = {
+    setSchemaForToken,
+    assignSchema,
+    setModeForToken,
+    FANG_SCHEMAS: [
+        ...FANG_PALETTE, 
+        ...FANG_CONTEXTUAL 
+    ],
+    fang_size: FANG_SIZE,
+}

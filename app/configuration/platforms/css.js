@@ -13,8 +13,9 @@ const transforms = [
     'content/icon',
     'size/rem',
     'color/css',
-    // 'console/schemas/[cti+]'
-    // 'console/routes/[cti+]'
+    // 'console/schemas/[cti+]',
+    // 'console/routes/[cti+],'
+    // 'console/tokens/[cti+]'
 ]
 
 module.exports = (build, brand, platform) => {
@@ -73,6 +74,21 @@ const contextualColorsFile = (domain, mode) => {
         format: format,
         options: {outputReferences: false, mode: mode},
         filter: (token) => {
+
+            if (token.$schema.route.includes("paper")) {
+
+                // console.log(`contextualColorsFile -> name: ${token.$schema.name}, mode:${token.$schema.mode}, destination: ${destination}`)
+                // console.log("DESTINATION:", destination)
+                // console.log("MODE:", mode)
+                // console.log("TOKEN:", token.$schema)
+            }
+
+            // if (token.$schema.route.includes("paper")) {
+            //     console.log("DESTINATION:", destination)
+            //     console.log("MODE:", mode)
+            //     console.log("TOKEN:", token.$schema)
+            // }
+
             return (
                 (isContextualColor(token)) && 
                 (token.$schema.mode === mode)
