@@ -20,17 +20,14 @@ const StyleDictionary = require('style-dictionary');
 const _ = require('lodash');
 const { jsonParser } = require('./helpers/jsonParser')
 const { keyParser } = require('./helpers/keyParser')
-const { schemaParser } = require('./helpers/schemaParser')
-
-const mapper = require('../../mapper')
-const consts = require('../../constants')
+const { schemaParser  } = require('./helpers/schemaParser')
 
 StyleDictionary.registerParser({
     pattern: /\.json$/,
     parse: ({ contents, filePath }) => {
         let dictionary = jsonParser(contents, false)
         let keys = keyParser(dictionary)
-        schemaParser(dictionary, keys)
+        schemaParser(dictionary, keys, filePath)
         return dictionary
     }
 })

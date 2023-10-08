@@ -9,21 +9,18 @@
 
 const { SCHEMA, COLOR, DIMENSION } = require('../../../constants')
 const utils = require('../../../utilities')
-const mapper = require('../../../mapper')
+const { parseBrand } = require('../../../utilities')
+const { assignSchema } = require('../../../mapper')
 const _ = require('lodash');
 
-function schemaParser(dictionary, keys) {
-    routeParser(dictionary, keys)
-    classParser(dictionary, keys)
-    mappingParser(dictionary, keys)
-}
-
-const routeParser = (dictionary, keys) => {
-    for (const key of keys) {
+function schemaParser(dictionary, keys, filePath) {
+    keys.map(key => {
         const token = _.get(dictionary, key)
         Object.assign(token, { $schema: SCHEMA() });
+        token.$schema.brand = parseBrand(filePath)
         token.$schema.route = key
-    }
+        assignSchema(token)
+    })
 }
 
 const classParser = (dictionary, keys) => {
@@ -36,16 +33,6 @@ const classParser = (dictionary, keys) => {
         if (utils.isColor(value)) token.$schema.class = COLOR.CLASS
         if (utils.isNumber(value)) token.$schema.class = DIMENSION.CLASS
         if (utils.isFont(value)) token.$schema.class = FONT.CLASS
-    }
-}
-
-const mappingParser = (dictionary, keys) => {
-    const map = mapper.FANG_SCHEMAS
-    for (const key of keys) {
-        const token = _.get(dictionary, key)
-        if (!token.$schema.mapped) {
-            mapper.assignSchema(token, null)
-        }
     }
 }
 

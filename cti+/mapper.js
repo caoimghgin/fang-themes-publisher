@@ -20,6 +20,7 @@ const assignSchema = (token, schemas) => {
     if (result) {
         result.mapped = true // Set mapped to true, so it is not remapped later.
         result.route = token.$schema.route // Add route from parser
+        result.brand = token.$schema.brand // Add brand from parser
         result.mode = parseMode({$schema: result})
         Object.assign(token.$schema, result)
     }

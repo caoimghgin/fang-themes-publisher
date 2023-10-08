@@ -1,6 +1,18 @@
-const { COLOR, MODE } = require("./constants")
+const { ENV, COLOR, MODE } = require("./constants")
 const tinycolor = require("tinycolor2")
 const _ = require('lodash');
+
+const brandFromTokensPath = (filePath) => {
+    // CTI+ requires all brand tokens are within a directory 
+    // labeled with a brand prefix ("fb", "appl", "amz" )
+    return filePath.split(`/${ENV.TOKENS_DIR}/`)[1].split("/")[0]
+}
+
+const parseBrand = (filePath) => {
+    // CTI+ requires all brand tokens are within a directory 
+    // labeled with a brand prefix ("fb", "appl", "amz" )
+    return filePath.split(`/${ENV.TOKENS_DIR}/`)[1].split("/")[0]
+}
 
 const isColor = (value) => {
     const color = tinycolor(value);
@@ -79,21 +91,6 @@ function schemaMapContructor(taxonomy) {
 
 }
 
-const doParseMode = (token) => {
-    if (!isContextualColor(token)) return MODE.NULL
-    
-    const path = token.$schema.route.split(".");
-    // But honestly, I should path.pop() off the key, right? Not just the end of the route
-    path.pop();
-
-    const isDark = path.find(item => {
-        const pathItem = item.toUpperCase()
-        return (pathItem.startsWith(MODE.DARK) || pathItem.endsWith(MODE.DARK));
-    })
-
-    return (isDark ? MODE.DARK : MODE.LIGHT)
-}
-
 const parseMode = (token) => {
 
     if (!isContextualColor(token)) return null
@@ -115,37 +112,6 @@ const parseMode = (token) => {
 }
 
 
-const XparseMode = (token) => {
-    if (!isContextualColor(token)) { token.$schema.mode = MODE.NULL; return }
-    
-    const path = token.$schema.route.split(".");
-
-    // But honestly, I should path.pop() off the key, right? Not just the end of the route
-    path.pop();
-
-    const isDark = path.find(item => {
-        const pathItem = item.toUpperCase()
-        return (pathItem.startsWith(MODE.DARK) || pathItem.endsWith(MODE.DARK));
-    })
-
-    token.$schema.mode = (isDark ? MODE.DARK : MODE.LIGHT)
-
-    console.log(`name:${token.$schema.name}, mode:${token.$schema.mode} route:${token.$schema.route}`)
-}
-
-const modeForToken = (route) => {
-
-    const path = route.split("."); path.pop();
-
-    const isDark = path.find(item => {
-        const pathItem = item.toUpperCase()
-        return (pathItem.startsWith(MODE.DARK) || pathItem.endsWith(MODE.DARK));
-    })
-
-    return (isDark ? MODE.DARK : MODE.LIGHT)
-
-
-}
 
 module.exports = {
     isColor,
@@ -158,8 +124,7 @@ module.exports = {
     transformFallback,
     isReferenceValue,
     getReferenceValue,
-    schemaMapContructor,
-    modeForToken,
     parseMode,
-    doParseMode
+    brandFromTokensPath,
+    parseBrand
 }
