@@ -1,5 +1,17 @@
 {
   "color": {
+    "foo": {
+      "description": "",
+      "type": "color",
+      "value": "#d9d9d9ff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:a002d759dd04f9088bc27c3d59eb0e6f3ff298bf,",
+          "exportKey": "color"
+        }
+      }
+    },
     "palette": {
       "primary": {
         "primary015": {

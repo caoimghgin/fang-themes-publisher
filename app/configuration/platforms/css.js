@@ -1,4 +1,4 @@
-const { DOMAIN, COLOR, FONT } = require('../../../cti+/constants')
+const { DOMAIN, COLOR, MODE, FONT } = require('../../../cti+/constants')
 const { isContextualColor } = require('../../../cti+/utilities')
 
 const name = "css"
@@ -13,7 +13,7 @@ const transforms = [
     'content/icon',
     'size/rem',
     'color/css',
-    'console/schemas/[cti+]',
+    // 'console/schemas/[cti+]',
     // 'console/routes/[cti+],'
     // 'console/tokens/[cti+]'
 ]
@@ -29,15 +29,33 @@ module.exports = (build, brand, platform) => {
         },
         files: [
             paletteColorsFile(DOMAIN.SYSTEM),
-            contextualColorsFile(DOMAIN.SYSTEM, COLOR.MODE.LIGHT),
-            contextualColorsFile(DOMAIN.SYSTEM, COLOR.MODE.DARK),
-            definitiveColorsFile(DOMAIN.UNDEFINED),
-            unknownFontsFile(DOMAIN.UNDEFINED),
+            contextualColorsFile(DOMAIN.SYSTEM, MODE.LIGHT),
+            contextualColorsFile(DOMAIN.SYSTEM, MODE.DARK),
+            // definitiveColorsFile(DOMAIN.UNDEFINED),
+            // unknownFontsFile(DOMAIN.UNDEFINED),
+
+            brandColorsFile(brand)
             // all(),
         ]
     }
     return result
 }
+
+const brandColorsFile = (brand) => {
+    const destination = `colors/definitive/${brand.toLowerCase()}-colors.${ext}`
+    return {
+        destination: destination,
+        format: format,
+        options: {outputReferences: false, mode: null},
+        filter: (token) => {
+            return (
+                (token.$schema.domain === null) &&
+                (token.$schema.brand === brand)
+            )
+        }
+    }
+}
+
 
 const unknownFontsFile = (domain) => {
     return {
@@ -68,7 +86,7 @@ const paletteColorsFile = (domain) => {
 }
 
 const contextualColorsFile = (domain, mode) => {
-    const destination = `colors/contextual/${mode.toLowerCase()}/${domain.toLowerCase()}-contextual.${ext}`
+    const destination = `colors/contextual/${mode.toLowerCase()}/${domain.toLowerCase()}-colors.${ext}`
     return {
         destination: destination,
         format: format,

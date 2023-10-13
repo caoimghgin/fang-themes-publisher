@@ -6,32 +6,27 @@ const FANG_SIZE = require("./schemas/fang/size")
 
 const assignSchema = (token, schemas) => {
 
-    if (!schemas) schemas = systemSchemas()
+    schemas = schemas ? schemas : [ ...FANG_PALETTE, ...FANG_CONTEXTUAL ]
+    let schema = mapTokenToSchema(token, schemas)
 
-    const route = routeCleaner(token.$schema.route)
-    const schema = schemas.filter(schema => !token.$schema.mapped && route.endsWith(schema.key))
-
-    if (schema.length === 0) return
-
-    if (schema.length > 1) throw new Error(`"${schema}" has more than one value for tokenAttributesForKey. 
-    All taxonomy definitions need to be unique.`);
-
-    let result = schema[0]
-    if (result) {
-        result.mapped = true // Set mapped to true, so it is not remapped later.
-        result.route = token.$schema.route // Add route from parser
-        result.brand = token.$schema.brand // Add brand from parser
-        result.mode = parseMode({$schema: result})
-        Object.assign(token.$schema, result)
+    if (schema) {
+        schema.mapped = true                            // Set mapped to true, so it is not remapped later.
+        schema.route = token.$schema.route              // Insert 'route' derived from parser
+        schema.brand = token.$schema.brand              // Insert 'brand' derived from parser
+        schema.mode = parseMode({ $schema: schema })    // Derive mode from result
+        Object.assign(token.$schema, schema)            // Assign token.$schema to result
     }
+
 }
 
-const systemSchemas = () => {
-    const result = [
-        ...FANG_PALETTE, 
-        ...FANG_CONTEXTUAL 
-    ]
-    return result
+const mapTokenToSchema = (token, schemas) => {
+    const matches = schemas.filter(schema => {
+        const route = routeCleaner(token.$schema.route)
+        return !token.$schema.mapped && route.endsWith(schema.key)
+    })
+    return matches.sort(
+        (left, right) => right.key.length - left.key.length
+    )[0]
 }
 
 module.exports = {

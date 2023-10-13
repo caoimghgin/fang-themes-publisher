@@ -14,12 +14,33 @@ const { assignSchema } = require('../../../mapper')
 const _ = require('lodash');
 
 function schemaParser(dictionary, keys, filePath) {
+    parseSystemSchemas(dictionary, keys, filePath)
+    parseBrandSchemas(dictionary, keys)
+}
+
+const parseSystemSchemas = (dictionary, keys, filePath) => {
     keys.map(key => {
         const token = _.get(dictionary, key)
+
         Object.assign(token, { $schema: SCHEMA() });
         token.$schema.brand = parseBrand(filePath)
         token.$schema.route = key
+        if (key.includes("primary")) console.log(token)
+
         assignSchema(token)
+        // if (token.$schema.taxonomy.variant === "primary") {
+        //     console.log(token)
+        // }
+    })
+}
+
+const parseBrandSchemas = (dictionary, keys) => {
+    keys.map(key => {
+        const token = _.get(dictionary, key)
+        if (token.$schema.mapped === false) {
+            console.log("HERE IS AN UNMAPPED TOKEN...", token.$schema)
+            console.log("I should try the best I can to make a schema, and the 'domain' becomes the 'brand', to be written seperately from SYSTEM defined")
+        }
     })
 }
 
