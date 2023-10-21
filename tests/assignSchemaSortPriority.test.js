@@ -2,11 +2,12 @@ const { assignSchema, getSchemas } = require('../cti+/mapper');
 const { schema } = require('../cti+/schemas/helpers')
 const { ENV, COLOR } = require('../cti+/constants')
 
-describe("Token ending with same letters (ink, link, shrink...) are properly assigned schema as sorted by length priority", () => {
+describe("Token ending with same characters such as 'ink', 'link', 'shrink' should be assigned a schema sorted by length priority", () => {
 
     let schemas = []
 
     beforeAll(() => {
+        // Insert schemas with identical ending characters for testing
         schemas = [...getSchemas(), ...INK(), ...LINK(), ...HOODWINK(), ...SHRINK()]
     });
 
@@ -22,7 +23,6 @@ describe("Token ending with same letters (ink, link, shrink...) are properly ass
 
     test('Expect token ending with LINK.P to map to correct $schema', () => {
         assignSchema(linkPToken, schemas)
-        console.info(linkPToken)
         expect(linkPToken).toStrictEqual(linkPExpected)
     })
 

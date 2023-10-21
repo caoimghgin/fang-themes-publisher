@@ -21,16 +21,11 @@ function schemaParser(dictionary, keys, filePath) {
 const parseSystemSchemas = (dictionary, keys, filePath) => {
     keys.map(key => {
         const token = _.get(dictionary, key)
-
         Object.assign(token, { $schema: SCHEMA() });
         token.$schema.brand = parseBrand(filePath)
         token.$schema.route = key
-        if (key.includes("primary")) console.log(token)
-
         assignSchema(token)
-        // if (token.$schema.taxonomy.variant === "primary") {
-        //     console.log(token)
-        // }
+
     })
 }
 
