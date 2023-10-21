@@ -6,7 +6,7 @@ const FANG_SIZE = require("./schemas/fang/size")
 
 const assignSchema = (token, schemas) => {
 
-    schemas = schemas ? schemas : [ ...FANG_PALETTE, ...FANG_CONTEXTUAL ]
+    schemas = schemas ? schemas : getSchemas()
     let schema = mapTokenToSchema(token, schemas)
 
     if (schema) {
@@ -17,6 +17,10 @@ const assignSchema = (token, schemas) => {
         Object.assign(token.$schema, schema)            // Assign token.$schema to result
     }
 
+}
+
+const getSchemas = () => {
+    return [ ...FANG_PALETTE, ...FANG_CONTEXTUAL ]
 }
 
 const mapTokenToSchema = (token, schemas) => {
@@ -30,5 +34,6 @@ const mapTokenToSchema = (token, schemas) => {
 }
 
 module.exports = {
-    assignSchema
+    assignSchema, 
+    getSchemas
 }
