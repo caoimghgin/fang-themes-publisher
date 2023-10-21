@@ -1,4 +1,4 @@
-const { getSchemas, schemasDuplicates } = require('../cti+/mapper');
+const { getSchemas, schemasDuplicates } = require('../cti+/mapper')
 const { schema } = require('../cti+/schemas/helpers')
 const { ENV, COLOR } = require('../cti+/constants')
 
