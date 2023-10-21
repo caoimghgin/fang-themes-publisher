@@ -4,7 +4,7 @@ const { parseMode } = require('../cti+/utilities');
 // To be recognized as dark or light mode in the system the token $schema
 // must satisfy these tests...
 // 
-//   a) Must be a defined contextual token (not palette, or anything else)
+//   a) Must be a defined contextual token (not palette)
 //   b) One item in route (minus name of token) must begin, end or equal 'dark'
 //   c) If contextual without 'dark', it is assumed 'light' mode.
 //

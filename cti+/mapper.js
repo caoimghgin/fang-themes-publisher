@@ -33,7 +33,13 @@ const mapTokenToSchema = (token, schemas) => {
     )[0]
 }
 
+const schemasDuplicates = (schemas) => {
+    const allKeys = schemas.map(item => item.key)
+    return allKeys.some((item, index) => allKeys.indexOf(item) != index)
+}
+
 module.exports = {
     assignSchema, 
-    getSchemas
+    getSchemas,
+    schemasDuplicates
 }

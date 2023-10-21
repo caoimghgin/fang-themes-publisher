@@ -1,7 +1,7 @@
 const { ENV, COLOR } = require('../../constants')
 const { schema } = require('../helpers')
 
-const PAPER = () => {
+const SURFACE = () => {
     const meta = { domain: ENV.DOMAIN.SYSTEM, class: COLOR.CLASS, subclass: COLOR.SUBCLASS.CONTEXTUAL.CANVAS }
     const result = [
         schema(meta, { type: null, item: null, variant: null, subitem: null, state: "f", context: null }),
@@ -33,5 +33,6 @@ const INK = () => {
 }
 
 module.exports = [
-    ...PAPER(), 
+    ...SURFACE(),
+    ...INK() 
 ] 
