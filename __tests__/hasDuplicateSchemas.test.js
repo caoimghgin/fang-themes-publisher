@@ -6,14 +6,12 @@ const { ENV, COLOR } = require('../cti+/constants')
 describe("Where user enters in duplicate schema keys, throw error and inform", () => {
     
     test('FANG schemas will not have duplicates', () => {
-        const schemas = getSchemas()
-        const result = schemasDuplicates(schemas)
+        const result = schemasDuplicates(getSchemas())
         expect(result).toBe(false)
     })
 
     test('FANG schemas with addition of PRIMARY will have duplicates', () => {
-        const schemas = [...getSchemas(), ...PRIMARY()]
-        const result = schemasDuplicates(schemas)
+        const result = schemasDuplicates([...getSchemas(), ...PRIMARY()])
         expect(result).toBe(true)
     })
 
