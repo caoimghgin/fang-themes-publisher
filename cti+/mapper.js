@@ -1,4 +1,4 @@
-const { routeCleaner, parseMode } = require('./utilities')
+const { routeCleaner, parseMode, schemasDuplicates } = require('./utilities')
 
 const FANG_PALETTE = require("./schemas/fang/palette")
 const FANG_CONTEXTUAL = require("./schemas/fang/contextual")
@@ -20,7 +20,9 @@ const assignSchema = (token, schemas) => {
 }
 
 const getSchemas = () => {
-    return [ ...FANG_PALETTE, ...FANG_CONTEXTUAL ]
+    const result = [ ...FANG_PALETTE, ...FANG_CONTEXTUAL ]
+    if (!schemasDuplicates(result)) return result
+    throw new Error('One or more schema keys are duplicated. Ensure all schema keys are unique to create platform code from tokens.');
 }
 
 const mapTokenToSchema = (token, schemas) => {
@@ -28,18 +30,10 @@ const mapTokenToSchema = (token, schemas) => {
         const route = routeCleaner(token.$schema.route)
         return !token.$schema.mapped && route.endsWith(schema.key)
     })
-    return matches.sort(
-        (left, right) => right.key.length - left.key.length
-    )[0]
-}
-
-const schemasDuplicates = (schemas) => {
-    const allKeys = schemas.map(item => item.key)
-    return allKeys.some((item, index) => allKeys.indexOf(item) != index)
+    return matches.sort((left, right) => right.key.length - left.key.length)[0]
 }
 
 module.exports = {
     assignSchema, 
-    getSchemas,
-    schemasDuplicates
+    getSchemas
 }

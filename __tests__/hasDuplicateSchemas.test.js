@@ -1,4 +1,5 @@
-const { getSchemas, schemasDuplicates } = require('../cti+/mapper')
+const { getSchemas } = require('../cti+/mapper')
+const { schemasDuplicates } = require('../cti+/utilities')
 const { schema } = require('../cti+/schemas/helpers')
 const { ENV, COLOR } = require('../cti+/constants')
 
@@ -10,7 +11,7 @@ describe("Where user enters in duplicate schema keys, throw error and inform", (
         expect(result).toBe(false)
     })
 
-    test('FANG schemas with addition of primary will have duplicates', () => {
+    test('FANG schemas with addition of PRIMARY will have duplicates', () => {
         const schemas = [...getSchemas(), ...PRIMARY()]
         const result = schemasDuplicates(schemas)
         expect(result).toBe(true)

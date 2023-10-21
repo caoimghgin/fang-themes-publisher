@@ -111,6 +111,11 @@ const parseMode = (token) => {
     }
 }
 
+const schemasDuplicates = (schemas) => {
+    const allKeys = schemas.map(item => item.key)
+    return allKeys.some((item, index) => allKeys.indexOf(item) != index)
+}
+
 
 
 module.exports = {
@@ -126,5 +131,6 @@ module.exports = {
     getReferenceValue,
     parseMode,
     brandFromTokensPath,
-    parseBrand
+    parseBrand,
+    schemasDuplicates
 }
