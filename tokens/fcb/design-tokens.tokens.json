@@ -2,9 +2,9 @@
   "palette": {
     "primary": {
       "100": {
-        "description": "$palette-primary-100\n\nhex: : #A181D7\nL*: 60.05 (60)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: true\n#000000-4.5:1: true\n#000000-3.0:1: true",
+        "description": "$palette-primary-100\n\nhex: : #5A96C6\nL*: 59.94 (60)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: true\n#000000-4.5:1: true\n#000000-3.0:1: true",
         "type": "color",
-        "value": "#a181d7ff",
+        "value": "#5a96c6ff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -13,15 +13,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10870",
+            "variableId": "VariableID:115:9",
             "exportKey": "variables"
           }
         }
       },
       "200": {
-        "description": "$palette-primary-200\n\nhex: : #9771D3\nL*: 55.17 (55)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: true\n#000000-4.5:1: true\n#000000-3.0:1: true",
+        "description": "$palette-primary-200\n\nhex: : #4289C1\nL*: 54.97 (55)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: true\n#000000-4.5:1: true\n#000000-3.0:1: true",
         "type": "color",
-        "value": "#9771d3ff",
+        "value": "#4289c1ff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -30,15 +30,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10871",
+            "variableId": "VariableID:115:10",
             "exportKey": "variables"
           }
         }
       },
       "300": {
-        "description": "$palette-primary-300\n\nhex: : #8B60CA\nL*: 49.64 (50)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: true\n#000000-3.0:1: true",
+        "description": "$palette-primary-300\n\nhex: : #267CB8\nL*: 49.84 (50)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: true\n#000000-3.0:1: true",
         "type": "color",
-        "value": "#8b60caff",
+        "value": "#267cb8ff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -47,15 +47,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10872",
+            "variableId": "VariableID:115:11",
             "exportKey": "variables"
           }
         }
       },
       "400": {
-        "description": "$palette-primary-400\n\nhex: : #8352C6\nL*: 45.55 (45)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: true",
+        "description": "$palette-primary-400\n\nhex: : #0071B2\nL*: 45.67 (45)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: true",
         "type": "color",
-        "value": "#8352c6ff",
+        "value": "#0071b2ff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -64,15 +64,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10873",
+            "variableId": "VariableID:115:12",
             "exportKey": "variables"
           }
         }
       },
       "500": {
-        "description": "$palette-primary-500\n\nhex: : #7248AD\nL*: 39.96 (40)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: true",
+        "description": "$palette-primary-500\n\nhex: : #00639B\nL*: 40.06 (40)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: true",
         "type": "color",
-        "value": "#7248adff",
+        "value": "#00639bff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -81,15 +81,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10874",
+            "variableId": "VariableID:115:13",
             "exportKey": "variables"
           }
         }
       },
       "600": {
-        "description": "$palette-primary-600\n\nhex: : #573486\nL*: 29.92 (30)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: false",
+        "description": "$palette-primary-600\n\nhex: : #004A78\nL*: 30.04 (30)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: false",
         "type": "color",
-        "value": "#573486ff",
+        "value": "#004a78ff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -98,15 +98,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10875",
+            "variableId": "VariableID:115:14",
             "exportKey": "variables"
           }
         }
       },
       "700": {
-        "description": "$palette-primary-700\n\nhex: : #3C235F\nL*: 20 (20)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: false",
+        "description": "$palette-primary-700\n\nhex: : #003354\nL*: 20.07 (20)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: false",
         "type": "color",
-        "value": "#3c235fff",
+        "value": "#003354ff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -115,15 +115,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10876",
+            "variableId": "VariableID:115:15",
             "exportKey": "variables"
           }
         }
       },
       "800": {
-        "description": "$palette-primary-800\n\nhex: : #301A4D\nL*: 14.97 (15)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: false",
+        "description": "$palette-primary-800\n\nhex: : #002844\nL*: 15.14 (15)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: false",
         "type": "color",
-        "value": "#301a4dff",
+        "value": "#002844ff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -132,15 +132,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10877",
+            "variableId": "VariableID:115:16",
             "exportKey": "variables"
           }
         }
       },
       "900": {
-        "description": "$palette-primary-900\n\nhex: : #231339\nL*: 9.94 (10)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: false",
+        "description": "$palette-primary-900\n\nhex: : #011D33\nL*: 9.98 (10)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: false",
         "type": "color",
-        "value": "#231339ff",
+        "value": "#011d33ff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -149,15 +149,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10878",
+            "variableId": "VariableID:115:17",
             "exportKey": "variables"
           }
         }
       },
       "925": {
-        "description": "$palette-primary-925\n\nhex: : #170A29\nL*: 5.05 (5)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: false",
+        "description": "$palette-primary-925\n\nhex: : #001224\nL*: 5.06 (5)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: false",
         "type": "color",
-        "value": "#170a29ff",
+        "value": "#001224ff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -166,15 +166,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10879",
+            "variableId": "VariableID:115:18",
             "exportKey": "variables"
           }
         }
       },
       "015": {
-        "description": "$palette-primary-015\n\nhex: : #F9F7FE\nL*: 97.56 (97.5)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: false\n#000000-4.5:1: true\n#000000-3.0:1: true",
+        "description": "$palette-primary-015\n\nhex: : #F4F8FB\nL*: 97.36 (97.5)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: false\n#000000-4.5:1: true\n#000000-3.0:1: true",
         "type": "color",
-        "value": "#f9f7feff",
+        "value": "#f4f8fbff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -183,15 +183,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10865",
+            "variableId": "VariableID:115:4",
             "exportKey": "variables"
           }
         }
       },
       "025": {
-        "description": "$palette-primary-025\n\nhex: : #F3EFFC\nL*: 95.08 (95)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: false\n#000000-4.5:1: true\n#000000-3.0:1: true",
+        "description": "$palette-primary-025\n\nhex: : #EBF2F9\nL*: 95.16 (95)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: false\n#000000-4.5:1: true\n#000000-3.0:1: true",
         "type": "color",
-        "value": "#f3effcff",
+        "value": "#ebf2f9ff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -200,15 +200,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10866",
+            "variableId": "VariableID:115:5",
             "exportKey": "variables"
           }
         }
       },
       "050": {
-        "description": "$palette-primary-050\n\nhex: : #E7DFF6\nL*: 90.05 (90)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: false\n#000000-4.5:1: true\n#000000-3.0:1: true",
+        "description": "$palette-primary-050\n\nhex: : #D5E5F3\nL*: 90.16 (90)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: false\n#000000-4.5:1: true\n#000000-3.0:1: true",
         "type": "color",
-        "value": "#e7dff6ff",
+        "value": "#d5e5f3ff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -217,15 +217,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10867",
+            "variableId": "VariableID:115:6",
             "exportKey": "variables"
           }
         }
       },
       "075": {
-        "description": "$palette-primary-075\n\nhex: : #CEBFEC\nL*: 79.86 (80)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: false\n#000000-4.5:1: true\n#000000-3.0:1: true",
+        "description": "$palette-primary-075\n\nhex: : #ACCAE4\nL*: 79.96 (80)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: false\n#000000-4.5:1: true\n#000000-3.0:1: true",
         "type": "color",
-        "value": "#cebfecff",
+        "value": "#accae4ff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -234,15 +234,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10868",
+            "variableId": "VariableID:115:7",
             "exportKey": "variables"
           }
         }
       },
       "085": {
-        "description": "$palette-primary-085\n\nhex: : #B8A0E3\nL*: 70.09 (70)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: false\n#000000-4.5:1: true\n#000000-3.0:1: true",
+        "description": "$palette-primary-085\n\nhex: : #82B0D6\nL*: 69.93 (70)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: false\n#000000-4.5:1: true\n#000000-3.0:1: true",
         "type": "color",
-        "value": "#b8a0e3ff",
+        "value": "#82b0d6ff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -251,7 +251,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10869",
+            "variableId": "VariableID:115:8",
             "exportKey": "variables"
           }
         }
@@ -270,7 +270,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10885",
+            "variableId": "VariableID:115:24",
             "exportKey": "variables"
           }
         }
@@ -287,7 +287,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10886",
+            "variableId": "VariableID:115:25",
             "exportKey": "variables"
           }
         }
@@ -304,7 +304,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10887",
+            "variableId": "VariableID:115:26",
             "exportKey": "variables"
           }
         }
@@ -321,7 +321,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10888",
+            "variableId": "VariableID:115:27",
             "exportKey": "variables"
           }
         }
@@ -338,7 +338,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10889",
+            "variableId": "VariableID:115:28",
             "exportKey": "variables"
           }
         }
@@ -355,7 +355,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10890",
+            "variableId": "VariableID:115:29",
             "exportKey": "variables"
           }
         }
@@ -372,7 +372,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10891",
+            "variableId": "VariableID:115:30",
             "exportKey": "variables"
           }
         }
@@ -389,7 +389,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10892",
+            "variableId": "VariableID:115:31",
             "exportKey": "variables"
           }
         }
@@ -406,7 +406,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10893",
+            "variableId": "VariableID:115:32",
             "exportKey": "variables"
           }
         }
@@ -423,7 +423,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10894",
+            "variableId": "VariableID:115:33",
             "exportKey": "variables"
           }
         }
@@ -440,7 +440,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10880",
+            "variableId": "VariableID:115:19",
             "exportKey": "variables"
           }
         }
@@ -457,7 +457,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10881",
+            "variableId": "VariableID:115:20",
             "exportKey": "variables"
           }
         }
@@ -474,7 +474,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10882",
+            "variableId": "VariableID:115:21",
             "exportKey": "variables"
           }
         }
@@ -491,7 +491,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10883",
+            "variableId": "VariableID:115:22",
             "exportKey": "variables"
           }
         }
@@ -508,7 +508,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10884",
+            "variableId": "VariableID:115:23",
             "exportKey": "variables"
           }
         }
@@ -516,9 +516,9 @@
     },
     "tertiary": {
       "100": {
-        "description": "$palette-tertiary-100\n\nhex: : #A181D7\nL*: 60.05 (60)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: true\n#000000-4.5:1: true\n#000000-3.0:1: true",
+        "description": "$palette-tertiary-100\n\nhex: : #9E8F77\nL*: 60.11 (60)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: true\n#000000-4.5:1: true\n#000000-3.0:1: true",
         "type": "color",
-        "value": "#a181d7ff",
+        "value": "#9e8f77ff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -527,15 +527,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10900",
+            "variableId": "VariableID:115:39",
             "exportKey": "variables"
           }
         }
       },
       "200": {
-        "description": "$palette-tertiary-200\n\nhex: : #9771D3\nL*: 55.17 (55)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: true\n#000000-4.5:1: true\n#000000-3.0:1: true",
+        "description": "$palette-tertiary-200\n\nhex: : #928167\nL*: 54.86 (55)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: true\n#000000-4.5:1: true\n#000000-3.0:1: true",
         "type": "color",
-        "value": "#9771d3ff",
+        "value": "#928167ff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -544,15 +544,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10901",
+            "variableId": "VariableID:115:40",
             "exportKey": "variables"
           }
         }
       },
       "300": {
-        "description": "$palette-tertiary-300\n\nhex: : #8B60CA\nL*: 49.64 (50)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: true\n#000000-3.0:1: true",
+        "description": "$palette-tertiary-300\n\nhex: : #867457\nL*: 49.8 (50)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: true\n#000000-3.0:1: true",
         "type": "color",
-        "value": "#8b60caff",
+        "value": "#867457ff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -561,15 +561,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10902",
+            "variableId": "VariableID:115:41",
             "exportKey": "variables"
           }
         }
       },
       "400": {
-        "description": "$palette-tertiary-400\n\nhex: : #8352C6\nL*: 45.55 (45)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: true",
+        "description": "$palette-tertiary-400\n\nhex: : #7B6747\nL*: 44.75 (45)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: true",
         "type": "color",
-        "value": "#8352c6ff",
+        "value": "#7b6747ff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -578,15 +578,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10903",
+            "variableId": "VariableID:115:42",
             "exportKey": "variables"
           }
         }
       },
       "500": {
-        "description": "$palette-tertiary-500\n\nhex: : #7248AD\nL*: 39.96 (40)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: true",
+        "description": "$palette-tertiary-500\n\nhex: : #6E5C3F\nL*: 40.13 (40)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: true",
         "type": "color",
-        "value": "#7248adff",
+        "value": "#6e5c3fff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -595,15 +595,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10904",
+            "variableId": "VariableID:115:43",
             "exportKey": "variables"
           }
         }
       },
       "600": {
-        "description": "$palette-tertiary-600\n\nhex: : #573486\nL*: 29.92 (30)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: false",
+        "description": "$palette-tertiary-600\n\nhex: : #53452E\nL*: 30.14 (30)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: false",
         "type": "color",
-        "value": "#573486ff",
+        "value": "#53452eff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -612,15 +612,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10905",
+            "variableId": "VariableID:115:44",
             "exportKey": "variables"
           }
         }
       },
       "700": {
-        "description": "$palette-tertiary-700\n\nhex: : #3C235F\nL*: 20 (20)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: false",
+        "description": "$palette-tertiary-700\n\nhex: : #392F1F\nL*: 20.05 (20)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: false",
         "type": "color",
-        "value": "#3c235fff",
+        "value": "#392f1fff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -629,15 +629,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10906",
+            "variableId": "VariableID:115:45",
             "exportKey": "variables"
           }
         }
       },
       "800": {
-        "description": "$palette-tertiary-800\n\nhex: : #301A4D\nL*: 14.97 (15)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: false",
+        "description": "$palette-tertiary-800\n\nhex: : #2D2416\nL*: 14.83 (15)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: false",
         "type": "color",
-        "value": "#301a4dff",
+        "value": "#2d2416ff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -646,15 +646,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10907",
+            "variableId": "VariableID:115:46",
             "exportKey": "variables"
           }
         }
       },
       "900": {
-        "description": "$palette-tertiary-900\n\nhex: : #231339\nL*: 9.94 (10)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: false",
+        "description": "$palette-tertiary-900\n\nhex: : #211B10\nL*: 10.14 (10)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: false",
         "type": "color",
-        "value": "#231339ff",
+        "value": "#211b10ff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -663,15 +663,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10908",
+            "variableId": "VariableID:115:47",
             "exportKey": "variables"
           }
         }
       },
       "925": {
-        "description": "$palette-tertiary-925\n\nhex: : #170A29\nL*: 5.05 (5)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: false",
+        "description": "$palette-tertiary-925\n\nhex: : #151008\nL*: 4.95 (5)\n\n#FFFFFF-4.5:1: true\n#FFFFFF-3.0:1: true\n#000000-4.5:1: false\n#000000-3.0:1: false",
         "type": "color",
-        "value": "#170a29ff",
+        "value": "#151008ff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -680,15 +680,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10909",
+            "variableId": "VariableID:115:48",
             "exportKey": "variables"
           }
         }
       },
       "015": {
-        "description": "$palette-tertiary-015\n\nhex: : #F9F7FE\nL*: 97.56 (97.5)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: false\n#000000-4.5:1: true\n#000000-3.0:1: true",
+        "description": "$palette-tertiary-015\n\nhex: : #F9F7F6\nL*: 97.36 (97.5)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: false\n#000000-4.5:1: true\n#000000-3.0:1: true",
         "type": "color",
-        "value": "#f9f7feff",
+        "value": "#f9f7f6ff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -697,15 +697,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10895",
+            "variableId": "VariableID:115:34",
             "exportKey": "variables"
           }
         }
       },
       "025": {
-        "description": "$palette-tertiary-025\n\nhex: : #F3EFFC\nL*: 95.08 (95)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: false\n#000000-4.5:1: true\n#000000-3.0:1: true",
+        "description": "$palette-tertiary-025\n\nhex: : #F2F0ED\nL*: 94.87 (95)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: false\n#000000-4.5:1: true\n#000000-3.0:1: true",
         "type": "color",
-        "value": "#f3effcff",
+        "value": "#f2f0edff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -714,15 +714,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10896",
+            "variableId": "VariableID:115:35",
             "exportKey": "variables"
           }
         }
       },
       "050": {
-        "description": "$palette-tertiary-050\n\nhex: : #E7DFF6\nL*: 90.05 (90)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: false\n#000000-4.5:1: true\n#000000-3.0:1: true",
+        "description": "$palette-tertiary-050\n\nhex: : #E7E2DC\nL*: 90.11 (90)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: false\n#000000-4.5:1: true\n#000000-3.0:1: true",
         "type": "color",
-        "value": "#e7dff6ff",
+        "value": "#e7e2dcff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -731,15 +731,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10897",
+            "variableId": "VariableID:115:36",
             "exportKey": "variables"
           }
         }
       },
       "075": {
-        "description": "$palette-tertiary-075\n\nhex: : #CEBFEC\nL*: 79.86 (80)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: false\n#000000-4.5:1: true\n#000000-3.0:1: true",
+        "description": "$palette-tertiary-075\n\nhex: : #CDC5B8\nL*: 79.83 (80)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: false\n#000000-4.5:1: true\n#000000-3.0:1: true",
         "type": "color",
-        "value": "#cebfecff",
+        "value": "#cdc5b8ff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -748,15 +748,15 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10898",
+            "variableId": "VariableID:115:37",
             "exportKey": "variables"
           }
         }
       },
       "085": {
-        "description": "$palette-tertiary-085\n\nhex: : #B8A0E3\nL*: 70.09 (70)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: false\n#000000-4.5:1: true\n#000000-3.0:1: true",
+        "description": "$palette-tertiary-085\n\nhex: : #B6AA98\nL*: 70.15 (70)\n\n#FFFFFF-4.5:1: false\n#FFFFFF-3.0:1: false\n#000000-4.5:1: true\n#000000-3.0:1: true",
         "type": "color",
-        "value": "#b8a0e3ff",
+        "value": "#b6aa98ff",
         "blendMode": "normal",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
@@ -765,7 +765,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10899",
+            "variableId": "VariableID:115:38",
             "exportKey": "variables"
           }
         }
@@ -784,7 +784,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10915",
+            "variableId": "VariableID:115:54",
             "exportKey": "variables"
           }
         }
@@ -801,7 +801,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10916",
+            "variableId": "VariableID:115:55",
             "exportKey": "variables"
           }
         }
@@ -818,7 +818,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10917",
+            "variableId": "VariableID:115:56",
             "exportKey": "variables"
           }
         }
@@ -835,7 +835,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10918",
+            "variableId": "VariableID:115:57",
             "exportKey": "variables"
           }
         }
@@ -852,7 +852,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10919",
+            "variableId": "VariableID:115:58",
             "exportKey": "variables"
           }
         }
@@ -869,7 +869,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10920",
+            "variableId": "VariableID:115:59",
             "exportKey": "variables"
           }
         }
@@ -886,7 +886,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10921",
+            "variableId": "VariableID:115:60",
             "exportKey": "variables"
           }
         }
@@ -903,7 +903,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10922",
+            "variableId": "VariableID:115:61",
             "exportKey": "variables"
           }
         }
@@ -920,7 +920,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10923",
+            "variableId": "VariableID:115:62",
             "exportKey": "variables"
           }
         }
@@ -937,7 +937,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10924",
+            "variableId": "VariableID:115:63",
             "exportKey": "variables"
           }
         }
@@ -954,7 +954,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10910",
+            "variableId": "VariableID:115:49",
             "exportKey": "variables"
           }
         }
@@ -971,7 +971,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10911",
+            "variableId": "VariableID:115:50",
             "exportKey": "variables"
           }
         }
@@ -988,7 +988,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10912",
+            "variableId": "VariableID:115:51",
             "exportKey": "variables"
           }
         }
@@ -1005,7 +1005,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10913",
+            "variableId": "VariableID:115:52",
             "exportKey": "variables"
           }
         }
@@ -1022,7 +1022,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10914",
+            "variableId": "VariableID:115:53",
             "exportKey": "variables"
           }
         }
@@ -1041,7 +1041,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10930",
+            "variableId": "VariableID:115:69",
             "exportKey": "variables"
           }
         }
@@ -1058,7 +1058,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10931",
+            "variableId": "VariableID:115:70",
             "exportKey": "variables"
           }
         }
@@ -1075,7 +1075,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10932",
+            "variableId": "VariableID:115:71",
             "exportKey": "variables"
           }
         }
@@ -1092,7 +1092,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10933",
+            "variableId": "VariableID:115:72",
             "exportKey": "variables"
           }
         }
@@ -1109,7 +1109,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10934",
+            "variableId": "VariableID:115:73",
             "exportKey": "variables"
           }
         }
@@ -1126,7 +1126,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10935",
+            "variableId": "VariableID:115:74",
             "exportKey": "variables"
           }
         }
@@ -1143,7 +1143,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10936",
+            "variableId": "VariableID:115:75",
             "exportKey": "variables"
           }
         }
@@ -1160,7 +1160,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10937",
+            "variableId": "VariableID:115:76",
             "exportKey": "variables"
           }
         }
@@ -1177,7 +1177,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10938",
+            "variableId": "VariableID:115:77",
             "exportKey": "variables"
           }
         }
@@ -1194,7 +1194,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10939",
+            "variableId": "VariableID:115:78",
             "exportKey": "variables"
           }
         }
@@ -1211,7 +1211,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10925",
+            "variableId": "VariableID:115:64",
             "exportKey": "variables"
           }
         }
@@ -1228,7 +1228,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10926",
+            "variableId": "VariableID:115:65",
             "exportKey": "variables"
           }
         }
@@ -1245,7 +1245,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10927",
+            "variableId": "VariableID:115:66",
             "exportKey": "variables"
           }
         }
@@ -1262,7 +1262,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10928",
+            "variableId": "VariableID:115:67",
             "exportKey": "variables"
           }
         }
@@ -1279,7 +1279,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10929",
+            "variableId": "VariableID:115:68",
             "exportKey": "variables"
           }
         }
@@ -1298,7 +1298,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10945",
+            "variableId": "VariableID:115:84",
             "exportKey": "variables"
           }
         }
@@ -1315,7 +1315,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10946",
+            "variableId": "VariableID:115:85",
             "exportKey": "variables"
           }
         }
@@ -1332,7 +1332,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10947",
+            "variableId": "VariableID:115:86",
             "exportKey": "variables"
           }
         }
@@ -1349,7 +1349,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10948",
+            "variableId": "VariableID:115:87",
             "exportKey": "variables"
           }
         }
@@ -1366,7 +1366,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10949",
+            "variableId": "VariableID:115:88",
             "exportKey": "variables"
           }
         }
@@ -1383,7 +1383,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10950",
+            "variableId": "VariableID:115:89",
             "exportKey": "variables"
           }
         }
@@ -1400,7 +1400,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10951",
+            "variableId": "VariableID:115:90",
             "exportKey": "variables"
           }
         }
@@ -1417,7 +1417,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10952",
+            "variableId": "VariableID:115:91",
             "exportKey": "variables"
           }
         }
@@ -1434,7 +1434,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10953",
+            "variableId": "VariableID:115:92",
             "exportKey": "variables"
           }
         }
@@ -1451,7 +1451,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10954",
+            "variableId": "VariableID:115:93",
             "exportKey": "variables"
           }
         }
@@ -1468,7 +1468,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10940",
+            "variableId": "VariableID:115:79",
             "exportKey": "variables"
           }
         }
@@ -1485,7 +1485,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10941",
+            "variableId": "VariableID:115:80",
             "exportKey": "variables"
           }
         }
@@ -1502,7 +1502,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10942",
+            "variableId": "VariableID:115:81",
             "exportKey": "variables"
           }
         }
@@ -1519,7 +1519,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10943",
+            "variableId": "VariableID:115:82",
             "exportKey": "variables"
           }
         }
@@ -1536,7 +1536,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10944",
+            "variableId": "VariableID:115:83",
             "exportKey": "variables"
           }
         }
@@ -1555,7 +1555,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10960",
+            "variableId": "VariableID:115:99",
             "exportKey": "variables"
           }
         }
@@ -1572,7 +1572,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10961",
+            "variableId": "VariableID:115:100",
             "exportKey": "variables"
           }
         }
@@ -1589,7 +1589,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10962",
+            "variableId": "VariableID:115:101",
             "exportKey": "variables"
           }
         }
@@ -1606,7 +1606,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10963",
+            "variableId": "VariableID:115:102",
             "exportKey": "variables"
           }
         }
@@ -1623,7 +1623,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10964",
+            "variableId": "VariableID:115:103",
             "exportKey": "variables"
           }
         }
@@ -1640,7 +1640,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10965",
+            "variableId": "VariableID:115:104",
             "exportKey": "variables"
           }
         }
@@ -1657,7 +1657,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10966",
+            "variableId": "VariableID:115:105",
             "exportKey": "variables"
           }
         }
@@ -1674,7 +1674,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10967",
+            "variableId": "VariableID:115:106",
             "exportKey": "variables"
           }
         }
@@ -1691,7 +1691,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10968",
+            "variableId": "VariableID:115:107",
             "exportKey": "variables"
           }
         }
@@ -1708,7 +1708,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10969",
+            "variableId": "VariableID:115:108",
             "exportKey": "variables"
           }
         }
@@ -1725,7 +1725,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10955",
+            "variableId": "VariableID:115:94",
             "exportKey": "variables"
           }
         }
@@ -1742,7 +1742,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10956",
+            "variableId": "VariableID:115:95",
             "exportKey": "variables"
           }
         }
@@ -1759,7 +1759,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10957",
+            "variableId": "VariableID:115:96",
             "exportKey": "variables"
           }
         }
@@ -1776,7 +1776,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10958",
+            "variableId": "VariableID:115:97",
             "exportKey": "variables"
           }
         }
@@ -1793,7 +1793,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10959",
+            "variableId": "VariableID:115:98",
             "exportKey": "variables"
           }
         }
@@ -1812,7 +1812,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10975",
+            "variableId": "VariableID:115:114",
             "exportKey": "variables"
           }
         }
@@ -1829,7 +1829,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10976",
+            "variableId": "VariableID:115:115",
             "exportKey": "variables"
           }
         }
@@ -1846,7 +1846,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10977",
+            "variableId": "VariableID:115:116",
             "exportKey": "variables"
           }
         }
@@ -1863,7 +1863,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10978",
+            "variableId": "VariableID:115:117",
             "exportKey": "variables"
           }
         }
@@ -1880,7 +1880,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10979",
+            "variableId": "VariableID:115:118",
             "exportKey": "variables"
           }
         }
@@ -1897,7 +1897,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10980",
+            "variableId": "VariableID:115:119",
             "exportKey": "variables"
           }
         }
@@ -1914,7 +1914,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10981",
+            "variableId": "VariableID:115:120",
             "exportKey": "variables"
           }
         }
@@ -1931,7 +1931,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10982",
+            "variableId": "VariableID:115:121",
             "exportKey": "variables"
           }
         }
@@ -1948,7 +1948,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10983",
+            "variableId": "VariableID:115:122",
             "exportKey": "variables"
           }
         }
@@ -1965,7 +1965,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10984",
+            "variableId": "VariableID:115:123",
             "exportKey": "variables"
           }
         }
@@ -1982,7 +1982,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10970",
+            "variableId": "VariableID:115:109",
             "exportKey": "variables"
           }
         }
@@ -1999,7 +1999,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10971",
+            "variableId": "VariableID:115:110",
             "exportKey": "variables"
           }
         }
@@ -2016,7 +2016,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10972",
+            "variableId": "VariableID:115:111",
             "exportKey": "variables"
           }
         }
@@ -2033,7 +2033,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10973",
+            "variableId": "VariableID:115:112",
             "exportKey": "variables"
           }
         }
@@ -2050,7 +2050,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10974",
+            "variableId": "VariableID:115:113",
             "exportKey": "variables"
           }
         }
@@ -2069,7 +2069,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10990",
+            "variableId": "VariableID:115:129",
             "exportKey": "variables"
           }
         }
@@ -2086,7 +2086,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10991",
+            "variableId": "VariableID:115:130",
             "exportKey": "variables"
           }
         }
@@ -2103,7 +2103,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10992",
+            "variableId": "VariableID:115:131",
             "exportKey": "variables"
           }
         }
@@ -2120,7 +2120,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10993",
+            "variableId": "VariableID:115:132",
             "exportKey": "variables"
           }
         }
@@ -2137,7 +2137,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10994",
+            "variableId": "VariableID:115:133",
             "exportKey": "variables"
           }
         }
@@ -2154,7 +2154,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10995",
+            "variableId": "VariableID:115:134",
             "exportKey": "variables"
           }
         }
@@ -2171,7 +2171,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10996",
+            "variableId": "VariableID:115:135",
             "exportKey": "variables"
           }
         }
@@ -2188,7 +2188,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10997",
+            "variableId": "VariableID:115:136",
             "exportKey": "variables"
           }
         }
@@ -2205,7 +2205,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10998",
+            "variableId": "VariableID:115:137",
             "exportKey": "variables"
           }
         }
@@ -2222,7 +2222,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10999",
+            "variableId": "VariableID:115:138",
             "exportKey": "variables"
           }
         }
@@ -2239,7 +2239,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10985",
+            "variableId": "VariableID:115:124",
             "exportKey": "variables"
           }
         }
@@ -2256,7 +2256,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10986",
+            "variableId": "VariableID:115:125",
             "exportKey": "variables"
           }
         }
@@ -2273,7 +2273,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10987",
+            "variableId": "VariableID:115:126",
             "exportKey": "variables"
           }
         }
@@ -2290,7 +2290,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10988",
+            "variableId": "VariableID:115:127",
             "exportKey": "variables"
           }
         }
@@ -2307,7 +2307,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:10989",
+            "variableId": "VariableID:115:128",
             "exportKey": "variables"
           }
         }
@@ -2326,7 +2326,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:11006",
+            "variableId": "VariableID:115:145",
             "exportKey": "variables"
           }
         }
@@ -2343,7 +2343,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:11007",
+            "variableId": "VariableID:115:146",
             "exportKey": "variables"
           }
         }
@@ -2360,7 +2360,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:11008",
+            "variableId": "VariableID:115:147",
             "exportKey": "variables"
           }
         }
@@ -2377,7 +2377,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:11009",
+            "variableId": "VariableID:115:148",
             "exportKey": "variables"
           }
         }
@@ -2394,7 +2394,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:11010",
+            "variableId": "VariableID:115:149",
             "exportKey": "variables"
           }
         }
@@ -2411,7 +2411,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:11011",
+            "variableId": "VariableID:115:150",
             "exportKey": "variables"
           }
         }
@@ -2428,7 +2428,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:11012",
+            "variableId": "VariableID:115:151",
             "exportKey": "variables"
           }
         }
@@ -2445,7 +2445,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:11013",
+            "variableId": "VariableID:115:152",
             "exportKey": "variables"
           }
         }
@@ -2462,7 +2462,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:11014",
+            "variableId": "VariableID:115:153",
             "exportKey": "variables"
           }
         }
@@ -2479,7 +2479,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:11015",
+            "variableId": "VariableID:115:154",
             "exportKey": "variables"
           }
         }
@@ -2496,7 +2496,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:11016",
+            "variableId": "VariableID:115:155",
             "exportKey": "variables"
           }
         }
@@ -2513,7 +2513,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:11000",
+            "variableId": "VariableID:115:139",
             "exportKey": "variables"
           }
         }
@@ -2530,7 +2530,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:11001",
+            "variableId": "VariableID:115:140",
             "exportKey": "variables"
           }
         }
@@ -2547,7 +2547,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:11002",
+            "variableId": "VariableID:115:141",
             "exportKey": "variables"
           }
         }
@@ -2564,7 +2564,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:11003",
+            "variableId": "VariableID:115:142",
             "exportKey": "variables"
           }
         }
@@ -2581,7 +2581,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:11004",
+            "variableId": "VariableID:115:143",
             "exportKey": "variables"
           }
         }
@@ -2598,7 +2598,7 @@
             "scopes": [
               "ALL_SCOPES"
             ],
-            "variableId": "VariableID:86:11005",
+            "variableId": "VariableID:115:144",
             "exportKey": "variables"
           }
         }
@@ -2617,7 +2617,7 @@
               "scopes": [
                 "ALL_SCOPES"
               ],
-              "variableId": "VariableID:86:11017",
+              "variableId": "VariableID:115:156",
               "exportKey": "variables"
             }
           }
@@ -2633,7 +2633,7 @@
               "scopes": [
                 "ALL_SCOPES"
               ],
-              "variableId": "VariableID:86:11018",
+              "variableId": "VariableID:115:157",
               "exportKey": "variables"
             }
           }
@@ -2649,7 +2649,7 @@
               "scopes": [
                 "ALL_SCOPES"
               ],
-              "variableId": "VariableID:86:11019",
+              "variableId": "VariableID:115:158",
               "exportKey": "variables"
             }
           }
@@ -2665,7 +2665,7 @@
               "scopes": [
                 "ALL_SCOPES"
               ],
-              "variableId": "VariableID:86:11020",
+              "variableId": "VariableID:115:159",
               "exportKey": "variables"
             }
           }
@@ -2681,7 +2681,7 @@
               "scopes": [
                 "ALL_SCOPES"
               ],
-              "variableId": "VariableID:86:11021",
+              "variableId": "VariableID:115:160",
               "exportKey": "variables"
             }
           }
@@ -2697,7 +2697,7 @@
               "scopes": [
                 "ALL_SCOPES"
               ],
-              "variableId": "VariableID:86:11022",
+              "variableId": "VariableID:115:161",
               "exportKey": "variables"
             }
           }
@@ -2713,7 +2713,7 @@
               "scopes": [
                 "ALL_SCOPES"
               ],
-              "variableId": "VariableID:86:11023",
+              "variableId": "VariableID:115:162",
               "exportKey": "variables"
             }
           }
@@ -2729,7 +2729,7 @@
               "scopes": [
                 "ALL_SCOPES"
               ],
-              "variableId": "VariableID:86:11024",
+              "variableId": "VariableID:115:163",
               "exportKey": "variables"
             }
           }
@@ -2745,7 +2745,7 @@
               "scopes": [
                 "ALL_SCOPES"
               ],
-              "variableId": "VariableID:86:11025",
+              "variableId": "VariableID:115:164",
               "exportKey": "variables"
             }
           }
@@ -2763,7 +2763,7 @@
               "scopes": [
                 "ALL_SCOPES"
               ],
-              "variableId": "VariableID:86:11026",
+              "variableId": "VariableID:115:165",
               "exportKey": "variables"
             }
           }
@@ -2779,7 +2779,7 @@
               "scopes": [
                 "ALL_SCOPES"
               ],
-              "variableId": "VariableID:86:11027",
+              "variableId": "VariableID:115:166",
               "exportKey": "variables"
             }
           }
@@ -2795,7 +2795,7 @@
               "scopes": [
                 "ALL_SCOPES"
               ],
-              "variableId": "VariableID:86:11028",
+              "variableId": "VariableID:115:167",
               "exportKey": "variables"
             }
           }
@@ -2811,7 +2811,7 @@
               "scopes": [
                 "ALL_SCOPES"
               ],
-              "variableId": "VariableID:86:11029",
+              "variableId": "VariableID:115:168",
               "exportKey": "variables"
             }
           }
@@ -2827,7 +2827,7 @@
               "scopes": [
                 "ALL_SCOPES"
               ],
-              "variableId": "VariableID:86:11030",
+              "variableId": "VariableID:115:169",
               "exportKey": "variables"
             }
           }
@@ -2843,7 +2843,7 @@
               "scopes": [
                 "ALL_SCOPES"
               ],
-              "variableId": "VariableID:86:11031",
+              "variableId": "VariableID:115:170",
               "exportKey": "variables"
             }
           }
@@ -2859,7 +2859,7 @@
               "scopes": [
                 "ALL_SCOPES"
               ],
-              "variableId": "VariableID:86:11032",
+              "variableId": "VariableID:115:171",
               "exportKey": "variables"
             }
           }
@@ -2875,7 +2875,7 @@
               "scopes": [
                 "ALL_SCOPES"
               ],
-              "variableId": "VariableID:86:11033",
+              "variableId": "VariableID:115:172",
               "exportKey": "variables"
             }
           }
@@ -2891,7 +2891,7 @@
               "scopes": [
                 "ALL_SCOPES"
               ],
-              "variableId": "VariableID:86:11034",
+              "variableId": "VariableID:115:173",
               "exportKey": "variables"
             }
           }
@@ -2909,7 +2909,7 @@
               "scopes": [
                 "ALL_SCOPES"
               ],
-              "variableId": "VariableID:86:11035",
+              "variableId": "VariableID:115:174",
               "exportKey": "variables"
             }
           }
@@ -2931,7 +2931,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11037",
+                "variableId": "VariableID:115:176",
                 "exportKey": "variables"
               }
             }
@@ -2946,7 +2946,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11038",
+                "variableId": "VariableID:115:177",
                 "exportKey": "variables"
               }
             }
@@ -2961,7 +2961,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11039",
+                "variableId": "VariableID:115:178",
                 "exportKey": "variables"
               }
             }
@@ -2976,7 +2976,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11040",
+                "variableId": "VariableID:115:179",
                 "exportKey": "variables"
               }
             }
@@ -2995,7 +2995,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11041",
+                "variableId": "VariableID:115:180",
                 "exportKey": "variables"
               }
             }
@@ -3010,7 +3010,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11042",
+                "variableId": "VariableID:115:181",
                 "exportKey": "variables"
               }
             }
@@ -3025,7 +3025,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11043",
+                "variableId": "VariableID:115:182",
                 "exportKey": "variables"
               }
             }
@@ -3040,7 +3040,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11044",
+                "variableId": "VariableID:115:183",
                 "exportKey": "variables"
               }
             }
@@ -3055,7 +3055,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11045",
+                "variableId": "VariableID:115:184",
                 "exportKey": "variables"
               }
             }
@@ -3072,7 +3072,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11046",
+                "variableId": "VariableID:115:185",
                 "exportKey": "variables"
               }
             }
@@ -3089,7 +3089,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11047",
+                "variableId": "VariableID:115:186",
                 "exportKey": "variables"
               }
             }
@@ -3108,7 +3108,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11048",
+                "variableId": "VariableID:115:187",
                 "exportKey": "variables"
               }
             }
@@ -3123,7 +3123,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11049",
+                "variableId": "VariableID:115:188",
                 "exportKey": "variables"
               }
             }
@@ -3138,7 +3138,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11050",
+                "variableId": "VariableID:115:189",
                 "exportKey": "variables"
               }
             }
@@ -3153,7 +3153,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11051",
+                "variableId": "VariableID:115:190",
                 "exportKey": "variables"
               }
             }
@@ -3172,7 +3172,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11052",
+                "variableId": "VariableID:115:191",
                 "exportKey": "variables"
               }
             }
@@ -3187,7 +3187,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11053",
+                "variableId": "VariableID:115:192",
                 "exportKey": "variables"
               }
             }
@@ -3202,7 +3202,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11054",
+                "variableId": "VariableID:115:193",
                 "exportKey": "variables"
               }
             }
@@ -3217,7 +3217,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11055",
+                "variableId": "VariableID:115:194",
                 "exportKey": "variables"
               }
             }
@@ -3236,7 +3236,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11056",
+                "variableId": "VariableID:115:195",
                 "exportKey": "variables"
               }
             }
@@ -3251,7 +3251,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11057",
+                "variableId": "VariableID:115:196",
                 "exportKey": "variables"
               }
             }
@@ -3266,7 +3266,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11058",
+                "variableId": "VariableID:115:197",
                 "exportKey": "variables"
               }
             }
@@ -3283,7 +3283,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11059",
+                "variableId": "VariableID:115:198",
                 "exportKey": "variables"
               }
             }
@@ -3298,7 +3298,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11060",
+                "variableId": "VariableID:115:199",
                 "exportKey": "variables"
               }
             }
@@ -3313,7 +3313,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11061",
+                "variableId": "VariableID:115:200",
                 "exportKey": "variables"
               }
             }
@@ -3330,7 +3330,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11062",
+                "variableId": "VariableID:115:201",
                 "exportKey": "variables"
               }
             }
@@ -3345,7 +3345,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11063",
+                "variableId": "VariableID:115:202",
                 "exportKey": "variables"
               }
             }
@@ -3360,7 +3360,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11064",
+                "variableId": "VariableID:115:203",
                 "exportKey": "variables"
               }
             }
@@ -3377,7 +3377,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11065",
+                "variableId": "VariableID:115:204",
                 "exportKey": "variables"
               }
             }
@@ -3392,7 +3392,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11066",
+                "variableId": "VariableID:115:205",
                 "exportKey": "variables"
               }
             }
@@ -3407,7 +3407,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11067",
+                "variableId": "VariableID:115:206",
                 "exportKey": "variables"
               }
             }
@@ -3426,7 +3426,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11068",
+                "variableId": "VariableID:115:207",
                 "exportKey": "variables"
               }
             }
@@ -3441,22 +3441,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11069",
-                "exportKey": "variables"
-              }
-            }
-          },
-          "transparent": {
-            "type": "color",
-            "value": "{palette.~.transparent.~}",
-            "extensions": {
-              "org.lukasoppermann.figmaDesignTokens": {
-                "mode": "light",
-                "collection": "contextual",
-                "scopes": [
-                  "ALL_SCOPES"
-                ],
-                "variableId": "VariableID:86:11070",
+                "variableId": "VariableID:115:208",
                 "exportKey": "variables"
               }
             }
@@ -3477,7 +3462,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11037",
+                "variableId": "VariableID:115:176",
                 "exportKey": "variables"
               }
             }
@@ -3492,7 +3477,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11038",
+                "variableId": "VariableID:115:177",
                 "exportKey": "variables"
               }
             }
@@ -3507,7 +3492,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11039",
+                "variableId": "VariableID:115:178",
                 "exportKey": "variables"
               }
             }
@@ -3522,7 +3507,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11040",
+                "variableId": "VariableID:115:179",
                 "exportKey": "variables"
               }
             }
@@ -3541,7 +3526,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11041",
+                "variableId": "VariableID:115:180",
                 "exportKey": "variables"
               }
             }
@@ -3556,7 +3541,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11042",
+                "variableId": "VariableID:115:181",
                 "exportKey": "variables"
               }
             }
@@ -3571,7 +3556,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11043",
+                "variableId": "VariableID:115:182",
                 "exportKey": "variables"
               }
             }
@@ -3586,7 +3571,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11044",
+                "variableId": "VariableID:115:183",
                 "exportKey": "variables"
               }
             }
@@ -3601,7 +3586,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11045",
+                "variableId": "VariableID:115:184",
                 "exportKey": "variables"
               }
             }
@@ -3618,7 +3603,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11046",
+                "variableId": "VariableID:115:185",
                 "exportKey": "variables"
               }
             }
@@ -3635,7 +3620,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11047",
+                "variableId": "VariableID:115:186",
                 "exportKey": "variables"
               }
             }
@@ -3654,7 +3639,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11048",
+                "variableId": "VariableID:115:187",
                 "exportKey": "variables"
               }
             }
@@ -3669,7 +3654,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11049",
+                "variableId": "VariableID:115:188",
                 "exportKey": "variables"
               }
             }
@@ -3684,7 +3669,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11050",
+                "variableId": "VariableID:115:189",
                 "exportKey": "variables"
               }
             }
@@ -3699,7 +3684,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11051",
+                "variableId": "VariableID:115:190",
                 "exportKey": "variables"
               }
             }
@@ -3718,7 +3703,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11052",
+                "variableId": "VariableID:115:191",
                 "exportKey": "variables"
               }
             }
@@ -3733,7 +3718,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11053",
+                "variableId": "VariableID:115:192",
                 "exportKey": "variables"
               }
             }
@@ -3748,7 +3733,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11054",
+                "variableId": "VariableID:115:193",
                 "exportKey": "variables"
               }
             }
@@ -3763,7 +3748,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11055",
+                "variableId": "VariableID:115:194",
                 "exportKey": "variables"
               }
             }
@@ -3782,7 +3767,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11056",
+                "variableId": "VariableID:115:195",
                 "exportKey": "variables"
               }
             }
@@ -3797,7 +3782,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11057",
+                "variableId": "VariableID:115:196",
                 "exportKey": "variables"
               }
             }
@@ -3812,7 +3797,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11058",
+                "variableId": "VariableID:115:197",
                 "exportKey": "variables"
               }
             }
@@ -3829,7 +3814,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11059",
+                "variableId": "VariableID:115:198",
                 "exportKey": "variables"
               }
             }
@@ -3844,7 +3829,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11060",
+                "variableId": "VariableID:115:199",
                 "exportKey": "variables"
               }
             }
@@ -3859,7 +3844,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11061",
+                "variableId": "VariableID:115:200",
                 "exportKey": "variables"
               }
             }
@@ -3876,7 +3861,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11062",
+                "variableId": "VariableID:115:201",
                 "exportKey": "variables"
               }
             }
@@ -3891,7 +3876,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11063",
+                "variableId": "VariableID:115:202",
                 "exportKey": "variables"
               }
             }
@@ -3906,7 +3891,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11064",
+                "variableId": "VariableID:115:203",
                 "exportKey": "variables"
               }
             }
@@ -3923,7 +3908,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11065",
+                "variableId": "VariableID:115:204",
                 "exportKey": "variables"
               }
             }
@@ -3938,7 +3923,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11066",
+                "variableId": "VariableID:115:205",
                 "exportKey": "variables"
               }
             }
@@ -3953,7 +3938,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11067",
+                "variableId": "VariableID:115:206",
                 "exportKey": "variables"
               }
             }
@@ -3972,7 +3957,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11068",
+                "variableId": "VariableID:115:207",
                 "exportKey": "variables"
               }
             }
@@ -3987,22 +3972,7 @@
                 "scopes": [
                   "ALL_SCOPES"
                 ],
-                "variableId": "VariableID:86:11069",
-                "exportKey": "variables"
-              }
-            }
-          },
-          "transparent": {
-            "type": "color",
-            "value": "{palette.~.transparent.~}",
-            "extensions": {
-              "org.lukasoppermann.figmaDesignTokens": {
-                "mode": "dark",
-                "collection": "contextual",
-                "scopes": [
-                  "ALL_SCOPES"
-                ],
-                "variableId": "VariableID:86:11070",
+                "variableId": "VariableID:115:208",
                 "exportKey": "variables"
               }
             }
