@@ -20,6 +20,7 @@ const PRIMARY = () => {
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "700", context: null }),
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "800", context: null }),
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "900", context: null }),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "925", context: null }),
     ]
 }
 
@@ -40,6 +41,7 @@ const SECONDARY = () => {
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "700", context: null }),
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "800", context: null }),
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "900", context: null }),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "925", context: null }),
     ]
 }
 
@@ -60,6 +62,7 @@ const TERTIARY = () => {
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "700", context: null }),
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "800", context: null }),
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "900", context: null }),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "925", context: null }),
     ]
 }
 
@@ -80,6 +83,7 @@ const POSITIVE = () => {
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "700", context: null }),
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "800", context: null }),
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "900", context: null }),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "925", context: null }),
     ]
 }
 
@@ -100,6 +104,7 @@ const NEGATIVE = () => {
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "700", context: null }),
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "800", context: null }),
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "900", context: null }),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "925", context: null }),
     ]
 }
 
@@ -120,6 +125,7 @@ const HIGHLIGHT = () => {
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "700", context: null }),
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "800", context: null }),
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "900", context: null }),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "925", context: null }),
     ]
 }
 
@@ -140,6 +146,7 @@ const ATTENTION = () => {
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "700", context: null }),
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "800", context: null }),
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "900", context: null }),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "925", context: null }),
     ]
 }
 
@@ -160,6 +167,7 @@ const INFO = () => {
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "700", context: null }),
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "800", context: null }),
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "900", context: null }),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "925", context: null }),
     ]
 }
 
@@ -180,6 +188,7 @@ const SYSTEM = () => {
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "700", context: null }),
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "800", context: null }),
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "900", context: null }),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "925", context: null }),
     ]
 }
 
@@ -201,6 +210,7 @@ const NEUTRAL = () => {
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "700", context: null }),
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "800", context: null }),
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "900", context: null }),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "925", context: null }),
         schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "950", context: null }),
     ]
 }
@@ -208,34 +218,41 @@ const NEUTRAL = () => {
 const LIGHTEN = () => {
     const variant = "lighten"
     return [
-        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "05a", context: null, key:"white005"}),
-        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "10a", context: null, key:"white010"}),
-        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "20a", context: null, key:"white020"}),
-        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "30a", context: null, key:"white030"}),
-        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "40a", context: null, key:"white040"}),
-        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "50a", context: null, key:"white050"}),
-        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "60a", context: null, key:"white060"}),
-        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "70a", context: null, key:"white070"}),
-        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "80a", context: null, key:"white080"}),
-        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "90a", context: null, key:"white090"}),
-        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "95a", context: null, key:"white095"}),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "05a", context: null}),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "10a", context: null}),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "20a", context: null}),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "30a", context: null}),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "40a", context: null}),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "50a", context: null}),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "60a", context: null}),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "70a", context: null}),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "80a", context: null}),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "90a", context: null}),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "95a", context: null}),
     ]
 }
 
 const DARKEN = () => {
     const variant = "darken"
     return [
-        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "05a", context: null, key:"black005" }),
-        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "10a", context: null, key:"black010" }),
-        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "20a", context: null, key:"black020" }),
-        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "30a", context: null, key:"black030" }),
-        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "40a", context: null, key:"black040" }),
-        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "50a", context: null, key:"black050" }),
-        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "60a", context: null, key:"black060" }),
-        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "70a", context: null, key:"black070" }),
-        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "80a", context: null, key:"black080" }),
-        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "90a", context: null, key:"black090" }),
-        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "95a", context: null, key:"black095" }),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "05a", context: null}),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "10a", context: null}),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "20a", context: null}),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "30a", context: null}),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "40a", context: null}),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "50a", context: null}),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "60a", context: null}),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "70a", context: null}),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "80a", context: null}),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "90a", context: null}),
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: "95a", context: null}),
+    ]
+}
+
+const TRANSPARENT = () => {
+    const variant = "transparent"
+    return [
+        schema(meta, { type: null, item: null, variant: variant, subitem: null, state: null, context: null, key:`${variant}`}),
     ]
 }
 
@@ -251,5 +268,6 @@ module.exports = [
     ...SYSTEM(),
     ...NEUTRAL(),
     ...LIGHTEN(),
-    ...DARKEN()
+    ...DARKEN(),
+    ...TRANSPARENT(),
 ] 

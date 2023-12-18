@@ -34,11 +34,19 @@ function keyParser(dictionary) {
     routeFilteredByValue.forEach(function (route, index) {
         const routeArray = route.split('.')
         routeArray.length = routeArray.indexOf("value") // set length to remove elements
+        // result.push(truncateSubFolders(routeArray).join('.'))
         result.push(routeArray.join('.'))
     });
 
     return result
 }
+
+const truncateSubFolders = (arr, n = 2) =>  { 
+    if (arr.length <= 3) return arr
+    const result = arr.slice(arr.length - n, arr.length)
+    result.unshift(arr[0])
+    return result
+    };
 
 const keyify = (obj, prefix = '') =>
     Object.keys(obj).reduce((res, el) => {

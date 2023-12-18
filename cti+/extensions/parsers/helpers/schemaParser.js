@@ -25,7 +25,6 @@ const parseSystemSchemas = (dictionary, keys, filePath) => {
         token.$schema.brand = parseBrand(filePath)
         token.$schema.route = key
         assignSchema(token)
-
     })
 }
 
@@ -33,8 +32,8 @@ const parseBrandSchemas = (dictionary, keys) => {
     keys.map(key => {
         const token = _.get(dictionary, key)
         if (token.$schema.mapped === false) {
-            console.log("HERE IS AN UNMAPPED TOKEN...", token.$schema)
-            console.log("I should try the best I can to make a schema, and the 'domain' becomes the 'brand', to be written seperately from SYSTEM defined")
+            // console.log("HERE IS AN UNMAPPED TOKEN...", token.$schema)
+            // console.log("I should try the best I can to make a schema, and the 'domain' becomes the 'brand', to be written seperately from SYSTEM defined")
         }
     })
 }

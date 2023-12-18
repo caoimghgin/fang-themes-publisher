@@ -25,8 +25,8 @@ const { schemaParser  } = require('./helpers/schemaParser')
 StyleDictionary.registerParser({
     pattern: /\.json$/,
     parse: ({ contents, filePath }) => {
-        let dictionary = jsonParser(contents, false)
-        let keys = keyParser(dictionary)
+        const dictionary = jsonParser(contents, false)
+        const keys = keyParser(dictionary)
         schemaParser(dictionary, keys, filePath)
         return dictionary
     }

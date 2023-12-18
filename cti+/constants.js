@@ -36,15 +36,17 @@ const CLASSES = Object.freeze({
         CLASS: "COLOR",
         SUBCLASS: {
             PALETTE: "PALETTE",         // Base semantic colors, not mode specific
-            DEFINITIVE: "DEFINITIVE",   // Brand specific color (non-white-label), not mode specific
-            SOCIAL: "SOCIAL",           // Apple, Google, etc...
             CONTEXTUAL: {
                 CANVAS: "CANVAS",       // Background of app (Highly dynamic to dark mode: Typically highlight tones in light-mode, shadows in dark-mode)
                 PAPER: "PAPER",         // Backgrounds on top of the app (Typically midtones and above in light mode)
+                PAINT: "PAINT",         // Color on the surface of PAPER
                 INK: "INK",             // Typography and icons, placed upon CANVAS and PAPER
+                THREAD: "THREAD",       // Lines, rules
                 DYE: "DYE",             // Lines, rules, placed upon CANVAS and PAPER
                 THERMACHROME: "THERMA", // Interactive backgrounds on components
-            }
+            },
+            DEFINITIVE: "DEFINITIVE",   // Brand specific color (non-white-label), or unrecognized taxonomy name. Not mode specific.
+            SOCIAL: "SOCIAL",           // Apple, Google, etc...
         },
         MODE: MODE
     },
